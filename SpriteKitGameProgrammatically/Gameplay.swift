@@ -53,7 +53,6 @@ class Gameplay: SKScene {
     }
     
     func startNewBoard() {
-        removeAllDonuts()
         addNewDonuts()
     }
     
@@ -90,13 +89,15 @@ class Gameplay: SKScene {
         winnerDonut.button.popUp()
     }
     
-    func removeAllDonuts() {
+   func removeAllDonuts() {
         enumerateChildNodes(withName: "//*") { (node, stop) in
             if node.name == "donut" {
-                node.removeFromParent()
-            }
+               node.removeFromParent()
+           }
         }
     }
+    
+
     
     func handleWinnerDonutTapped() {
         score += 1
