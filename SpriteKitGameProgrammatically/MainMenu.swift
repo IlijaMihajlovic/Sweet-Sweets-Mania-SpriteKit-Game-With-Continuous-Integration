@@ -79,14 +79,74 @@ class MainMenu: SKScene {
     
     
     
+    lazy var handleMoreButton: BDButton = {
+        var button = BDButton(imageNamed: "ButtonSettings", buttonAction: {
+            
+            self.handleMore()
+          
+        })
+        button.scaleTo(screenWithPercentage: 0.27)
+        
+        button.zPosition = 2
+        return button
+    }()
+    
+    
+
+    
     override func didMove(to view: SKView) {
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
         playButton.position = CGPoint.zero
         setupNodes()
         addNodes()
-        
-        
+ 
     }
+    
+    let settingsLauncher = SettingsLauncher()
+    func handleMore() {
+        settingsLauncher.showSettings()
+    }
+    
+//    let blackView = UIView()
+//    
+//    func showSettings() {
+//        if let window = UIApplication.shared.keyWindow {
+//            
+//            
+//            blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+//            
+//            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
+//            
+//            window.addSubview(blackView)
+//            blackView.frame = window.frame
+//            blackView.alpha = 0
+//            UIView.animate(withDuration: 0.5) {
+//                self.blackView.alpha = 1
+//            }
+//        }
+//        
+//    }
+//    
+//    @objc func handleDismiss() {
+//        
+//        //Set isUserInteractionEnabled = false so we can use GestureRecognizer
+//        enumerateChildNodes(withName: "//*") { (node, stop) in
+//            if node.name == "donut" {
+//                //node.removeFromParent()
+//                node.isUserInteractionEnabled = false
+//            }
+//        }
+//        
+//        UIView.animate(withDuration: 0.5) {
+//            self.blackView.alpha = 0
+//            
+//        }
+//        
+//    }
+//    
+    
+    
+    
     
     func setupNodes() {
         background.position = CGPoint.zero
@@ -94,6 +154,7 @@ class MainMenu: SKScene {
         playButton.position = CGPoint.zero
         rateButton.position = CGPoint(x: ScreenSize.width * -0.15, y: ScreenSize.heigth * -0.15)
         shareButton.position = CGPoint(x: ScreenSize.width * 0.20, y: ScreenSize.heigth * -0.15)
+        handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.heigth * 0.35)
     }
     
     
@@ -103,6 +164,7 @@ class MainMenu: SKScene {
         addChild(playButton)
         addChild(rateButton)
         addChild(shareButton)
+        addChild(handleMoreButton)
     }
     
     @objc func startGameplayNotification(_ info:Notification) {
