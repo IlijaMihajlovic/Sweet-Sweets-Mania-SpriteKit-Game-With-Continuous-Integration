@@ -12,9 +12,10 @@ import SpriteKit
 class ACTManager {
     
     enum SceneType {
-        case MainMenu, Gameplay, GameOver
+        case MainMenu, Gameplay, GameOver, AboutScene, LoginScene, VolumeScene
     }
     
+    //initialize of class private
     private init() {}
     static let shared = ACTManager()
     
@@ -27,7 +28,7 @@ class ACTManager {
             
             print("This is our first launch")
             ACTPlayerStats.shared.setSounds(true)
-            ACTPlayerStats.shared.saveMusicVolume(0.7)
+            ACTPlayerStats.shared.saveMusicVolume(0.9)
             
             UserDefaults.standard.set(true, forKey: "isFirstLaunch")
             UserDefaults.standard.synchronize()
@@ -49,6 +50,16 @@ class ACTManager {
     
     func getScene(_ sceneType: SceneType) -> SKScene? {
         switch sceneType {
+        case SceneType.AboutScene:
+            return AboutScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+        
+        case SceneType.LoginScene:
+            return LoginScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+       
+        case SceneType.VolumeScene:
+            return VolumeScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+            
+            
         case SceneType.MainMenu:
             return MainMenu(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
         case SceneType.Gameplay:

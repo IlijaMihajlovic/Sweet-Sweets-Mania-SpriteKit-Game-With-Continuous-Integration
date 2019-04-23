@@ -7,8 +7,10 @@
 //
 
 import SpriteKit
+import UIKit
 class MainMenu: SKScene {
     
+   
     
     var background: SKSpriteNode = {
         var sprite = SKSpriteNode(imageNamed: "Background")
@@ -81,8 +83,8 @@ class MainMenu: SKScene {
     
     lazy var handleMoreButton: BDButton = {
         var button = BDButton(imageNamed: "ButtonSettings", buttonAction: {
-            
-            self.handleMore()
+//
+        self.handleMore()
           
         })
         button.scaleTo(screenWithPercentage: 0.27)
@@ -102,48 +104,37 @@ class MainMenu: SKScene {
  
     }
     
-    let settingsLauncher = SettingsLauncher()
-    func handleMore() {
-        settingsLauncher.showSettings()
-    }
+    lazy var settingsLauncher: SettingsLauncher = {
+        let launcher = SettingsLauncher()
+        launcher.mainMenu = self //Make Main Menu scene not nil
+        return launcher
+    }()
     
-//    let blackView = UIView()
-//    
-//    func showSettings() {
-//        if let window = UIApplication.shared.keyWindow {
-//            
-//            
-//            blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
-//            
-//            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
-//            
-//            window.addSubview(blackView)
-//            blackView.frame = window.frame
-//            blackView.alpha = 0
-//            UIView.animate(withDuration: 0.5) {
-//                self.blackView.alpha = 1
-//            }
+    
+    func handleMore() {
+        settingsLauncher.mainMenu = self
+        settingsLauncher.showSettings()
+ 
+    }
+        
+
+    //func showControllerForSetting(setting: Setting) {
+//        ACTManager.shared.transition(self, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
+        
+        
+//        switch setting.name {
+//        case "Settings" :
+//            ACTManager.shared.transition(self, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
+//
+//        case "Replay" :
+//            ACTManager.shared.transition(self, toScene: .AboutScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
+//        default:
+//            break
 //        }
-//        
-//    }
-//    
-//    @objc func handleDismiss() {
-//        
-//        //Set isUserInteractionEnabled = false so we can use GestureRecognizer
-//        enumerateChildNodes(withName: "//*") { (node, stop) in
-//            if node.name == "donut" {
-//                //node.removeFromParent()
-//                node.isUserInteractionEnabled = false
-//            }
-//        }
-//        
-//        UIView.animate(withDuration: 0.5) {
-//            self.blackView.alpha = 0
-//            
-//        }
-//        
-//    }
-//    
+        
+//        ACTManager.shared.transition(self, toScene: .AboutScene, transition: SKTransition.moveIn(with: .up, duration: 0.5))
+ //  }
+    
     
     
     
@@ -176,3 +167,6 @@ class MainMenu: SKScene {
         
     }
 }
+
+
+

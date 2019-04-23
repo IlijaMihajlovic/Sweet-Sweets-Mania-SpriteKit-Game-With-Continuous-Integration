@@ -2,13 +2,12 @@
 
 import UIKit
 import SpriteKit
-import GameplayKit
 import AVFoundation
 
 let stopBackgroundMusicNotificationName = Notification.Name("stopBackgroundMusicNotificationName")
 let startBackgroundMusicNotificationName = Notification.Name("startBackgroundMusicNotificationName")
-
 let startGameplayNotificationName = Notification.Name("startGameplayNotificationName")
+let setMusicVolumeNotificationName = Notification.Name("setMusicVolumeNotificationName")
 
 class GameViewController: UIViewController {
     
@@ -19,16 +18,22 @@ class GameViewController: UIViewController {
     }()
     
     lazy var backgroundMusic: AVAudioPlayer? = {
-        guard let url = Bundle.main.url(forResource:  kBackgroundMusicName, withExtension: kBackgroundMusicExtension) else {
+        
+        //Getting the path to the audio file
+        guard let url = Bundle.main.url(forResource: kBackgroundMusicName, withExtension: kBackgroundMusicExtension) else {
+            print("Unable to found audio file")
             return nil
         }
         do {
             let player = try AVAudioPlayer(contentsOf: url)
+            //repeat the backgorund music forever
             player.numberOfLoops = -1
             return player
+            
         } catch {
             return nil
         }
+        
     }()
     
     override func viewDidLoad() {
@@ -46,18 +51,28 @@ class GameViewController: UIViewController {
         skView.presentScene(scene)
         skView.ignoresSiblingOrder = true
         
-        addNotificationObservers()
+       // addNotificationObservers()
         
         playStopBackgroundMusic()
+        
+        //Sets the configured volume when the apps starts
+        let info = ["volume": ACTPlayerStats.shared.getMusicVolume()]
+        NotificationCenter.default.post(name: setMusicVolumeNotificationName, object: nil, userInfo: info)
     }
     
     func addNotificationObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.stopBackgroundMusic(_:)), name: stopBackgroundMusicNotificationName, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.startBackgroundMusic(_:)), name: startBackgroundMusicNotificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setMusicVolume(_:)), name: setMusicVolumeNotificationName, object: nil)
     }
     
     func playStopBackgroundMusic() {
-        backgroundMusic?.play()
+        if ACTPlayerStats.shared.getSound() {
+            backgroundMusic?.play()
+        
+        } else {
+            backgroundMusic?.stop()
+        }
     }
     
     @objc func stopBackgroundMusic(_ info:Notification) {
@@ -71,5 +86,15 @@ class GameViewController: UIViewController {
             backgroundMusic?.play()
         }
     }
+        @objc func setMusicVolume(_ info:Notification) {
+            guard let userInfo = info.userInfo else {return}
+            let volume = userInfo["volume"] as! Float
+            setBackgroundMusicVolume(to: volume)
+        }
+        
+        func setBackgroundMusicVolume(to volume: Float) {
+            backgroundMusic?.volume = volume
+        }
+    }
     
-}
+

@@ -16,11 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        let gameViewController = GameViewController()
+        let navigationController = UINavigationController(rootViewController: gameViewController)
+        
         window = UIWindow()
         window?.makeKeyAndVisible()
+     
         
-        let gameViewController = GameViewController()
-        window?.rootViewController = gameViewController
+        
+        window?.rootViewController = navigationController
         
         return true
     }
