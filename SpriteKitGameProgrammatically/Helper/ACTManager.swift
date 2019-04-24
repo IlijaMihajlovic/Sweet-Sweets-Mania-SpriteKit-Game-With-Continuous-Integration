@@ -55,10 +55,7 @@ class ACTManager {
         
         case SceneType.LoginScene:
             return LoginScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
-       
-      
-            
-            
+     
         case SceneType.MainMenu:
             return MainMenu(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
         case SceneType.Gameplay:

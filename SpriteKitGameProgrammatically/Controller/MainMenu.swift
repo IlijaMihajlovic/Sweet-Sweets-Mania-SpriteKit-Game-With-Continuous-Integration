@@ -116,29 +116,7 @@ class MainMenu: SKScene {
         settingsLauncher.showSettings()
  
     }
-        
 
-    //func showControllerForSetting(setting: Setting) {
-//        ACTManager.shared.transition(self, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
-        
-        
-//        switch setting.name {
-//        case "Settings" :
-//            ACTManager.shared.transition(self, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
-//
-//        case "Replay" :
-//            ACTManager.shared.transition(self, toScene: .AboutScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
-//        default:
-//            break
-//        }
-        
-//        ACTManager.shared.transition(self, toScene: .AboutScene, transition: SKTransition.moveIn(with: .up, duration: 0.5))
- //  }
-    
-    
-    
-    
-    
     func setupNodes() {
         background.position = CGPoint.zero
         title.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.25)
