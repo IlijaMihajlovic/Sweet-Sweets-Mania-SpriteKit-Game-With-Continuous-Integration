@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CustomCellDelegate: class {
+    func sharePressed(cell: BaseCell)
+}
+
 class SettingCell: BaseCell {
     
     //Higlight  Cell
@@ -26,6 +30,13 @@ class SettingCell: BaseCell {
          
         }
     }
+    
+    var delegate: CustomCellDelegate?
+    func didTapShare() {
+        delegate?.sharePressed(cell: self)
+    }
+    
+    
     
     var setting: Setting? {
         didSet {

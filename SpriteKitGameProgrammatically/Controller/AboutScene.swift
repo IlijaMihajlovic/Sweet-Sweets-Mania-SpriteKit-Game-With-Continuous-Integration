@@ -22,9 +22,9 @@ class AboutScene: SKScene {
     
     lazy var backButton: BDButton = {
         var button = BDButton(imageNamed: "ButtonBack", title: "", buttonAction: {
-            ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+            ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.1))
             
-           self.labelTextView.removeFromSuperview()
+            self.labelTextView.removeFromSuperview()
             self.customToolBar.removeFromSuperview()
            
             

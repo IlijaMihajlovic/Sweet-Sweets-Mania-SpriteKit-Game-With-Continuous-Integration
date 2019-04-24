@@ -23,9 +23,9 @@ class Setting: NSObject {
 }
 
 class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
-    var mainMenu: MainMenu?
-    
+        
+        var mainMenu: MainMenu?
+
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -129,6 +129,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         }) { (_ ) in
             
             //Present scene after completion
+           
             
             let setting = self.settings[indexPath.item]
             guard let mainMenu = self.mainMenu else {return}
@@ -139,9 +140,10 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
                 
                 case 0 :
 //                    ACTManager.shared.transition(mainMenu, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
-                ACTManager.shared.transition(mainMenu, toScene: .AboutScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
-
-            
+                ACTManager.shared.transition(mainMenu, toScene: .AboutScene, transition: SKTransition.moveIn(with: .up, duration: 0.2))
+                    
+                
+                    
                 case 1:
                     ACTManager.shared.transition(mainMenu, toScene: .LoginScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
                 default:
