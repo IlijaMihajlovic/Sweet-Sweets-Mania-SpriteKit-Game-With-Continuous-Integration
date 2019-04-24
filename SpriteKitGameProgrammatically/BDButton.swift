@@ -90,7 +90,6 @@ class BDButton: SKNode {
         let location: CGPoint = touch.location(in: self)
         
         if button.contains(location) {
-          ACTManager.shared.run(SoundFileName.TapFile.rawValue, onNode: self)
           disable()
           action()
           run(SKAction.sequence([SKAction.wait(forDuration: 0.2), SKAction.run({

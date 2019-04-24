@@ -139,11 +139,8 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
                 
                 case 0 :
                     ACTManager.shared.transition(mainMenu, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
-                    
-                case 1 :
-                    ACTManager.shared.transition(mainMenu, toScene: .VolumeScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
-                    
-                case 3:
+            
+                case 1:
                     ACTManager.shared.transition(mainMenu, toScene: .LoginScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
                 default:
                     break

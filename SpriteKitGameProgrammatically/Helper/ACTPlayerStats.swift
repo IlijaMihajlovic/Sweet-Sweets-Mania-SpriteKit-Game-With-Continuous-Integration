@@ -3,16 +3,14 @@ import Foundation
 import SpriteKit
 
 let kSoundState = "kSoundState"
-let kBackgroundMusicName = "BackgroundMusic"
-let kBackgroundMusicExtension = "m4a"
+let kBackgroundMusicName = "summer"
+let kBackgroundMusicExtension = "mp3"
 
 let kScore = "kScore"
 let kBestScore = "kBestScore"
-let kMusicVolume = "kMusicVolume"
 
-enum SoundFileName: String {
-    case TapFile = "ClickSound.mp3"
-}
+
+
 
 class ACTPlayerStats {
     
@@ -54,13 +52,6 @@ class ACTPlayerStats {
     }
     
     
-    func saveMusicVolume(_ value: Float) {
-        UserDefaults.standard.set(value, forKey: kMusicVolume)
-        UserDefaults.standard.synchronize()
-    }
-    
-    func getMusicVolume() -> Float {
-        return UserDefaults.standard.float(forKey: kMusicVolume)
-    }
+ 
     
 }

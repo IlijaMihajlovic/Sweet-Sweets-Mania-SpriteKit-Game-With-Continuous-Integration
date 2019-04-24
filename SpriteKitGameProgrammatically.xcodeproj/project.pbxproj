@@ -10,8 +10,7 @@
 		240F8013226A1765009F0B9F /* ACTPlayerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99C922686EE3004874FB /* ACTPlayerStats.swift */; };
 		240F801B226A229E009F0B9F /* ACTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F801A226A229E009F0B9F /* ACTManager.swift */; };
 		240F801F226A4910009F0B9F /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F801E226A4910009F0B9F /* SettingsLauncher.swift */; };
-		243849CE226F4A1C00D77F18 /* BackgroundMusic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 243849CD226F4A1C00D77F18 /* BackgroundMusic.m4a */; };
-		243849D0226F4A5E00D77F18 /* ClickSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 243849CF226F4A5E00D77F18 /* ClickSound.mp3 */; };
+		2436715D22707603009FC1A1 /* summer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2436715C22707603009FC1A1 /* summer.mp3 */; };
 		244F99AE226868A3004874FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99AD226868A3004874FB /* AppDelegate.swift */; };
 		244F99B5226868A4004874FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244F99B4226868A4004874FB /* Assets.xcassets */; };
 		244F99B8226868A4004874FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244F99B6226868A4004874FB /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 		244F99C622686D79004874FB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99C522686D79004874FB /* Extension.swift */; };
 		244F99CC22686FA6004874FB /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99CB22686FA6004874FB /* Gameplay.swift */; };
 		244F99CE22689A36004874FB /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99CD22689A36004874FB /* GameOver.swift */; };
-		246FFF81226F0EB80043B611 /* VolumeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246FFF80226F0EB80043B611 /* VolumeScene.swift */; };
 		246FFF83226F0EC30043B611 /* LoginScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246FFF82226F0EC30043B611 /* LoginScene.swift */; };
 		246FFF85226F0EE60043B611 /* AboutScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246FFF84226F0EE60043B611 /* AboutScene.swift */; };
 		2482B1C3226B26BF007EF025 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C2226B26BF007EF025 /* BaseCell.swift */; };
@@ -32,8 +30,7 @@
 /* Begin PBXFileReference section */
 		240F801A226A229E009F0B9F /* ACTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACTManager.swift; sourceTree = "<group>"; };
 		240F801E226A4910009F0B9F /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
-		243849CD226F4A1C00D77F18 /* BackgroundMusic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = BackgroundMusic.m4a; sourceTree = "<group>"; };
-		243849CF226F4A5E00D77F18 /* ClickSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ClickSound.mp3; sourceTree = "<group>"; };
+		2436715C22707603009FC1A1 /* summer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = summer.mp3; sourceTree = "<group>"; };
 		244F99AA226868A3004874FB /* SpriteKitGameProgrammatically.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitGameProgrammatically.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		244F99AD226868A3004874FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		244F99B4226868A4004874FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,7 +43,6 @@
 		244F99C922686EE3004874FB /* ACTPlayerStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACTPlayerStats.swift; sourceTree = "<group>"; };
 		244F99CB22686FA6004874FB /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
 		244F99CD22689A36004874FB /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
-		246FFF80226F0EB80043B611 /* VolumeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeScene.swift; sourceTree = "<group>"; };
 		246FFF82226F0EC30043B611 /* LoginScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScene.swift; sourceTree = "<group>"; };
 		246FFF84226F0EE60043B611 /* AboutScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScene.swift; sourceTree = "<group>"; };
 		2482B1C2226B26BF007EF025 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
@@ -94,10 +90,9 @@
 				244F99CB22686FA6004874FB /* Gameplay.swift */,
 				244F99C322686D3E004874FB /* BDButton.swift */,
 				244F99C522686D79004874FB /* Extension.swift */,
+				2436715C22707603009FC1A1 /* summer.mp3 */,
 				244F99B4226868A4004874FB /* Assets.xcassets */,
 				244F99B6226868A4004874FB /* LaunchScreen.storyboard */,
-				243849CF226F4A5E00D77F18 /* ClickSound.mp3 */,
-				243849CD226F4A1C00D77F18 /* BackgroundMusic.m4a */,
 				244F99B9226868A4004874FB /* Info.plist */,
 			);
 			path = SpriteKitGameProgrammatically;
@@ -117,7 +112,6 @@
 			children = (
 				240F801E226A4910009F0B9F /* SettingsLauncher.swift */,
 				244F99C122686BDD004874FB /* MainMenu.swift */,
-				246FFF80226F0EB80043B611 /* VolumeScene.swift */,
 				246FFF82226F0EC30043B611 /* LoginScene.swift */,
 				246FFF84226F0EE60043B611 /* AboutScene.swift */,
 			);
@@ -199,10 +193,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				243849CE226F4A1C00D77F18 /* BackgroundMusic.m4a in Resources */,
+				2436715D22707603009FC1A1 /* summer.mp3 in Resources */,
 				244F99B8226868A4004874FB /* LaunchScreen.storyboard in Resources */,
 				244F99B5226868A4004874FB /* Assets.xcassets in Resources */,
-				243849D0226F4A5E00D77F18 /* ClickSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +221,6 @@
 				244F99C422686D3E004874FB /* BDButton.swift in Sources */,
 				244F99CC22686FA6004874FB /* Gameplay.swift in Sources */,
 				244F99C222686BDD004874FB /* MainMenu.swift in Sources */,
-				246FFF81226F0EB80043B611 /* VolumeScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

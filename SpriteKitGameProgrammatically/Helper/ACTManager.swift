@@ -12,7 +12,7 @@ import SpriteKit
 class ACTManager {
     
     enum SceneType {
-        case MainMenu, Gameplay, GameOver, AboutScene, LoginScene, VolumeScene
+        case MainMenu, Gameplay, GameOver, AboutScene, LoginScene
     }
     
     //initialize of class private
@@ -28,7 +28,7 @@ class ACTManager {
             
             print("This is our first launch")
             ACTPlayerStats.shared.setSounds(true)
-            ACTPlayerStats.shared.saveMusicVolume(0.9)
+          
             
             UserDefaults.standard.set(true, forKey: "isFirstLaunch")
             UserDefaults.standard.synchronize()
@@ -56,8 +56,7 @@ class ACTManager {
         case SceneType.LoginScene:
             return LoginScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
        
-        case SceneType.VolumeScene:
-            return VolumeScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+      
             
             
         case SceneType.MainMenu:

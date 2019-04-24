@@ -6,8 +6,7 @@ import AVFoundation
 
 let stopBackgroundMusicNotificationName = Notification.Name("stopBackgroundMusicNotificationName")
 let startBackgroundMusicNotificationName = Notification.Name("startBackgroundMusicNotificationName")
-let startGameplayNotificationName = Notification.Name("startGameplayNotificationName")
-let setMusicVolumeNotificationName = Notification.Name("setMusicVolumeNotificationName")
+
 
 class GameViewController: UIViewController {
     
@@ -51,19 +50,15 @@ class GameViewController: UIViewController {
         skView.presentScene(scene)
         skView.ignoresSiblingOrder = true
         
-       // addNotificationObservers()
+        addNotificationObservers()
         
         playStopBackgroundMusic()
-        
-        //Sets the configured volume when the apps starts
-        let info = ["volume": ACTPlayerStats.shared.getMusicVolume()]
-        NotificationCenter.default.post(name: setMusicVolumeNotificationName, object: nil, userInfo: info)
     }
     
     func addNotificationObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.stopBackgroundMusic(_:)), name: stopBackgroundMusicNotificationName, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.startBackgroundMusic(_:)), name: startBackgroundMusicNotificationName, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.setMusicVolume(_:)), name: setMusicVolumeNotificationName, object: nil)
+
     }
     
     func playStopBackgroundMusic() {
@@ -80,21 +75,13 @@ class GameViewController: UIViewController {
             backgroundMusic?.stop()
         }
     }
-    
+
     @objc func startBackgroundMusic(_ info:Notification) {
         if ACTPlayerStats.shared.getSound() {
             backgroundMusic?.play()
         }
     }
-        @objc func setMusicVolume(_ info:Notification) {
-            guard let userInfo = info.userInfo else {return}
-            let volume = userInfo["volume"] as! Float
-            setBackgroundMusicVolume(to: volume)
-        }
-        
-        func setBackgroundMusicVolume(to volume: Float) {
-            backgroundMusic?.volume = volume
-        }
-    }
     
+}
+
 
