@@ -147,9 +147,18 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
                     //let sceneViewVC = self.view?.window?.rootViewController
                     //            sceneViewVC?.present(self.testvc, animated: true, completion: nil)
             
-                    let ab = AboutVC()
-                    let appDelegate = UIApplication.shared.delegate as? AppDelegate
-                    appDelegate?.window?.rootViewController?.present(ab, animated: true, completion: nil)
+//                    let ab = AboutVC()
+//                    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+//                    appDelegate?.window?.rootViewController?.present(ab, animated: true, completion: nil)
+//
+ //                   let layout = UICollectionViewFlowLayout()
+//                    layout.scrollDirection = .horizontal
+//                    let sw = SwipingController(collectionViewLayout: layout)
+//                    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+//                    appDelegate?.window?.rootViewController?.present(sw, animated: true, completion: nil)
+                    self.collectionViewFlowLayoutInitToSwipeController()
+               
+                
                 case 1:
                     ACTManager.shared.transition(mainMenu, toScene: .LoginScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
                 default:
@@ -160,6 +169,14 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
             
         }
         
+    }
+    
+    fileprivate func collectionViewFlowLayoutInitToSwipeController() {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let sw = SwipingController(collectionViewLayout: layout)
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        appDelegate?.window?.rootViewController?.present(sw, animated: true, completion: nil)
     }
     
     
