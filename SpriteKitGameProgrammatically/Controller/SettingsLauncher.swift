@@ -25,6 +25,7 @@ class Setting: NSObject {
 class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
         
         var mainMenu: MainMenu?
+    
 
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -117,6 +118,8 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
 //        print(setting.name)
             handleDismiss()
         
+        
+        
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             
             self.blackView.alpha = 0
@@ -140,10 +143,13 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
                 
                 case 0 :
 //                    ACTManager.shared.transition(mainMenu, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
-                ACTManager.shared.transition(mainMenu, toScene: .AboutScene, transition: SKTransition.moveIn(with: .up, duration: 0.2))
-                    
-                
-                    
+//                ACTManager.shared.transition(mainMenu, toScene: .AboutScene, transition: SKTransition.moveIn(with: .up, duration: 0.2))
+                    //let sceneViewVC = self.view?.window?.rootViewController
+                    //            sceneViewVC?.present(self.testvc, animated: true, completion: nil)
+            
+                    let ab = AboutVC()
+                    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+                    appDelegate?.window?.rootViewController?.present(ab, animated: true, completion: nil)
                 case 1:
                     ACTManager.shared.transition(mainMenu, toScene: .LoginScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
                 default:

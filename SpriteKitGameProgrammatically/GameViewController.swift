@@ -45,7 +45,7 @@ class GameViewController: UIViewController {
         skView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         skView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         
-        let scene = AboutScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+        let scene = MainMenu(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
         scene.scaleMode = .aspectFill
         skView.presentScene(scene)
         skView.ignoresSiblingOrder = true
@@ -81,7 +81,6 @@ class GameViewController: UIViewController {
             backgroundMusic?.play()
         }
     }
-    
 }
 
 

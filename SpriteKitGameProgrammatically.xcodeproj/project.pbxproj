@@ -25,6 +25,7 @@
 		2482B1C3226B26BF007EF025 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C2226B26BF007EF025 /* BaseCell.swift */; };
 		2482B1C5226B26D4007EF025 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C4226B26D4007EF025 /* SettingCell.swift */; };
 		2482B1C8226B2A61007EF025 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C7226B2A61007EF025 /* extension.swift */; };
+		24ED3726227AE590009A466A /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ED3725227AE590009A466A /* TestVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		2482B1C2226B26BF007EF025 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		2482B1C4226B26D4007EF025 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		2482B1C7226B2A61007EF025 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		24ED3725227AE590009A466A /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				244F99C122686BDD004874FB /* MainMenu.swift */,
 				246FFF82226F0EC30043B611 /* LoginScene.swift */,
 				246FFF84226F0EE60043B611 /* AboutScene.swift */,
+				24ED3725227AE590009A466A /* TestVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24ED3726227AE590009A466A /* TestVC.swift in Sources */,
 				2482B1C8226B2A61007EF025 /* extension.swift in Sources */,
 				246FFF83226F0EC30043B611 /* LoginScene.swift in Sources */,
 				240F8013226A1765009F0B9F /* ACTPlayerStats.swift in Sources */,

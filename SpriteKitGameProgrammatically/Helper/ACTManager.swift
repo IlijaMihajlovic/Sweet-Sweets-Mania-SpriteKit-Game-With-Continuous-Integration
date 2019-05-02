@@ -12,7 +12,7 @@ import SpriteKit
 class ACTManager {
     
     enum SceneType {
-        case MainMenu, Gameplay, GameOver, AboutScene, LoginScene
+        case MainMenu, Gameplay, GameOver, LoginScene
     }
     
     //initialize of class private
@@ -50,8 +50,8 @@ class ACTManager {
     
     func getScene(_ sceneType: SceneType) -> SKScene? {
         switch sceneType {
-        case SceneType.AboutScene:
-            return AboutScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+        //case SceneType.AboutScene:
+            //return AboutScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
         
         case SceneType.LoginScene:
             return LoginScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
