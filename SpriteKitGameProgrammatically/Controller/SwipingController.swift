@@ -15,7 +15,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     private let dismissAboutVCToMainMenu: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Cancel", for: .normal)
-        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Medium", size: 17)
+        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
         button.setTitleColor(.mainPink, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(dismissAboutViewControllerTapped), for: .touchUpInside)
@@ -27,10 +27,10 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     }
     
     private let previousButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Previous", for: .normal)
-        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Medium", size: 19)
-        button.setTitleColor(.gray, for: .normal)
+        let button = UIButton()
+        button.setImage(UIImage(named: "backButton")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        button.tintColor = .mainPink
+        button.imageView?.contentMode = .scaleAspectFit
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(handlePrevButton), for: .touchUpInside)
         return button
@@ -38,10 +38,10 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     
 
     private let nextButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Next", for: .normal)
-        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Medium", size: 19)
-        button.setTitleColor(.mainPink, for: .normal)
+        let button = UIButton()
+        button.setImage(UIImage(named: "forwardButton")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        button.tintColor = .mainPink
+        button.imageView?.contentMode = .scaleAspectFit
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(handleNextButton), for: .touchUpInside)
         return button
@@ -118,7 +118,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     
      //MARK: - Constraints
     fileprivate func setupConstraints() {
-        bottomControlsStackView.anchor(top: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 5, bottom: 0, right: 5), size: .init(width: 0, height: 50))
+        bottomControlsStackView.anchor(top: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 3, bottom: 6, right: 3), size: .init(width: 0, height: 40))
         
         dismissAboutVCToMainMenu.anchor(top: view.safeAreaLayoutGuide.topAnchor, bottom: nil, leading: view.leadingAnchor, trailing: nil, padding: .init(top: 5, left: 10, bottom: 0, right: 0), size: .init(width: 60, height: 50))
     }
