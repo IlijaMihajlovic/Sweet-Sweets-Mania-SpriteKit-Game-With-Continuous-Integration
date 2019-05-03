@@ -1,17 +1,14 @@
 //
-//  extension.swift
+//  AutoLayoutAnchorExtension.swift
 //  SpriteKitGameProgrammatically
 //
 //  Created by Ilija Mihajlovic on 4/20/19.
 //  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
 //
 
-
 import UIKit
-import SpriteKit
 
 //MARK: - Auto Layout Anchor Extension
-
 extension UIView {
     
     func anchor(top: NSLayoutYAxisAnchor?, bottom: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero) {
