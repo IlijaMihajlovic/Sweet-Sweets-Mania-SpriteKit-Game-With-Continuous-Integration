@@ -56,32 +56,32 @@ class AboutVC: UIViewController {
     }
     
     
-    private let previousButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("PREV", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.setTitleColor(.gray, for: .normal)
-        return button
-    }()
-    
-    private let nextButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("NEXT", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.setTitleColor(.mainPink, for: .normal)
-        return button
-    }()
-    
-    private let pageControl: UIPageControl = {
-        let pc = UIPageControl()
-        pc.currentPage = 0
-        pc.numberOfPages = 4
-        pc.currentPageIndicatorTintColor = .mainPink
-        pc.pageIndicatorTintColor = UIColor(red: 249/255, green: 207/255, blue: 224/255, alpha: 1)
-        return pc
-    }()
+//    private let previousButton: UIButton = {
+//        let button = UIButton(type: .system)
+//        button.setTitle("PREV", for: .normal)
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+//        button.setTitleColor(.gray, for: .normal)
+//        return button
+//    }()
+//
+//    private let nextButton: UIButton = {
+//        let button = UIButton(type: .system)
+//        button.setTitle("NEXT", for: .normal)
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+//        button.setTitleColor(.mainPink, for: .normal)
+//        return button
+//    }()
+//
+//    private let pageControl: UIPageControl = {
+//        let pc = UIPageControl()
+//        pc.currentPage = 0
+//        pc.numberOfPages = 4
+//        pc.currentPageIndicatorTintColor = .mainPink
+//        pc.pageIndicatorTintColor = UIColor(red: 249/255, green: 207/255, blue: 224/255, alpha: 1)
+//        return pc
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,8 +89,8 @@ class AboutVC: UIViewController {
        
         view.addSubview(descriptionTextView)
         
-        setupBottomControlls()
-        setupLayout()
+//        setupBottomControlls()
+//        setupLayout()
    
        
         self.view.backgroundColor = .white
@@ -101,46 +101,46 @@ class AboutVC: UIViewController {
         
     }
     
-    fileprivate func setupBottomControlls() {
-        let bottomControlsStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextButton])
-        bottomControlsStackView.translatesAutoresizingMaskIntoConstraints = false
-        bottomControlsStackView.distribution = .fillEqually
-        bottomControlsStackView.axis = .horizontal
-        
-        view.addSubview(bottomControlsStackView)
-        
-        NSLayoutConstraint.activate([
-            bottomControlsStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            bottomControlsStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            bottomControlsStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            bottomControlsStackView.heightAnchor.constraint(equalToConstant: 50)
-            ])
-    }
+//    fileprivate func setupBottomControlls() {
+//        let bottomControlsStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextButton])
+//        bottomControlsStackView.translatesAutoresizingMaskIntoConstraints = false
+//        bottomControlsStackView.distribution = .fillEqually
+//        bottomControlsStackView.axis = .horizontal
+//
+//        view.addSubview(bottomControlsStackView)
+//
+//        NSLayoutConstraint.activate([
+//            bottomControlsStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+//            bottomControlsStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+//            bottomControlsStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+//            bottomControlsStackView.heightAnchor.constraint(equalToConstant: 50)
+//            ])
+//    }
     
-    private func setupLayout() {
-        
-        let topImageContainerView = UIView()
-        view.addSubview(topImageContainerView)
-        //enable auto layout
-        topImageContainerView.translatesAutoresizingMaskIntoConstraints = false
-        
-        topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        
-        topImageContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        topImageContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        
-        topImageContainerView.addSubview(bearImageView)
-        bearImageView.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor).isActive = true
-        bearImageView.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor).isActive = true
-        bearImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.5).isActive = true
-        
-        topImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
-        
-        descriptionTextView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor).isActive = true
-        descriptionTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24).isActive = true
-        descriptionTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24).isActive = true
-        descriptionTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-    }
+//    private func setupLayout() {
+//
+//        let topImageContainerView = UIView()
+//        view.addSubview(topImageContainerView)
+//        //enable auto layout
+//        topImageContainerView.translatesAutoresizingMaskIntoConstraints = false
+//
+//        topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+//
+//        topImageContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+//        topImageContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+//
+//        topImageContainerView.addSubview(bearImageView)
+//        bearImageView.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor).isActive = true
+//        bearImageView.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor).isActive = true
+//        bearImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.5).isActive = true
+//
+//        topImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
+//
+//        descriptionTextView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor).isActive = true
+//        descriptionTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24).isActive = true
+//        descriptionTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24).isActive = true
+//        descriptionTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+//    }
     
 }
 
@@ -180,14 +180,14 @@ class AboutVC: UIViewController {
 //        return button
 //    }()
 //
-//    var imageNode: SKShapeNode = {
-//        var image = SKShapeNode(circleOfRadius: 70)
-//        image.fillTexture = SKTexture(image: UIImage(named: "Moja")!)
-//        image.lineWidth = 3
-//        image.fillColor = .white
-//
-//        return image
-//    }()
+    var imageNode: SKShapeNode = {
+        var image = SKShapeNode(circleOfRadius: 70)
+        image.fillTexture = SKTexture(image: UIImage(named: "Moja")!)
+        image.lineWidth = 3
+        image.fillColor = .white
+
+        return image
+    }()
 //
 //    var labelNode: SKLabelNode = {
 //        var label = SKLabelNode(fontNamed: "HelveticaNeue-Light")

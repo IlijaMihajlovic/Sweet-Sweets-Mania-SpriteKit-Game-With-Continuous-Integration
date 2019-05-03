@@ -21,10 +21,11 @@
 		244F99CC22686FA6004874FB /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99CB22686FA6004874FB /* Gameplay.swift */; };
 		244F99CE22689A36004874FB /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99CD22689A36004874FB /* GameOver.swift */; };
 		246FFF83226F0EC30043B611 /* LoginScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246FFF82226F0EC30043B611 /* LoginScene.swift */; };
-		246FFF85226F0EE60043B611 /* AboutScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246FFF84226F0EE60043B611 /* AboutScene.swift */; };
+		246FFF85226F0EE60043B611 /* AboutScene1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246FFF84226F0EE60043B611 /* AboutScene1.swift */; };
 		2482B1C3226B26BF007EF025 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C2226B26BF007EF025 /* BaseCell.swift */; };
 		2482B1C5226B26D4007EF025 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C4226B26D4007EF025 /* SettingCell.swift */; };
 		2482B1C8226B2A61007EF025 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C7226B2A61007EF025 /* extension.swift */; };
+		24C5BEF2227C458F0050CBAA /* SwipingController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */; };
 		24ED3726227AE590009A466A /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ED3725227AE590009A466A /* TestVC.swift */; };
 		24ED372C227B5A66009A466A /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ED372B227B5A66009A466A /* SwipingController.swift */; };
 		24ED372E227B7016009A466A /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ED372D227B7016009A466A /* PageCell.swift */; };
@@ -48,10 +49,11 @@
 		244F99CB22686FA6004874FB /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
 		244F99CD22689A36004874FB /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		246FFF82226F0EC30043B611 /* LoginScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScene.swift; sourceTree = "<group>"; };
-		246FFF84226F0EE60043B611 /* AboutScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScene.swift; sourceTree = "<group>"; };
+		246FFF84226F0EE60043B611 /* AboutScene1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScene1.swift; sourceTree = "<group>"; };
 		2482B1C2226B26BF007EF025 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		2482B1C4226B26D4007EF025 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		2482B1C7226B2A61007EF025 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+CollectionView.swift"; sourceTree = "<group>"; };
 		24ED3725227AE590009A466A /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		24ED372B227B5A66009A466A /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		24ED372D227B7016009A466A /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
@@ -122,7 +124,7 @@
 				240F801E226A4910009F0B9F /* SettingsLauncher.swift */,
 				244F99C122686BDD004874FB /* MainMenu.swift */,
 				246FFF82226F0EC30043B611 /* LoginScene.swift */,
-				246FFF84226F0EE60043B611 /* AboutScene.swift */,
+				246FFF84226F0EE60043B611 /* AboutScene1.swift */,
 				24ED3725227AE590009A466A /* TestVC.swift */,
 				24ED372B227B5A66009A466A /* SwipingController.swift */,
 			);
@@ -143,6 +145,7 @@
 			children = (
 				2482B1C7226B2A61007EF025 /* extension.swift */,
 				244F99C522686D79004874FB /* Extension.swift */,
+				24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -236,12 +239,13 @@
 				240F801B226A229E009F0B9F /* ACTManager.swift in Sources */,
 				244F99C022686A95004874FB /* GameViewController.swift in Sources */,
 				2482B1C5226B26D4007EF025 /* SettingCell.swift in Sources */,
-				246FFF85226F0EE60043B611 /* AboutScene.swift in Sources */,
+				246FFF85226F0EE60043B611 /* AboutScene1.swift in Sources */,
 				24ED372C227B5A66009A466A /* SwipingController.swift in Sources */,
 				244F99AE226868A3004874FB /* AppDelegate.swift in Sources */,
 				244F99C622686D79004874FB /* Extension.swift in Sources */,
 				24ED3730227B87FF009A466A /* PageModel.swift in Sources */,
 				24ED372E227B7016009A466A /* PageCell.swift in Sources */,
+				24C5BEF2227C458F0050CBAA /* SwipingController+CollectionView.swift in Sources */,
 				244F99C422686D3E004874FB /* BDButton.swift in Sources */,
 				244F99CC22686FA6004874FB /* Gameplay.swift in Sources */,
 				244F99C222686BDD004874FB /* MainMenu.swift in Sources */,

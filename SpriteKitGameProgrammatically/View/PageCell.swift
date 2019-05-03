@@ -59,6 +59,9 @@ class PageCell: UICollectionViewCell {
     }
     
     
+    
+    
+    
     private func setupLayout() {
         
         let topImageContainerView = UIView()
