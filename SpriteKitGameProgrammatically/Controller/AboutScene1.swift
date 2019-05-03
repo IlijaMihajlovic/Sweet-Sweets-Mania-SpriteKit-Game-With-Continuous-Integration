@@ -180,14 +180,7 @@ class AboutVC: UIViewController {
 //        return button
 //    }()
 //
-    var imageNode: SKShapeNode = {
-        var image = SKShapeNode(circleOfRadius: 70)
-        image.fillTexture = SKTexture(image: UIImage(named: "Moja")!)
-        image.lineWidth = 3
-        image.fillColor = .white
 
-        return image
-    }()
 //
 //    var labelNode: SKLabelNode = {
 //        var label = SKLabelNode(fontNamed: "HelveticaNeue-Light")
