@@ -12,6 +12,20 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     
     let CellReuseIdentifier = "cellId"
     
+    private let dismissAboutVCToMainMenu: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Cancel", for: .normal)
+        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Medium", size: 17)
+        button.setTitleColor(.mainPink, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(dismissAboutViewControllerTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc fileprivate func dismissAboutViewControllerTapped() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     private let previousButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Previous", for: .normal)
@@ -92,12 +106,14 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     }
     
     fileprivate func addSubView() {
-        [bottomControlsStackView].forEach{(view.addSubview($0))}
+        [bottomControlsStackView, dismissAboutVCToMainMenu].forEach{(view.addSubview($0))}
     }
     
      //MARK: - Constraints
     fileprivate func setupConstraints() {
         bottomControlsStackView.anchor(top: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 5, bottom: 0, right: 5), size: .init(width: 0, height: 50))
+        
+        dismissAboutVCToMainMenu.anchor(top: view.safeAreaLayoutGuide.topAnchor, bottom: nil, leading: view.leadingAnchor, trailing: nil, padding: .init(top: 5, left: 10, bottom: 0, right: 0), size: .init(width: 60, height: 50))
     }
     
 }
