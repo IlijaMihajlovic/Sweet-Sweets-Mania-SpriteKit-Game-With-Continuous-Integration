@@ -15,7 +15,7 @@ class PageCell: UICollectionViewCell {
         didSet {
             guard let unwrappedPage = page else { return }
             
-            bearImageView.image = UIImage(named: unwrappedPage.imageName)
+            showImageView.image = UIImage(named: unwrappedPage.imageName)
             
             let attributedText = NSMutableAttributedString(string: unwrappedPage.headerText, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)])
             
@@ -26,14 +26,15 @@ class PageCell: UICollectionViewCell {
         }
     }
     
-   private let bearImageView: UIImageView = {
-        var imageView = UIImageView(image: UIImage(named: "bear_first"))
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-        
+        lazy private var showImageView: UIImageView = {
+            var imageView = UIImageView()
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.contentMode = .scaleAspectFit
+            return imageView
+    
     }()
     
+  
    private let descriptionTextView: UITextView = {
         let textView = UITextView()
         
@@ -75,17 +76,17 @@ class PageCell: UICollectionViewCell {
         topImageContainerView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         topImageContainerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         
-        topImageContainerView.addSubview(bearImageView)
-        bearImageView.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor).isActive = true
-        bearImageView.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor).isActive = true
-        bearImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.5).isActive = true
+        topImageContainerView.addSubview(showImageView)
+        showImageView.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor).isActive = true
+        showImageView.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor).isActive = true
+        showImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.5).isActive = true
         
         topImageContainerView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5).isActive = true
         
         addSubview(descriptionTextView)
         descriptionTextView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor).isActive = true
-        descriptionTextView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24).isActive = true
-        descriptionTextView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24).isActive = true
+        descriptionTextView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
+        descriptionTextView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5).isActive = true
         descriptionTextView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
    }
     

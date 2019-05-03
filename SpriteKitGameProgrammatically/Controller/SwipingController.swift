@@ -67,8 +67,14 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     }()
     
      let pages = [
-        PageModel(imageName: "bear_first", headerText: "Join use today in our fun and games!", bodyText: "Are you ready for loads and loads of fun? Don't wait any longer! We hope to see you in our stores soon."),
-        PageModel(imageName: "heart_second", headerText: "Subscribe and get coupons on our daily events", bodyText: "Get notified of the savings immediately when we announce them on our website. Make sure to also give us any feedback you have."),
+        PageModel(imageName: "MyImage", headerText: "Briefly About The Author Of The Project", bodyText:
+        """
+            Self-taught iOS developer and computer science graduate, with a passion for machine learning and computer vision.
+            I specialize mainly in iOS development but lately, I'm working on python and machine learning too.
+            In my free time, I read about deep learning, neural nets and theire application towards
+            solving difficult and data-intensive problems or just playing with the nearest dog.
+        """),
+        PageModel(imageName: "heart_second", headerText: "About The Game", bodyText: "Get notified of the savings immediately when we announce them on our website. Make sure to also give us any feedback you have."),
         PageModel(imageName: "leaf_third", headerText: "VIP members special services", bodyText: ""),
         
         PageModel(imageName: "bear_first", headerText: "Join use today in our fun and games!", bodyText: "Are you ready for loads and loads of fun? Don't wait any longer! We hope to see you in our stores soon.")
@@ -82,7 +88,8 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         addSubView()
         setupConstraints()
     }
-    
+   
+
     @objc fileprivate func handleNextButton(_ sender: UIButton) {
         sender.popUpAnimation()
         let nextIndex = min(pageControl.currentPage + 1, pages.count - 1)
