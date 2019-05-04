@@ -40,11 +40,20 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     
     //Cell Data Source
     let settings: [Setting] = {
-        return [Setting(name: "Settings", imageName: "settingsButton"),
+        return [Setting(name: "About", imageName: "aboutIcon"),
                 Setting(name: "Replay", imageName: "replayButton"),
                 Setting(name: "Share", imageName: "shareButton"),
                 Setting(name: "Cancel", imageName: "settingsButton")]
     }()
+    
+    
+    override init() {
+        super.init()
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(SettingCell.self, forCellWithReuseIdentifier: cellId)
+    }
+    
     
     func showSettings() {
         if let window = UIApplication.shared.keyWindow {
@@ -114,11 +123,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let setting = settings[indexPath.item]
-//        print(setting.name)
             handleDismiss()
-        
-        
         
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             
@@ -132,8 +137,6 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         }) { (_ ) in
             
             //Present scene after completion
-           
-            
             let setting = self.settings[indexPath.item]
             guard let mainMenu = self.mainMenu else {return}
             
@@ -142,23 +145,8 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
                 switch indexPath.item {
                 
                 case 0 :
-//                    ACTManager.shared.transition(mainMenu, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
-//                ACTManager.shared.transition(mainMenu, toScene: .AboutScene, transition: SKTransition.moveIn(with: .up, duration: 0.2))
-                    //let sceneViewVC = self.view?.window?.rootViewController
-                    //            sceneViewVC?.present(self.testvc, animated: true, completion: nil)
-            
-//                    let ab = AboutVC()
-//                    let appDelegate = UIApplication.shared.delegate as? AppDelegate
-//                    appDelegate?.window?.rootViewController?.present(ab, animated: true, completion: nil)
-//
- //                   let layout = UICollectionViewFlowLayout()
-//                    layout.scrollDirection = .horizontal
-//                    let sw = SwipingController(collectionViewLayout: layout)
-//                    let appDelegate = UIApplication.shared.delegate as? AppDelegate
-//                    appDelegate?.window?.rootViewController?.present(sw, animated: true, completion: nil)
                     self.collectionViewFlowLayoutInitToSwipeController()
                
-                
                 case 1:
                     ACTManager.shared.transition(mainMenu, toScene: .LoginScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
                 default:
@@ -179,15 +167,6 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         appDelegate?.window?.rootViewController?.present(sw, animated: true, completion: nil)
     }
     
-    
-    
-    override init() {
-        super.init()
-        
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        
-        collectionView.register(SettingCell.self, forCellWithReuseIdentifier: cellId)
-        
-    }
+
+ 
 }
