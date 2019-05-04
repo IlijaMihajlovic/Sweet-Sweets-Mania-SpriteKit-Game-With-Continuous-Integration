@@ -69,10 +69,11 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
      let pages = [
         PageModel(imageName: "MyImage", headerText: "Briefly About The Author Of The Project", bodyText:
         """
-            Self-taught iOS developer and computer science graduate, with a passion for machine learning and computer vision.
-            I specialize mainly in iOS development but lately, I'm working on python and machine learning too.
-            In my free time, I read about deep learning, neural nets and theire application towards
-            solving difficult and data-intensive problems or just playing with the nearest dog.
+        Self-taught iOS developer and computer science graduate, with a passion for machine
+        learning and computer vision.
+        I specialize mainly in iOS development but lately, I'm working on python and machine learning too.
+        In my free time, I read about deep learning, neural nets and theire application towards
+        solving difficult and data-intensive problems or just playing with the nearest dog.
         """),
         PageModel(imageName: "heart_second", headerText: "About The Game", bodyText: "Get notified of the savings immediately when we announce them on our website. Make sure to also give us any feedback you have."),
         PageModel(imageName: "leaf_third", headerText: "VIP members special services", bodyText: ""),
