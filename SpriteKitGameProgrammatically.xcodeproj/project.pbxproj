@@ -25,14 +25,21 @@
 		2482B1C5226B26D4007EF025 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C4226B26D4007EF025 /* SettingCell.swift */; };
 		2482B1C8226B2A61007EF025 /* AutoLayoutAnchorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C7226B2A61007EF025 /* AutoLayoutAnchorExt.swift */; };
 		24C5BEF2227C458F0050CBAA /* SwipingController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */; };
+		24E4A5BE227F49F9009035F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */; };
+		24E4A5C0227F4BAC009035F7 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */; };
+		24E4A5C2227F4C84009035F7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4A5C1227F4C84009035F7 /* WelcomeViewController.swift */; };
+		24E4A5C4227F4DD1009035F7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4A5C3227F4DD1009035F7 /* Service.swift */; };
+		24E4A5C6227F568E009035F7 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4A5C5227F568E009035F7 /* UserProfileController.swift */; };
 		24E95CBC227C5E4F00CA272C /* UIColor+UIbuttonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E95CBB227C5E4F00CA272C /* UIColor+UIbuttonExt.swift */; };
 		24E95CBE227C5F1700CA272C /* SwipingController+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E95CBD227C5F1700CA272C /* SwipingController+ScrollView.swift */; };
 		24ED372C227B5A66009A466A /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ED372B227B5A66009A466A /* SwipingController.swift */; };
 		24ED372E227B7016009A466A /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ED372D227B7016009A466A /* PageCell.swift */; };
 		24ED3730227B87FF009A466A /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ED372F227B87FF009A466A /* PageModel.swift */; };
+		7AB073833A1FA307D29CA58C /* Pods_SpriteKitGameProgrammatically.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3960846A0C5148B991391E /* Pods_SpriteKitGameProgrammatically.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		140109F52B4F1D78FF3CAAD8 /* Pods-SpriteKitGameProgrammatically.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpriteKitGameProgrammatically.release.xcconfig"; path = "Target Support Files/Pods-SpriteKitGameProgrammatically/Pods-SpriteKitGameProgrammatically.release.xcconfig"; sourceTree = "<group>"; };
 		240F801A226A229E009F0B9F /* ACTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACTManager.swift; sourceTree = "<group>"; };
 		240F801E226A4910009F0B9F /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
 		2436715C22707603009FC1A1 /* summer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = summer.mp3; sourceTree = "<group>"; };
@@ -53,11 +60,18 @@
 		2482B1C4226B26D4007EF025 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		2482B1C7226B2A61007EF025 /* AutoLayoutAnchorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutAnchorExt.swift; sourceTree = "<group>"; };
 		24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+CollectionView.swift"; sourceTree = "<group>"; };
+		24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		24E4A5C1227F4C84009035F7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		24E4A5C3227F4DD1009035F7 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		24E4A5C5227F568E009035F7 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		24E95CBB227C5E4F00CA272C /* UIColor+UIbuttonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+UIbuttonExt.swift"; sourceTree = "<group>"; };
 		24E95CBD227C5F1700CA272C /* SwipingController+ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+ScrollView.swift"; sourceTree = "<group>"; };
 		24ED372B227B5A66009A466A /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		24ED372D227B7016009A466A /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		24ED372F227B87FF009A466A /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		51A72247B66BA809593FA2A1 /* Pods-SpriteKitGameProgrammatically.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpriteKitGameProgrammatically.debug.xcconfig"; path = "Target Support Files/Pods-SpriteKitGameProgrammatically/Pods-SpriteKitGameProgrammatically.debug.xcconfig"; sourceTree = "<group>"; };
+		CF3960846A0C5148B991391E /* Pods_SpriteKitGameProgrammatically.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpriteKitGameProgrammatically.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AB073833A1FA307D29CA58C /* Pods_SpriteKitGameProgrammatically.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +91,8 @@
 			children = (
 				244F99AC226868A3004874FB /* SpriteKitGameProgrammatically */,
 				244F99AB226868A3004874FB /* Products */,
+				BC2C8F615C6A6BE92C0693D1 /* Pods */,
+				F389AED203B143BAC066EE57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +141,9 @@
 				244F99C122686BDD004874FB /* MainMenu.swift */,
 				246FFF82226F0EC30043B611 /* LoginScene.swift */,
 				24ED372B227B5A66009A466A /* SwipingController.swift */,
+				24E4A5C5227F568E009035F7 /* UserProfileController.swift */,
+				24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */,
+				24E4A5C1227F4C84009035F7 /* WelcomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -145,6 +165,7 @@
 				24E95CBB227C5E4F00CA272C /* UIColor+UIbuttonExt.swift */,
 				24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */,
 				24E95CBD227C5F1700CA272C /* SwipingController+ScrollView.swift */,
+				24E4A5C3227F4DD1009035F7 /* Service.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -162,6 +183,7 @@
 			children = (
 				244F99B4226868A4004874FB /* Assets.xcassets */,
 				2436715C22707603009FC1A1 /* summer.mp3 */,
+				24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -182,6 +204,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BC2C8F615C6A6BE92C0693D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51A72247B66BA809593FA2A1 /* Pods-SpriteKitGameProgrammatically.debug.xcconfig */,
+				140109F52B4F1D78FF3CAAD8 /* Pods-SpriteKitGameProgrammatically.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F389AED203B143BAC066EE57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF3960846A0C5148B991391E /* Pods_SpriteKitGameProgrammatically.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 244F99BC226868A4004874FB /* Build configuration list for PBXNativeTarget "SpriteKitGameProgrammatically" */;
 			buildPhases = (
+				1CAAD5307F387BB9DA070132 /* [CP] Check Pods Manifest.lock */,
 				244F99A6226868A3004874FB /* Sources */,
 				244F99A7226868A3004874FB /* Frameworks */,
 				244F99A8226868A3004874FB /* Resources */,
+				0CECD4233596802F19058DAF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,11 +283,67 @@
 			files = (
 				2436715D22707603009FC1A1 /* summer.mp3 in Resources */,
 				244F99B8226868A4004874FB /* LaunchScreen.storyboard in Resources */,
+				24E4A5BE227F49F9009035F7 /* GoogleService-Info.plist in Resources */,
 				244F99B5226868A4004874FB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CECD4233596802F19058DAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpriteKitGameProgrammatically/Pods-SpriteKitGameProgrammatically-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpriteKitGameProgrammatically/Pods-SpriteKitGameProgrammatically-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CAAD5307F387BB9DA070132 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpriteKitGameProgrammatically-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		244F99A6226868A3004874FB /* Sources */ = {
@@ -254,6 +351,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E95CBE227C5F1700CA272C /* SwipingController+ScrollView.swift in Sources */,
+				24E4A5C4227F4DD1009035F7 /* Service.swift in Sources */,
+				24E4A5C6227F568E009035F7 /* UserProfileController.swift in Sources */,
 				24E95CBC227C5E4F00CA272C /* UIColor+UIbuttonExt.swift in Sources */,
 				2482B1C8226B2A61007EF025 /* AutoLayoutAnchorExt.swift in Sources */,
 				246FFF83226F0EC30043B611 /* LoginScene.swift in Sources */,
@@ -262,9 +361,11 @@
 				244F99CE22689A36004874FB /* GameOver.swift in Sources */,
 				2482B1C3226B26BF007EF025 /* BaseCell.swift in Sources */,
 				240F801B226A229E009F0B9F /* ACTManager.swift in Sources */,
+				24E4A5C0227F4BAC009035F7 /* FirebaseManager.swift in Sources */,
 				244F99C022686A95004874FB /* GameViewController.swift in Sources */,
 				2482B1C5226B26D4007EF025 /* SettingCell.swift in Sources */,
 				24ED372C227B5A66009A466A /* SwipingController.swift in Sources */,
+				24E4A5C2227F4C84009035F7 /* WelcomeViewController.swift in Sources */,
 				244F99AE226868A3004874FB /* AppDelegate.swift in Sources */,
 				244F99C622686D79004874FB /* Extension.swift in Sources */,
 				24ED3730227B87FF009A466A /* PageModel.swift in Sources */,
@@ -408,6 +509,7 @@
 		};
 		244F99BD226868A4004874FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51A72247B66BA809593FA2A1 /* Pods-SpriteKitGameProgrammatically.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -425,6 +527,7 @@
 		};
 		244F99BE226868A4004874FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 140109F52B4F1D78FF3CAAD8 /* Pods-SpriteKitGameProgrammatically.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

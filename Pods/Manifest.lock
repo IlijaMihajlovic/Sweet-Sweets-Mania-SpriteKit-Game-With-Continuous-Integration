@@ -1,0 +1,74 @@
+PODS:
+  - Firebase/Auth (5.20.2):
+    - Firebase/CoreOnly
+    - FirebaseAuth (= 5.4.2)
+  - Firebase/CoreOnly (5.20.2):
+    - FirebaseCore (= 5.4.1)
+  - Firebase/Database (5.20.2):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (= 5.1.1)
+  - Firebase/Storage (5.20.2):
+    - Firebase/CoreOnly
+    - FirebaseStorage (= 3.1.1)
+  - FirebaseAuth (5.4.2):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.2)
+    - GoogleUtilities/Environment (~> 5.2)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseAuthInterop (1.0.0)
+  - FirebaseCore (5.4.1):
+    - GoogleUtilities/Environment (~> 5.2)
+    - GoogleUtilities/Logger (~> 5.2)
+  - FirebaseDatabase (5.1.1):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.2)
+    - leveldb-library (~> 1.18)
+  - FirebaseStorage (3.1.1):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.2)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleUtilities/Environment (5.7.0)
+  - GoogleUtilities/Logger (5.7.0):
+    - GoogleUtilities/Environment
+  - GTMSessionFetcher/Core (1.2.1)
+  - JGProgressHUD (2.0.3)
+  - LBTAComponents (1.0.2)
+  - leveldb-library (1.20)
+
+DEPENDENCIES:
+  - Firebase/Auth
+  - Firebase/Database
+  - Firebase/Storage
+  - JGProgressHUD
+  - LBTAComponents
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Firebase
+    - FirebaseAuth
+    - FirebaseAuthInterop
+    - FirebaseCore
+    - FirebaseDatabase
+    - FirebaseStorage
+    - GoogleUtilities
+    - GTMSessionFetcher
+    - JGProgressHUD
+    - LBTAComponents
+    - leveldb-library
+
+SPEC CHECKSUMS:
+  Firebase: 0c8cf33f266410c61ab3e2265cfa412200351d9c
+  FirebaseAuth: dd7bbf03a5aee0eafb3a1aee4d2812bd74bac890
+  FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
+  FirebaseCore: f1a9a8be1aee4bf71a2fc0f4096df6788bdfda61
+  FirebaseDatabase: 2c15b0ea6f2c6eb5e57413f9d6340f1e50b81ae3
+  FirebaseStorage: 6162ef4322502b818d9de0ec552f5226d283de43
+  GoogleUtilities: 273e67030e0de313e7304f6dcfa96fc5214f6c23
+  GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
+  LBTAComponents: c4c8863e0ef6715e378300db148b96a09df656f7
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+
+PODFILE CHECKSUM: 1ffa2c1cc95e1f83f1b7fee3dff9651dfef30ca6
+
+COCOAPODS: 1.6.1
