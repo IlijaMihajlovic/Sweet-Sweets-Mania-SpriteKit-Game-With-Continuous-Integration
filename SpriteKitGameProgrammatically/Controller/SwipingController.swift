@@ -13,18 +13,14 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     let CellReuseIdentifier = "cellId"
     
     private let dismissAboutVCToMainMenu: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Cancel", for: .normal)
-        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
-        button.setTitleColor(.mainPink, for: .normal)
+        let button = UIButton()
+        button.setImage(UIImage(named: "BackToMainMenu"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.imageView?.contentMode = .scaleAspectFit
         button.addTarget(self, action: #selector(dismissAboutViewControllerTapped), for: .touchUpInside)
         return button
     }()
     
-    @objc fileprivate func dismissAboutViewControllerTapped() {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     private let previousButton: UIButton = {
         let button = UIButton()
@@ -88,8 +84,10 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         configureCollectionView()
         addSubView()
         setupConstraints()
+        
     }
    
+  
 
     @objc fileprivate func handleNextButton(_ sender: UIButton) {
         sender.popUpAnimation()
@@ -113,6 +111,11 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         collectionView.isPagingEnabled = true
     }
     
+    @objc fileprivate func dismissAboutViewControllerTapped() {
+        self.dismiss(animated: true, completion: nil)
+    
+    }
+    
     fileprivate func addSubView() {
         [bottomControlsStackView, dismissAboutVCToMainMenu].forEach{(view.addSubview($0))}
     }
@@ -121,7 +124,9 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     fileprivate func setupConstraints() {
         bottomControlsStackView.anchor(top: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 3, bottom: 6, right: 3), size: .init(width: 0, height: 40))
         
-        dismissAboutVCToMainMenu.anchor(top: view.safeAreaLayoutGuide.topAnchor, bottom: nil, leading: view.leadingAnchor, trailing: nil, padding: .init(top: 5, left: 10, bottom: 0, right: 0), size: .init(width: 60, height: 50))
+       dismissAboutVCToMainMenu.anchor(top: view.topAnchor, bottom: nil, leading: view.leadingAnchor, trailing: nil, padding: .init(top: 2, left: 10, bottom: 0, right: 0), size: .init(width: 100, height: 100))
+        
+       
     }
     
 }

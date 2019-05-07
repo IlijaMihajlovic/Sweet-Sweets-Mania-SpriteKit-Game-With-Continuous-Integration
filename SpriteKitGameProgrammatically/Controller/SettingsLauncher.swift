@@ -6,27 +6,12 @@
 //  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
 //
 //
+
 import UIKit
 import SpriteKit
 
-
-
-//Model Class
-class Setting: NSObject {
-    let name: String
-    let imageName: String
-    
-    init(name: String, imageName: String) {
-        self.name = name
-        self.imageName = imageName
-    }
-}
-
 class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-        
-        var mainMenu: MainMenu?
     
-
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -36,14 +21,15 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     
     let blackView = UIView()
     let cellId = "cellId"
-    let cellHeight: CGFloat = 50
+    let cellHeight: CGFloat = 60
+    var mainMenu: MainMenu?
     
     //Cell Data Source
-    let settings: [Setting] = {
-        return [Setting(name: "About", imageName: "aboutIcon"),
-                Setting(name: "Replay", imageName: "replayButton"),
-                Setting(name: "Share", imageName: "shareButton"),
-                Setting(name: "Cancel", imageName: "settingsButton")]
+    let settings: [SettingsModel] = {
+        return [SettingsModel(name: "About", imageName: "aboutIcon"),
+                SettingsModel(name: "User", imageName: "profileIcon"),
+                SettingsModel(name: "Rate", imageName: "rateButton"),
+                SettingsModel(name: "Cancel", imageName: "cancelButton")]
     }()
     
     
@@ -52,6 +38,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(SettingCell.self, forCellWithReuseIdentifier: cellId)
+        
     }
     
     
@@ -82,7 +69,6 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
                 self.collectionView.frame = CGRect(x: 0, y: y, width: self.collectionView.frame.width, height: self.collectionView.frame.height)
                 
             }, completion: nil)
-            
            
         }
         
@@ -148,7 +134,11 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
                     self.collectionViewFlowLayoutInitToSwipeController()
                
                 case 1:
-                    ACTManager.shared.transition(mainMenu, toScene: .LoginScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
+                    ACTManager.shared.transition(mainMenu, toScene: .UserProfileScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
+                    
+                case 2:
+                   self.rateProjectOnGitHub()
+             
                 default:
                     break
                 }
@@ -159,6 +149,20 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         
     }
     
+    fileprivate func rateProjectOnGitHub() {
+        
+        //Check out my GitHub repo
+        if let url = URL(string: "https://github.com/IlijaMihajlovic") {
+            UIApplication.shared.open(url, options: [:], completionHandler: { (result) in
+                if result {
+                    print("Success")
+                } else {
+                    print("Failed")
+                }
+            })
+        }
+    }
+    
     fileprivate func collectionViewFlowLayoutInitToSwipeController() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -167,6 +171,5 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         appDelegate?.window?.rootViewController?.present(sw, animated: true, completion: nil)
     }
     
-
  
 }

@@ -12,7 +12,7 @@ import SpriteKit
 class ACTManager {
     
     enum SceneType {
-        case MainMenu, Gameplay, GameOver, LoginScene
+        case MainMenu, Gameplay, GameOver, LoginScene, UserProfileScene, WelcomeScene
     }
     
     //initialize of class private
@@ -53,6 +53,12 @@ class ACTManager {
         //case SceneType.AboutScene:
             //return AboutScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
         
+        case SceneType.WelcomeScene:
+            return WelcomeScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+            
+        case SceneType.UserProfileScene:
+            return UserProfileScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+            
         case SceneType.LoginScene:
             return LoginScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
      
@@ -100,6 +106,8 @@ class ACTManager {
         // present the view controller
         scene.view?.window?.rootViewController?.present(activityViewController, animated: true, completion: nil)
     }
+    
+ 
     
 }
 

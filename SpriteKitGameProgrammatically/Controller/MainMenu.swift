@@ -9,9 +9,7 @@
 import SpriteKit
 import UIKit
 class MainMenu: SKScene {
-    
-   
-    
+
     var background: SKSpriteNode = {
         var sprite = SKSpriteNode(imageNamed: "Background")
         if DeviceType.isiPad || DeviceType.isiPadPro {
@@ -46,27 +44,6 @@ class MainMenu: SKScene {
     }()
     
     
-    lazy var rateButton: BDButton = {
-        var button = BDButton(imageNamed: "ButtonRate", buttonAction: {
-            
-            //Check out my GitHub repo
-            if let url = URL(string: "https://github.com/IlijaMihajlovic") {
-                UIApplication.shared.open(url, options: [:], completionHandler: { (result) in
-                    if result {
-                        print("Success")
-                    } else {
-                        print("Failed")
-                    }
-                })
-                
-            }
-            
-        })
-        button.scaleTo(screenWithPercentage: 0.27)
-        button.zPosition = 1
-        return button
-    }()
-    
     
     lazy var shareButton: BDButton = {
         var button = BDButton(imageNamed: "ButtonShare", buttonAction: {
@@ -83,7 +60,6 @@ class MainMenu: SKScene {
     
     lazy var handleMoreButton: BDButton = {
         var button = BDButton(imageNamed: "ButtonSettings", buttonAction: {
-//
         self.handleMore()
           
         })
@@ -109,7 +85,7 @@ class MainMenu: SKScene {
         launcher.mainMenu = self //Make Main Menu scene not nil
         return launcher
     }()
-    
+
     
     func handleMore() {
         settingsLauncher.mainMenu = self
@@ -121,7 +97,6 @@ class MainMenu: SKScene {
         background.position = CGPoint.zero
         title.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.25)
         playButton.position = CGPoint.zero
-        rateButton.position = CGPoint(x: ScreenSize.width * -0.15, y: ScreenSize.heigth * -0.15)
         shareButton.position = CGPoint(x: ScreenSize.width * 0.20, y: ScreenSize.heigth * -0.15)
         handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.heigth * 0.35)
     }
@@ -131,7 +106,6 @@ class MainMenu: SKScene {
         addChild(background)
         addChild(title)
         addChild(playButton)
-        addChild(rateButton)
         addChild(shareButton)
         addChild(handleMoreButton)
     }

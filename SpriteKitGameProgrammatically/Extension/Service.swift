@@ -11,6 +11,7 @@ import LBTAComponents
 
 class Service {
     
+    static let backButtonColor = UIColor(r: 242, g: 151, b: 187)
     static let baseColor = UIColor(r: 254, g: 202, b: 64)
     static let darkBaseColor = UIColor(r: 253, g: 166, b: 47)
     static let unselectedItemColor = UIColor(r: 173, g: 173, b: 173)

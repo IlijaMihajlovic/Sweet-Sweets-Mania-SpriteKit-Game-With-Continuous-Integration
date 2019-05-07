@@ -19,13 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        //let gameViewController = GameViewController()
-        let firebaseManager = FirebaseManager()
+        let gameViewController = GameViewController()
+        //let firebaseManager = FirebaseManager()
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-        //window?.rootViewController = gameViewController
-        window?.rootViewController = firebaseManager
+        window?.rootViewController = gameViewController
+        //window?.rootViewController = firebaseManager
         
         ACTManager.shared.launch()
         

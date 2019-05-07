@@ -25,6 +25,7 @@
 		2482B1C5226B26D4007EF025 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C4226B26D4007EF025 /* SettingCell.swift */; };
 		2482B1C8226B2A61007EF025 /* AutoLayoutAnchorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C7226B2A61007EF025 /* AutoLayoutAnchorExt.swift */; };
 		24C5BEF2227C458F0050CBAA /* SwipingController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */; };
+		24CF845422820A5500D35D19 /* SettignsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF845322820A5500D35D19 /* SettignsModel.swift */; };
 		24E4A5BE227F49F9009035F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */; };
 		24E4A5C0227F4BAC009035F7 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */; };
 		24E4A5C2227F4C84009035F7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4A5C1227F4C84009035F7 /* WelcomeViewController.swift */; };
@@ -60,6 +61,7 @@
 		2482B1C4226B26D4007EF025 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		2482B1C7226B2A61007EF025 /* AutoLayoutAnchorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutAnchorExt.swift; sourceTree = "<group>"; };
 		24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+CollectionView.swift"; sourceTree = "<group>"; };
+		24CF845322820A5500D35D19 /* SettignsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettignsModel.swift; sourceTree = "<group>"; };
 		24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		24E4A5C1227F4C84009035F7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +118,6 @@
 				24E95CC1227C607C00CA272C /* Interface Builder */,
 				24E95CC0227C603A00CA272C /* Resources */,
 				24E95CBF227C5FF100CA272C /* Supporting Files */,
-				244F99BF22686A95004874FB /* GameViewController.swift */,
 				244F99CD22689A36004874FB /* GameOver.swift */,
 				244F99CB22686FA6004874FB /* Gameplay.swift */,
 				244F99C322686D3E004874FB /* BDButton.swift */,
@@ -137,13 +138,12 @@
 		2482B1C0226B2645007EF025 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				24CF84522281D61F00D35D19 /* Firebase Controllers */,
+				244F99BF22686A95004874FB /* GameViewController.swift */,
 				240F801E226A4910009F0B9F /* SettingsLauncher.swift */,
 				244F99C122686BDD004874FB /* MainMenu.swift */,
 				246FFF82226F0EC30043B611 /* LoginScene.swift */,
 				24ED372B227B5A66009A466A /* SwipingController.swift */,
-				24E4A5C5227F568E009035F7 /* UserProfileController.swift */,
-				24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */,
-				24E4A5C1227F4C84009035F7 /* WelcomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,6 +168,16 @@
 				24E4A5C3227F4DD1009035F7 /* Service.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		24CF84522281D61F00D35D19 /* Firebase Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */,
+				24E4A5C5227F568E009035F7 /* UserProfileController.swift */,
+				24E4A5C1227F4C84009035F7 /* WelcomeViewController.swift */,
+			);
+			path = "Firebase Controllers";
 			sourceTree = "<group>";
 		};
 		24E95CBF227C5FF100CA272C /* Supporting Files */ = {
@@ -200,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				24ED372F227B87FF009A466A /* PageModel.swift */,
+				24CF845322820A5500D35D19 /* SettignsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -354,6 +365,7 @@
 				24E4A5C4227F4DD1009035F7 /* Service.swift in Sources */,
 				24E4A5C6227F568E009035F7 /* UserProfileController.swift in Sources */,
 				24E95CBC227C5E4F00CA272C /* UIColor+UIbuttonExt.swift in Sources */,
+				24CF845422820A5500D35D19 /* SettignsModel.swift in Sources */,
 				2482B1C8226B2A61007EF025 /* AutoLayoutAnchorExt.swift in Sources */,
 				246FFF83226F0EC30043B611 /* LoginScene.swift in Sources */,
 				240F8013226A1765009F0B9F /* ACTPlayerStats.swift in Sources */,

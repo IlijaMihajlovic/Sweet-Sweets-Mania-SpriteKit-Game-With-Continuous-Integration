@@ -16,4 +16,8 @@ class LoginScene: SKScene {
         view.backgroundColor = .red
         print("Login Scene")
     }
+    
+    func share() {
+        ACTManager.shared.share(on: self, text: "I just love this new game. Go ahead and download 'The Biggest Donut' from the App Store", image: UIImage(named: "Donut92"), exculdeActivityTypes: [])
+    }
 }

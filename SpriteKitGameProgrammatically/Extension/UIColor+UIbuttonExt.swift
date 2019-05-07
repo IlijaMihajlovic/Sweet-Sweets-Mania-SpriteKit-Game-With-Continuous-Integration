@@ -9,7 +9,11 @@
 import UIKit
 
 extension UIColor {
-    static var mainPink = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
+    
+    static let mainPink = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
+    static let customLightPinkColor = UIColor(red: 242/255, green: 151/255, blue: 187/255, alpha: 1)
+    static let customPurpleColor = UIColor(red: 170/255, green: 53/255, blue: 218/255, alpha: 1)
+  
 }
 
 extension UIButton {
