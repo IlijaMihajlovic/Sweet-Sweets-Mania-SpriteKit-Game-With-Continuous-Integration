@@ -6,71 +6,11 @@
 //  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
 //
 
-//import UIKit
-//import FirebaseAuth
-//import LBTAComponents
-//import JGProgressHUD
-//
-//class WelcomeController: UIViewController {
-//
-//    let hud: JGProgressHUD = {
-//        let hud = JGProgressHUD(style: .light)
-//        hud.interactionType = .blockAllTouches
-//        return hud
-//    }()
-//
-//    lazy var signInAnonymouslyButton: UIButton = {
-//
-//        var button = UIButton(type: .system)
-//        button.setTitle("Sign Up Anonymously", for: .normal)
-//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-//        button.setTitleColor(Service.buttonTitleColor, for: .normal)
-//        button.backgroundColor = Service.buttonBackgroundColorSignInAnonymously
-//        button.layer.masksToBounds = true
-//        button.layer.cornerRadius = Service.buttonCornerRadius
-//        //button.translatesAutoresizingMaskIntoConstraints = false
-//        button.addTarget(self, action: #selector(handleSignInAnonymouslyButtonTapped), for: .touchUpInside)
-//        return button
-//    }()
-//
-//    @objc fileprivate func handleSignInAnonymouslyButtonTapped() {
-//        hud.textLabel.text = "Signing In Anonymously..."
-//        hud.show(in: view, animated: true)
-//        Auth.auth().signInAnonymously { (user, error) in
-//            if let err = error {
-//                self.hud.dismiss(animated: true)
-//                print("errror",err)
-//
-//                //self.showAlert(on: self, style: .alert, title:"Sign In Error", message: err.localizedDescription)
-//                return
-//            }
-//            print("Sucessfllly signed in Anonymously wiht uidi:", user?.user.uid)
-//            self.hud.dismiss(animated: true)
-//            self.dismiss(animated: true, completion: nil)
-//        }
-//    }
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        view.backgroundColor = .orange
-//        navigationItem.title = "Welcome"
-//        setupViews()
-//    }
-//
-//    fileprivate func setupViews() {
-//        view.addSubview(signInAnonymouslyButton)
-//
-//        signInAnonymouslyButton.anchor(view.safeAreaLayoutGuide.topAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: view.safeAreaLayoutGuide.rightAnchor, topConstant: 16, leftConstant: 16, bottomConstant: 0, rightConstant: 16, widthConstant: 50, heightConstant: 50)
-//    }
-//
-//
-//
-//}
-
-
 import SpriteKit
 import FirebaseAuth
+import FacebookCore
+import FacebookLogin
+import SVProgressHUD
 
 class WelcomeScene: SKScene {
     
@@ -86,17 +26,76 @@ class WelcomeScene: SKScene {
         return button
     }()
 
+    lazy var signInWithFacebookButton: BDButton = {
+        var button = BDButton(imageNamed: "Donut19", buttonAction: {
+            
+            self.handleSignInWithFacebookButtonTapped()
+            
+        })
+        button.titleLabel?.text = "Login With Facebook"
+        button.scaleTo(screenWithPercentage: 0.27)
+        button.zPosition = 3
+        return button
+    }()
     
+    
+    fileprivate func handleSignInWithFacebookButtonTapped() {
+        
+        print("logging in with facebook...")
+     
+        //SVProgressHUD.show(withStatus: "Logging in with Facebook...")
+     
+        
+     
+        //SVProgressHUD.showError(withStatus: "Error \n ghghghg")
+        let login = LoginManager()
+       
+        let viewController = UIApplication.shared.keyWindow?.rootViewController
+        login.logIn(readPermissions: [.publicProfile, .email], viewController: viewController) { (result) in
+            
+            switch result {
+            
+            case . success(grantedPermissions: _, declinedPermissions: _, token: _):
+                
+                print("Sucessfully logged into Facebook")
+                
+                SVProgressHUD.show(withStatus: "Logging In With Facebook")
+                self.signInIntoFirebase()
+                
+            case .failed(let err):
+                print(err)
+                SVProgressHUD.showError(withStatus: "Fialded to Get Facebook User\n \(err)")
+            case .cancelled:
+                SVProgressHUD.showError(withStatus: "Canceled Getting Facebook User!")
+                print("canceld")
+            }
+            
+           
+        }
+    }
+    
+    func signInIntoFirebase() {
+        guard let authenticationToken = AccessToken.current?.authenticationToken else {return}
+        let credential = FacebookAuthProvider.credential(withAccessToken: authenticationToken)
+        Auth.auth().signIn(with: credential) { (user, err) in
+            if let err = err {
+                SVProgressHUD.showError(withStatus: "Sign Up Error\n \(err)")
+                print(err)
+                return
+            }
+            print("Sucessfully authenticated with Firebase")
+            //SVProgressHUD.dismiss(withDelay: 0.7)
+        } 
+    }
     
     fileprivate func handleSignInAnonymouslyButtonTapped() {
         
                 Auth.auth().signInAnonymously { (user, error) in
                     if let err = error {
-                       
                         print("errror",err)
-        
+                       
                          let errorAction = UIAlertAction(title: "", style: .default, handler: nil)
-                        //self.showAlert(on: self, style: .alert, title:"Sign In Error", message: err.localizedDescription)
+                    
                         ACTManager.shared.showAlert(on: self, title: "Sign In Error", message: err.localizedDescription, actions: [errorAction])
                         return
                     }
@@ -122,9 +121,11 @@ class WelcomeScene: SKScene {
 
     func addNodes() {
         addChild(signInAnonymouslyButton)
+        addChild(signInWithFacebookButton)
     }
     
     func setupNodes() {
         signInAnonymouslyButton.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.heigth * 0.35)
+        signInWithFacebookButton.position = .zero
     }
 }

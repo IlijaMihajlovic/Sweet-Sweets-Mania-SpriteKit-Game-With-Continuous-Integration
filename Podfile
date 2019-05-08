@@ -11,5 +11,8 @@ target 'SpriteKitGameProgrammatically' do
   pod 'Firebase/Storage'
   pod 'LBTAComponents'
   pod 'JGProgressHUD'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 
 end
