@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Model Class
 struct PageModel {
     
     let imageName: String

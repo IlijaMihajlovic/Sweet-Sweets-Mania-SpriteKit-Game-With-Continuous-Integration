@@ -14,5 +14,7 @@ target 'SpriteKitGameProgrammatically' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
+  pod 'SwiftyJSON'
+  pod 'Kingfisher', '~> 5.3.1'
 
 end

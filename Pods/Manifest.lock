@@ -50,9 +50,11 @@ PODS:
     - GoogleUtilities/Environment
   - GTMSessionFetcher/Core (1.2.1)
   - JGProgressHUD (2.0.3)
+  - Kingfisher (5.3.1)
   - LBTAComponents (1.0.2)
   - leveldb-library (1.20)
   - SVProgressHUD (2.2.5)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - FacebookCore
@@ -61,8 +63,10 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - JGProgressHUD
+  - Kingfisher (~> 5.3.1)
   - LBTAComponents
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -80,8 +84,10 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - JGProgressHUD
+    - Kingfisher
     - LBTAComponents
     - leveldb-library
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   SVProgressHUD:
@@ -107,10 +113,12 @@ SPEC CHECKSUMS:
   GoogleUtilities: 273e67030e0de313e7304f6dcfa96fc5214f6c23
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   LBTAComponents: c4c8863e0ef6715e378300db148b96a09df656f7
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 0c9996060a39d6b5621e0e1c89e1e52d9e5403a1
+PODFILE CHECKSUM: 63318021b5261fbfc710092fa089e4e5466b5823
 
 COCOAPODS: 1.6.1
