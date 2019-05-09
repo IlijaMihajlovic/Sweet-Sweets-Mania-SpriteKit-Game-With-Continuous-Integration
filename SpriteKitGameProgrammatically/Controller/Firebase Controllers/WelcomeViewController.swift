@@ -16,10 +16,9 @@ import FirebaseStorage
 import FirebaseDatabase
 import Kingfisher
 
-
 class WelcomeScene: SKScene {
     
-    var userName: String?
+    var firstName: String?
     var email: String?
     var profileImage: UIImage?
     
@@ -48,9 +47,19 @@ class WelcomeScene: SKScene {
     }()
     
     
+    
+    override func didMove(to view: SKView) {
+        anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        setupNodes()
+        addNodes()
+        print("Welcome Controller")
+    }
+    
+    
+    //MARK: Sign In Into Facebook Function
     fileprivate func handleSignInWithFacebookButtonTapped() {
         
-        print("logging in with facebook...")
+        print("Logging in with Facebook...")
      
         let login = LoginManager()
        
@@ -61,45 +70,53 @@ class WelcomeScene: SKScene {
             
             case .success(grantedPermissions: _, declinedPermissions: _, token: _):
                 
-                print("Sucessfully logged into Facebook")
+                print("Sucessfully Logged Into Facebook")
                 
                 SVProgressHUD.show(withStatus: "Logging In With Facebook...")
                
                 self.signInIntoFirebase()
-                 ACTManager.shared.transition(self, toScene: .UserProfileScene, transition: SKTransition.moveIn(with: .left, duration: 0.0))
+                 ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.0))
+                SVProgressHUD.dismiss(withDelay: 0.8)
                 
             case .failed(let err):
                 print(err)
-                SVProgressHUD.showError(withStatus: "Fialded to Get Facebook User\n \(err)")
+                SVProgressHUD.showError(withStatus: "Failed to Get Facebook User\n \(err)")
+                
             case .cancelled:
                 SVProgressHUD.showError(withStatus: "Canceled Getting Facebook User!")
-                print("canceld")
+               
             }
-            
-           
+
         }
     }
     
+    
+    //MARK: - Sign In Into Firebase
     func signInIntoFirebase() {
+       
         guard let authenticationToken = AccessToken.current?.authenticationToken else {return}
         let credential = FacebookAuthProvider.credential(withAccessToken: authenticationToken)
+       
         Auth.auth().signIn(with: credential) { (user, err) in
+            
             if let err = err {
                 SVProgressHUD.showError(withStatus: "Sign Up Error\n \(err)")
                 print(err)
                 return
             }
             print("Sucessfully authenticated with Firebase")
-            //SVProgressHUD.dismiss(withDelay: 0.1)
             
-            //Fetch Users Data From Facebook
+            //Fetch User Data From Facebook
             self.fetchFacebookUser()
         } 
     }
     
+    
+    //MARK: - Fetch Facebook User
     fileprivate func fetchFacebookUser() {
+       
         let graphRequestConnection = GraphRequestConnection()
-        let graphRequest = GraphRequest(graphPath: "me", parameters: ["fields": "id, email, name, picture.type(large)"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion)
+        let graphRequest = GraphRequest(graphPath: "me", parameters: ["fields": "id, first_name, email, picture.type(large)"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion)
     
         graphRequestConnection.add(graphRequest) { (httpResponse, result) in
             
@@ -110,9 +127,11 @@ class WelcomeScene: SKScene {
                 
                 let json = JSON(responseDictionary)
                 
-                //Extract: Email,  Username and Picture URL
-                self.userName = json["name"].string
+                //Extract: Email,  First Name and Picture URL
+                self.firstName = json["first_name"].string
+                
                 self.email = json["email"].string
+                print("User: \(String(describing: self.firstName)), Email: \(String(describing: self.email))")
                 
                 guard let profilePictureUrl = json["picture"]["data"]["url"].string else { return }
                 guard let url = URL(string: profilePictureUrl) else { return }
@@ -127,7 +146,7 @@ class WelcomeScene: SKScene {
                     //Assign fetched image to profile picture variable
                     guard let data = data else { return }
                     self.profileImage = UIImage(data: data)
-                    self.saveUserIntoFirebaseStorageAndDatabase()
+                    self.saveUserIntoFirebaseStorageAndIntoDatabase()
                     
                 }).resume()
                 break
@@ -140,88 +159,28 @@ class WelcomeScene: SKScene {
         graphRequestConnection.start()
     }
     
-    fileprivate func saveUserIntoFirebaseStorageAndDatabase() {
-        
-        
-//        guard let data = profileImage?.jpegData(compressionQuality: 0.3) else {
-//            print("SOMTHING WENT WRONG")
-//            return
-//        }
-//        let imageName = UUID().uuidString
-//        let imageReference = Storage.storage().reference().child("profileImages").child(imageName)
-//
-//        imageReference.putData(data, metadata: nil) { (metadata, err) in
-//            if let error = err {
-//                SVProgressHUD.showError(withStatus: "Error:\n \(error.localizedDescription)")
-//                return
-//            }
-//
-//            imageReference.downloadURL(completion: { (url, err) in
-//                if let error = err {
-//                    SVProgressHUD.showError(withStatus: "Error:\n \(error.localizedDescription)")
-//                    return
-//                }
-//
-//                guard let  url = url else {
-//
-//                    SVProgressHUD.showError(withStatus: "Error)")
-//                    return
-//                }
-//
-//
-//            })
-//        }
-        
-   
-        
-
     
-//        let fileName = UUID().uuidString
-//        guard let uploadData = profileImage?.jpegData(compressionQuality: 0.3) else { return }
-//
-//        //Safe user profile image to Firebase Storage
-//    Storage.storage().reference().child("profileImages").child(fileName).putData(uploadData, metadata: nil) { (metadata, error) in
-//
-//            if let err = error {
-//                print(err)
-//                return
-//            }
-//            print("Succesfully saved profile image into Firebase Storage.")
-//
-//            //MARK - MAYBE AN ERROR IS HERE
-//            guard let profilePictureUrl = metadata?.dictionaryRepresentation()["mediaLink"] as? String else { return }
-//
-//
-//            guard let uid = Auth.auth().currentUser?.uid else {return}
-//
-//            let dictionaryValues = ["name": self.name, "email": self.email, "profilePictureUrl": profilePictureUrl]
-//
-//            let values = [uid: dictionaryValues]
-//
-//            Database.database().reference().child("users").updateChildValues(values, withCompletionBlock: { (err, refrence) in
-//
-//                if let error = err {
-//                    print(error)
-//                    return
-//                }
-//                print("Sucessfully saved user info into Firebase Database")
-//                SVProgressHUD.dismiss(withDelay: 0.1)
-//
-//            })
-    
-        let fileName = UUID().uuidString
+    //MARK: - Safe User Into into Firebase Storage And into Realtime Database
+    fileprivate func saveUserIntoFirebaseStorageAndIntoDatabase() {
+        
+        let imageUuid = UUID().uuidString
         guard let uploadData = profileImage?.jpegData(compressionQuality: 0.3) else { return }
         
+       
+        //MARK: - Firebase Storage
         //Safe user profile image to Firebase Storage
-        Storage.storage().reference().child("profileImages").child(fileName).putData(uploadData, metadata: nil, completion: {(metadata, err) in
+        Storage.storage().reference().child("profileImages").child(imageUuid).putData(uploadData, metadata: nil, completion: {(metadata, err) in
             
-            if let err = err {
-                print("failed to upload profile image:", err)
+            if let error = err {
+                print("Failed to upload profile image:", error)
+                SVProgressHUD.showError(withStatus: "Error\n \(error)")
                 return
             }
-        Storage.storage().reference().child("profileImages").child(fileName).downloadURL(completion: { (url, err) in
+       
+            
+        Storage.storage().reference().child("profileImages").child(imageUuid).downloadURL(completion: { (url, err) in
             if let err = err {
-                print("Failed to get downloadurl", err)
+                print("Failed to get downloadURL", err)
                 return
             }
             guard let profileImageURL = url?.absoluteString else {return}
@@ -229,10 +188,13 @@ class WelcomeScene: SKScene {
         
             guard let uid = Auth.auth().currentUser?.uid else {return}
             
-            let dictionaryValues = ["name": self.name, "email": self.email, "profilePictureUrl": profileImageURL]
+            // Dictionary of keys to change and their new values
+            let dictionaryValues = ["name": self.firstName, "email": self.email, "profilePictureUrl": profileImageURL]
             
             let values = [uid: dictionaryValues]
             
+            
+            //MARK: - Firebase Realtime Database
             Database.database().reference().child("users").updateChildValues(values, withCompletionBlock: { (err, refrence) in
                 
                 if let error = err {
@@ -248,15 +210,8 @@ class WelcomeScene: SKScene {
         })
     }
     
-      
-
-    
-        
-   
-    
-    
-    
-    
+ 
+    //MARK: - Sign In Anonymously Function
     fileprivate func handleSignInAnonymouslyButtonTapped() {
         
                 Auth.auth().signInAnonymously { (user, error) in
@@ -268,29 +223,17 @@ class WelcomeScene: SKScene {
                         ACTManager.shared.showAlert(on: self, title: "Sign In Error", message: err.localizedDescription, actions: [errorAction])
                         return
                     }
-//                    ACTManager.shared.transition(self, toScene: .UserProfileScene, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+                        SVProgressHUD.show(withStatus: "Signing Up Anonymously...")
                     
-                        ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
-
-                   
-                    print("Sucessfllly signed in Anonymously wiht uidi:", user?.user.uid)
-    
+                    ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+                    SVProgressHUD.dismiss(withDelay: 0.8)
                 }
             }
     
-    
-    override func didMove(to view: SKView) {
-        anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        setupNodes()
-        addNodes()
-        print("Welcome Controller")
-        view.backgroundColor = SKColor.red
-    }
 
 
     func addNodes() {
-        addChild(signInAnonymouslyButton)
-        addChild(signInWithFacebookButton)
+        [signInAnonymouslyButton, signInWithFacebookButton].forEach{addChild($0)}
     }
     
     func setupNodes() {
