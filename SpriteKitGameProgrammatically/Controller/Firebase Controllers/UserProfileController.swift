@@ -60,6 +60,7 @@ class UserProfileScene: SKScene {
             
             self.userProfileImage.removeFromSuperview()
             ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.1))
+            self.userProfileImage.removeFromSuperview()
             
         })
         button.scaleTo(screenWithPercentage: 0.3)
@@ -106,7 +107,6 @@ class UserProfileScene: SKScene {
                 
                 guard let dict = snapshot.value as? [String: Any] else { return }
                 
-                
                 //Create User
                 let user = CurrentUser(dictionary: dict)
                 
@@ -146,6 +146,7 @@ class UserProfileScene: SKScene {
             do {
                 try Auth.auth().signOut()
                 
+                self.userProfileImage.removeFromSuperview()
                 ACTManager.shared.transition(self, toScene: .WelcomeScene, transition: SKTransition.moveIn(with: .left, duration: 0.1))
                 
             } catch let err {

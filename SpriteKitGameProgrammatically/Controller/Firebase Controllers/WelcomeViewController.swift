@@ -18,9 +18,9 @@ import Kingfisher
 
 class WelcomeScene: SKScene {
     
-    var firstName: String?
+    var firstName: String? = "Anonymous"
     var email: String?
-    var profileImage: UIImage?
+    var profileImage: UIImage? = UIImage(named: "profileIcon")
     
     lazy var signInAnonymouslyButton: BDButton = {
         var button = BDButton(imageNamed: "Donut8", buttonAction: {
@@ -74,8 +74,10 @@ class WelcomeScene: SKScene {
                 
                 SVProgressHUD.show(withStatus: "Logging In With Facebook...")
                
-                self.signInIntoFirebase()
-                 ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.0))
+                self.signInIntoFirebaseWithFacebook()
+               
+                ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.0))
+                
                 SVProgressHUD.dismiss(withDelay: 0.8)
                 
             case .failed(let err):
@@ -91,8 +93,31 @@ class WelcomeScene: SKScene {
     }
     
     
+    //MARK: - Sign In Anonymously Function
+    fileprivate func handleSignInAnonymouslyButtonTapped() {
+        
+        Auth.auth().signInAnonymously { (user, error) in
+            if let err = error {
+                print("errror",err)
+                
+                let errorAction = UIAlertAction(title: "", style: .default, handler: nil)
+                
+                ACTManager.shared.showAlert(on: self, title: "Sign In Error", message: err.localizedDescription, actions: [errorAction])
+                return
+            }
+            SVProgressHUD.show(withStatus: "Signing Up Anonymously...")
+            
+            self.saveUserIntoFirebaseStorageAndIntoDatabase()
+            
+            ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+            
+            SVProgressHUD.dismiss(withDelay: 0.7)
+        }
+    }
+    
+    
     //MARK: - Sign In Into Firebase
-    func signInIntoFirebase() {
+    func signInIntoFirebaseWithFacebook() {
        
         guard let authenticationToken = AccessToken.current?.authenticationToken else {return}
         let credential = FacebookAuthProvider.credential(withAccessToken: authenticationToken)
@@ -163,6 +188,7 @@ class WelcomeScene: SKScene {
     //MARK: - Safe User Into into Firebase Storage And into Realtime Database
     fileprivate func saveUserIntoFirebaseStorageAndIntoDatabase() {
         
+        
         let imageUuid = UUID().uuidString
         guard let uploadData = profileImage?.jpegData(compressionQuality: 0.3) else { return }
         
@@ -204,33 +230,13 @@ class WelcomeScene: SKScene {
                 print("Sucessfully saved user info into Firebase Database")
                 SVProgressHUD.dismiss()
                
-
             })
             })
         
         })
     }
     
- 
-    //MARK: - Sign In Anonymously Function
-    fileprivate func handleSignInAnonymouslyButtonTapped() {
-        
-                Auth.auth().signInAnonymously { (user, error) in
-                    if let err = error {
-                        print("errror",err)
-                       
-                         let errorAction = UIAlertAction(title: "", style: .default, handler: nil)
-                    
-                        ACTManager.shared.showAlert(on: self, title: "Sign In Error", message: err.localizedDescription, actions: [errorAction])
-                        return
-                    }
-                        SVProgressHUD.show(withStatus: "Signing Up Anonymously...")
-                    
-                    ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
-                    SVProgressHUD.dismiss(withDelay: 0.8)
-                }
-            }
-    
+
 
 
     func addNodes() {
