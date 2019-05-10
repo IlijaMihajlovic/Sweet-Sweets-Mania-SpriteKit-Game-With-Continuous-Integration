@@ -18,8 +18,8 @@ import Kingfisher
 
 class WelcomeScene: SKScene {
     
-    var firstName: String? = "Anonymous"
-    var email: String?
+    var firstName: String? = ""
+    var email: String? = ""
     var profileImage: UIImage? = UIImage(named: "profileIcon")
     
     lazy var signInAnonymouslyButton: BDButton = {
@@ -108,6 +108,7 @@ class WelcomeScene: SKScene {
             SVProgressHUD.show(withStatus: "Signing Up Anonymously...")
             
             self.saveUserIntoFirebaseStorageAndIntoDatabase()
+            print("Successfully Signed In Anonymously ")
             
             ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
             

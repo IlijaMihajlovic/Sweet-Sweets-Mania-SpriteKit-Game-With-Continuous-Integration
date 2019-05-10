@@ -110,8 +110,8 @@ class UserProfileScene: SKScene {
                 //Create User
                 let user = CurrentUser(dictionary: dict)
                 
-                self.nameLabel.text = user.name
-                self.emailLabel.text = user.email
+                self.nameLabel.text = user.name == "" ? "Username: N/A" : user.name
+                self.emailLabel.text = user.email == "" ? "Email: N/A" : user.email
                 
                 //Load image from Firebase and assign it
                 self.userProfileImage.loadImage(urlString: user.profileImageUrl)
