@@ -189,7 +189,7 @@ class WelcomeScene: SKScene {
             guard let uid = Auth.auth().currentUser?.uid else {return}
             
             // Dictionary of keys to change and their new values
-            let dictionaryValues = ["name": self.firstName, "email": self.email, "profilePictureUrl": profileImageURL]
+            let dictionaryValues = ["name": self.firstName, "email": self.email, "profileImageUrl": profileImageURL]
             
             let values = [uid: dictionaryValues]
             
@@ -203,7 +203,8 @@ class WelcomeScene: SKScene {
                 }
                 print("Sucessfully saved user info into Firebase Database")
                 SVProgressHUD.dismiss()
-            
+               
+
             })
             })
         

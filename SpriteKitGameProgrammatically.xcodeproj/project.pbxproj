@@ -11,6 +11,7 @@
 		240F801B226A229E009F0B9F /* ACTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F801A226A229E009F0B9F /* ACTManager.swift */; };
 		240F801F226A4910009F0B9F /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F801E226A4910009F0B9F /* SettingsLauncher.swift */; };
 		2436715D22707603009FC1A1 /* summer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2436715C22707603009FC1A1 /* summer.mp3 */; };
+		2442D334228484770080003C /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442D333228484770080003C /* CurrentUser.swift */; };
 		244F99AE226868A3004874FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99AD226868A3004874FB /* AppDelegate.swift */; };
 		244F99B5226868A4004874FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244F99B4226868A4004874FB /* Assets.xcassets */; };
 		244F99B8226868A4004874FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244F99B6226868A4004874FB /* LaunchScreen.storyboard */; };
@@ -44,6 +45,7 @@
 		240F801A226A229E009F0B9F /* ACTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACTManager.swift; sourceTree = "<group>"; };
 		240F801E226A4910009F0B9F /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
 		2436715C22707603009FC1A1 /* summer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = summer.mp3; sourceTree = "<group>"; };
+		2442D333228484770080003C /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		244F99AA226868A3004874FB /* SpriteKitGameProgrammatically.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitGameProgrammatically.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		244F99AD226868A3004874FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		244F99B4226868A4004874FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			children = (
 				24ED372F227B87FF009A466A /* PageModel.swift */,
 				24CF845322820A5500D35D19 /* SettignsModel.swift */,
+				2442D333228484770080003C /* CurrentUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				244F99CE22689A36004874FB /* GameOver.swift in Sources */,
 				2482B1C3226B26BF007EF025 /* BaseCell.swift in Sources */,
 				240F801B226A229E009F0B9F /* ACTManager.swift in Sources */,
+				2442D334228484770080003C /* CurrentUser.swift in Sources */,
 				24E4A5C0227F4BAC009035F7 /* FirebaseManager.swift in Sources */,
 				244F99C022686A95004874FB /* GameViewController.swift in Sources */,
 				2482B1C5226B26D4007EF025 /* SettingCell.swift in Sources */,
