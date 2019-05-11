@@ -21,39 +21,50 @@ class WelcomeScene: SKScene {
     var email: String? = ""
     var profileImage: UIImage? = UIImage(named: "profileIcon")
     
-    var nameLabel: SKLabelNode = {
-        var label = SKLabelNode(fontNamed: "HelveticaNeue-Medium")
-        label.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.center
+
+    var privecyPolicyAndTermsOfServiceNode: SKSpriteNode = {
+        var image = SKSpriteNode(imageNamed: "terms")
+        image.scaleTo(screenWidthPercentage: 0.7)
+        return image
         
-        label.fontSize = 19
-        label.text = "User's Name"
-        label.numberOfLines = 0
-        label.preferredMaxLayoutWidth = 310
-        label.fontColor = SKColor.lightGray
-        label.zPosition = 3
-        
-        return label
     }()
+    
+ 
     lazy var signInAnonymouslyButton: BDButton = {
-        var button = BDButton(imageNamed: "Donut8", buttonAction: {
+        var button = BDButton(imageNamed: "anonymouslyButton", buttonAction: {
             
             self.handleSignInAnonymouslyButtonTapped()
             
         })
-        button.titleLabel?.text = "Sign Up Anonymously"
-        button.scaleTo(screenWithPercentage: 0.27)
+        button.scaleTo(screenWithPercentage: 0.8)
         button.zPosition = 3
         return button
     }()
 
+    
+    var logoLabel: SKLabelNode = {
+        var label = SKLabelNode(fontNamed: "HelveticaNeue-Light")
+        label.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.center
+        
+        label.fontSize = 19
+        label.text = "Sweet Sweets Mania"
+        label.color = SKColor.purple
+        label.numberOfLines = 0
+        label.preferredMaxLayoutWidth = 310
+        label.fontColor = SKColor.customSKLightPinkColor
+        label.setScale(1.6)
+        label.zPosition = 3
+        
+        return label
+    }()
+    
     lazy var signInWithFacebookButton: BDButton = {
-        var button = BDButton(imageNamed: "Donut19", buttonAction: {
+        var button = BDButton(imageNamed: "facebookButton", buttonAction: {
             
             self.handleSignInWithFacebookButtonTapped()
             
         })
-        button.titleLabel?.text = "Login With Facebook"
-        button.scaleTo(screenWithPercentage: 0.27)
+        button.scaleTo(screenWithPercentage: 0.8)
         button.zPosition = 3
         return button
     }()
@@ -62,6 +73,7 @@ class WelcomeScene: SKScene {
     
     override func didMove(to view: SKView) {
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        self.scene?.backgroundColor = .white
         setupNodes()
         addNodes()
         print("Welcome Controller")
@@ -251,13 +263,16 @@ class WelcomeScene: SKScene {
     
 
 
-
     func addNodes() {
-        [signInAnonymouslyButton, signInWithFacebookButton].forEach{addChild($0)}
+        [signInAnonymouslyButton, signInWithFacebookButton, privecyPolicyAndTermsOfServiceNode, logoLabel].forEach{addChild($0)}
     }
     
     func setupNodes() {
-        signInAnonymouslyButton.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.heigth * 0.35)
-        signInWithFacebookButton.position = .zero
+        signInAnonymouslyButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.26)
+        signInWithFacebookButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.37)
+        
+        logoLabel.position = .zero
+        privecyPolicyAndTermsOfServiceNode.position = CGPoint(x: ScreenSize.width * 0.00, y: ScreenSize.heigth * -0.45)
+        
     }
 }

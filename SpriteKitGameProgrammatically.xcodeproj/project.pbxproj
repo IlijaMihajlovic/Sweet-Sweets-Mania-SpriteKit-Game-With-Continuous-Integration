@@ -25,6 +25,7 @@
 		2482B1C3226B26BF007EF025 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C2226B26BF007EF025 /* BaseCell.swift */; };
 		2482B1C5226B26D4007EF025 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C4226B26D4007EF025 /* SettingCell.swift */; };
 		2482B1C8226B2A61007EF025 /* AutoLayoutAnchorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C7226B2A61007EF025 /* AutoLayoutAnchorExt.swift */; };
+		24A6BA2F22876C3C007D74F4 /* GPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A6BA2E22876C3C007D74F4 /* GPButton.swift */; };
 		24C5BEF2227C458F0050CBAA /* SwipingController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */; };
 		24CF845422820A5500D35D19 /* SettignsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF845322820A5500D35D19 /* SettignsModel.swift */; };
 		24E4A5BE227F49F9009035F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */; };
@@ -62,6 +63,7 @@
 		2482B1C2226B26BF007EF025 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		2482B1C4226B26D4007EF025 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		2482B1C7226B2A61007EF025 /* AutoLayoutAnchorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutAnchorExt.swift; sourceTree = "<group>"; };
+		24A6BA2E22876C3C007D74F4 /* GPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPButton.swift; sourceTree = "<group>"; };
 		24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+CollectionView.swift"; sourceTree = "<group>"; };
 		24CF845322820A5500D35D19 /* SettignsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettignsModel.swift; sourceTree = "<group>"; };
 		24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				24E95CBF227C5FF100CA272C /* Supporting Files */,
 				244F99CD22689A36004874FB /* GameOver.swift */,
 				244F99CB22686FA6004874FB /* Gameplay.swift */,
+				24A6BA2E22876C3C007D74F4 /* GPButton.swift */,
 				244F99C322686D3E004874FB /* BDButton.swift */,
 			);
 			path = SpriteKitGameProgrammatically;
@@ -400,6 +403,7 @@
 				24ED372E227B7016009A466A /* PageCell.swift in Sources */,
 				24C5BEF2227C458F0050CBAA /* SwipingController+CollectionView.swift in Sources */,
 				244F99C422686D3E004874FB /* BDButton.swift in Sources */,
+				24A6BA2F22876C3C007D74F4 /* GPButton.swift in Sources */,
 				244F99CC22686FA6004874FB /* Gameplay.swift in Sources */,
 				244F99C222686BDD004874FB /* MainMenu.swift in Sources */,
 			);

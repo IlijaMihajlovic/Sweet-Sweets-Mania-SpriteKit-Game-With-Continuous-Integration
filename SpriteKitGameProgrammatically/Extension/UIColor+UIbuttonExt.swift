@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpriteKit
 
 extension UIColor {
     
@@ -14,6 +15,10 @@ extension UIColor {
     static let customLightPinkColor = UIColor(red: 242/255, green: 151/255, blue: 187/255, alpha: 1)
     static let customPurpleColor = UIColor(red: 170/255, green: 53/255, blue: 218/255, alpha: 1)
   
+}
+
+extension SKColor {
+    static let customSKLightPinkColor = SKColor(red: 242/255, green: 151/255, blue: 187/255, alpha: 1)
 }
 
 extension UIButton {

@@ -56,29 +56,29 @@ class Gameplay: SKScene {
     }
     
     func addNewDonuts() {
-        for i in 1...30 {
+        for i in 1...12 {
             
-            let imageNamed = "Donut\(Int(CGFloat.random(1.0, max: 2.0)))"
+            let imageNamed = "sweet\(Int(CGFloat.random(1.0, max: 12.0)))"
             
-            let donut = BDButton(imageNamed: imageNamed) {
+            let donut = GPButton(imageNamed: imageNamed) {
                 print("Wrong Donut tapped")
                 self.handleWrongDonutTapped()
             }
-            donut.name = "donut"
-            donut.scaleTo(screenWithPercentage: CGFloat.random(0.3, max: 0.5))
+            donut.name = "sweet"
+            donut.scaleTo(screenWithPercentage: CGFloat.random(0.2, max: 0.3))
             donut.zPosition = CGFloat(i)
             donut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.9), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.9))
             addChild(donut)
             donut.button.popUp(after: CGFloat.random(0.1, max: 1.0), sequenceNumber: 0)
         }
         
-        let imageNamed = "Donut\(Int(CGFloat.random(1.0, max: 96.0)))"
-        let winnerDonut = BDButton(imageNamed: imageNamed) {
+        let imageNamed = "sweet\(Int(CGFloat.random(1.0, max: 12.0)))"
+        let winnerDonut = GPButton(imageNamed: imageNamed) {
             print("Winner Donut tapped")
             self.handleWinnerDonutTapped()
         }
-        winnerDonut.scaleTo(screenWithPercentage: 0.51)
-        winnerDonut.name = "donut"
+        winnerDonut.scaleTo(screenWithPercentage: 0.43)
+        winnerDonut.name = "sweet"
         winnerDonut.zPosition = CGFloat(31)
         winnerDonut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.9), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.9))
         addChild(winnerDonut)
@@ -87,7 +87,7 @@ class Gameplay: SKScene {
     
     func removeAllDonuts() {
         enumerateChildNodes(withName: "//*") { (node, stop) in
-            if node.name == "donut" {
+            if node.name == "sweet" {
                 node.removeFromParent()
             }
         }

@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class BDButton: SKNode {
+class GPButton: SKNode {
     var button: SKSpriteNode
     private var mask: SKSpriteNode
     private var cropNode: SKCropNode
@@ -65,7 +65,7 @@ class BDButton: SKNode {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if isEnabled {
-            mask.alpha = 0.5
+            //mask.alpha = 0.5
             //run(SKAction.scale(by: 1.05, duration: 0.05))
         }
     }
@@ -76,9 +76,9 @@ class BDButton: SKNode {
                 let location: CGPoint = touch.location(in: self)
                 
                 if button.contains(location) {
-                    mask.alpha = 0.5
+                    // mask.alpha = 0.5
                 } else {
-                    mask.alpha = 0.0
+                    // mask.alpha = 0.0
                 }
             }
         }
@@ -90,7 +90,7 @@ class BDButton: SKNode {
                 let location: CGPoint = touch.location(in: self)
                 
                 if button.contains(location) {
-                    disable()
+                    //disable()
                     action()
                     run(SKAction.sequence([SKAction.wait(forDuration: 0.2), SKAction.run({
                         self.enable()

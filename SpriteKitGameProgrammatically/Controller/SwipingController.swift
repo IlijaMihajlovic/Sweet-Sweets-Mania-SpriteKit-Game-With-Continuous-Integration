@@ -72,7 +72,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         solving difficult and data-intensive problems or just playing with the nearest dog.
         """),
         PageModel(imageName: "heart_second", headerText: "About The Game", bodyText: "Get notified of the savings immediately when we announce them on our website. Make sure to also give us any feedback you have."),
-        PageModel(imageName: "leaf_third", headerText: "VIP members special services", bodyText: ""),
+        PageModel(imageName: "leaf_third", headerText: "Want to Get In Touch", bodyText: ""),
         
         PageModel(imageName: "bear_first", headerText: "Join use today in our fun and games!", bodyText: "Are you ready for loads and loads of fun? Don't wait any longer! We hope to see you in our stores soon.")
     ]
