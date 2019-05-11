@@ -14,7 +14,6 @@ import FirebaseStorage
 import LBTAComponents
 import SVProgressHUD
 
-
 class UserProfileScene: SKScene {
     
     let userProfileImageViewHeight: CGFloat = 80
@@ -110,6 +109,7 @@ class UserProfileScene: SKScene {
                 //Create User
                 let user = CurrentUser(dictionary: dict)
                 
+                //Default Values When Sign In Anonymously
                 self.nameLabel.text = user.name == "" ? "Username: N/A" : user.name
                 self.emailLabel.text = user.email == "" ? "Email: N/A" : user.email
                 

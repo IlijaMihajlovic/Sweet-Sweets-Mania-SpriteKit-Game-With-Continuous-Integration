@@ -10,11 +10,9 @@ target 'SpriteKitGameProgrammatically' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'LBTAComponents'
-  pod 'JGProgressHUD'
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
   pod 'SwiftyJSON'
-  pod 'Kingfisher', '~> 5.3.1'
 
 end

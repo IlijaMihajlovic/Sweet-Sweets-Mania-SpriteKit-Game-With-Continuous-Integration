@@ -37,11 +37,11 @@
 		24ED372C227B5A66009A466A /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ED372B227B5A66009A466A /* SwipingController.swift */; };
 		24ED372E227B7016009A466A /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ED372D227B7016009A466A /* PageCell.swift */; };
 		24ED3730227B87FF009A466A /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ED372F227B87FF009A466A /* PageModel.swift */; };
-		7AB073833A1FA307D29CA58C /* Pods_SpriteKitGameProgrammatically.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3960846A0C5148B991391E /* Pods_SpriteKitGameProgrammatically.framework */; };
+		2740D6973587D9ECB5F48D52 /* Pods_SpriteKitGameProgrammatically.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B7D5AA32F48B08FC500BDC /* Pods_SpriteKitGameProgrammatically.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		140109F52B4F1D78FF3CAAD8 /* Pods-SpriteKitGameProgrammatically.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpriteKitGameProgrammatically.release.xcconfig"; path = "Target Support Files/Pods-SpriteKitGameProgrammatically/Pods-SpriteKitGameProgrammatically.release.xcconfig"; sourceTree = "<group>"; };
+		0ADDD2CF4D2EDF5412F61E02 /* Pods-SpriteKitGameProgrammatically.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpriteKitGameProgrammatically.debug.xcconfig"; path = "Target Support Files/Pods-SpriteKitGameProgrammatically/Pods-SpriteKitGameProgrammatically.debug.xcconfig"; sourceTree = "<group>"; };
 		240F801A226A229E009F0B9F /* ACTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACTManager.swift; sourceTree = "<group>"; };
 		240F801E226A4910009F0B9F /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
 		2436715C22707603009FC1A1 /* summer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = summer.mp3; sourceTree = "<group>"; };
@@ -74,8 +74,8 @@
 		24ED372B227B5A66009A466A /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		24ED372D227B7016009A466A /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		24ED372F227B87FF009A466A /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
-		51A72247B66BA809593FA2A1 /* Pods-SpriteKitGameProgrammatically.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpriteKitGameProgrammatically.debug.xcconfig"; path = "Target Support Files/Pods-SpriteKitGameProgrammatically/Pods-SpriteKitGameProgrammatically.debug.xcconfig"; sourceTree = "<group>"; };
-		CF3960846A0C5148B991391E /* Pods_SpriteKitGameProgrammatically.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpriteKitGameProgrammatically.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4369802E318A7CA1ED1EDF38 /* Pods-SpriteKitGameProgrammatically.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpriteKitGameProgrammatically.release.xcconfig"; path = "Target Support Files/Pods-SpriteKitGameProgrammatically/Pods-SpriteKitGameProgrammatically.release.xcconfig"; sourceTree = "<group>"; };
+		86B7D5AA32F48B08FC500BDC /* Pods_SpriteKitGameProgrammatically.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpriteKitGameProgrammatically.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AB073833A1FA307D29CA58C /* Pods_SpriteKitGameProgrammatically.framework in Frameworks */,
+				2740D6973587D9ECB5F48D52 /* Pods_SpriteKitGameProgrammatically.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +96,7 @@
 				244F99AC226868A3004874FB /* SpriteKitGameProgrammatically */,
 				244F99AB226868A3004874FB /* Products */,
 				BC2C8F615C6A6BE92C0693D1 /* Pods */,
-				F389AED203B143BAC066EE57 /* Frameworks */,
+				CAA8FB14B30C37868E58F64C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,16 +221,16 @@
 		BC2C8F615C6A6BE92C0693D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				51A72247B66BA809593FA2A1 /* Pods-SpriteKitGameProgrammatically.debug.xcconfig */,
-				140109F52B4F1D78FF3CAAD8 /* Pods-SpriteKitGameProgrammatically.release.xcconfig */,
+				0ADDD2CF4D2EDF5412F61E02 /* Pods-SpriteKitGameProgrammatically.debug.xcconfig */,
+				4369802E318A7CA1ED1EDF38 /* Pods-SpriteKitGameProgrammatically.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F389AED203B143BAC066EE57 /* Frameworks */ = {
+		CAA8FB14B30C37868E58F64C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CF3960846A0C5148B991391E /* Pods_SpriteKitGameProgrammatically.framework */,
+				86B7D5AA32F48B08FC500BDC /* Pods_SpriteKitGameProgrammatically.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -242,11 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 244F99BC226868A4004874FB /* Build configuration list for PBXNativeTarget "SpriteKitGameProgrammatically" */;
 			buildPhases = (
-				1CAAD5307F387BB9DA070132 /* [CP] Check Pods Manifest.lock */,
+				B4E9FAF1A642E7F224E9C13C /* [CP] Check Pods Manifest.lock */,
 				244F99A6226868A3004874FB /* Sources */,
 				244F99A7226868A3004874FB /* Frameworks */,
 				244F99A8226868A3004874FB /* Resources */,
-				0CECD4233596802F19058DAF /* [CP] Embed Pods Frameworks */,
+				EB48C6A3AA9527463648B0A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -305,53 +305,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CECD4233596802F19058DAF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpriteKitGameProgrammatically/Pods-SpriteKitGameProgrammatically-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpriteKitGameProgrammatically/Pods-SpriteKitGameProgrammatically-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1CAAD5307F387BB9DA070132 /* [CP] Check Pods Manifest.lock */ = {
+		B4E9FAF1A642E7F224E9C13C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -371,6 +325,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB48C6A3AA9527463648B0A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpriteKitGameProgrammatically/Pods-SpriteKitGameProgrammatically-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpriteKitGameProgrammatically/Pods-SpriteKitGameProgrammatically-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -541,7 +537,7 @@
 		};
 		244F99BD226868A4004874FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51A72247B66BA809593FA2A1 /* Pods-SpriteKitGameProgrammatically.debug.xcconfig */;
+			baseConfigurationReference = 0ADDD2CF4D2EDF5412F61E02 /* Pods-SpriteKitGameProgrammatically.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -559,7 +555,7 @@
 		};
 		244F99BE226868A4004874FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 140109F52B4F1D78FF3CAAD8 /* Pods-SpriteKitGameProgrammatically.release.xcconfig */;
+			baseConfigurationReference = 4369802E318A7CA1ED1EDF38 /* Pods-SpriteKitGameProgrammatically.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

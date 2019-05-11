@@ -14,7 +14,6 @@ import SVProgressHUD
 import SwiftyJSON
 import FirebaseStorage
 import FirebaseDatabase
-import Kingfisher
 
 class WelcomeScene: SKScene {
     
@@ -22,6 +21,19 @@ class WelcomeScene: SKScene {
     var email: String? = ""
     var profileImage: UIImage? = UIImage(named: "profileIcon")
     
+    var nameLabel: SKLabelNode = {
+        var label = SKLabelNode(fontNamed: "HelveticaNeue-Medium")
+        label.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.center
+        
+        label.fontSize = 19
+        label.text = "User's Name"
+        label.numberOfLines = 0
+        label.preferredMaxLayoutWidth = 310
+        label.fontColor = SKColor.lightGray
+        label.zPosition = 3
+        
+        return label
+    }()
     lazy var signInAnonymouslyButton: BDButton = {
         var button = BDButton(imageNamed: "Donut8", buttonAction: {
             
