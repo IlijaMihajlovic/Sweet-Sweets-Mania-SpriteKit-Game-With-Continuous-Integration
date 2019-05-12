@@ -11,11 +11,12 @@ import SpriteKit
 class Gameplay: SKScene {
     
     var background: SKSpriteNode = {
-        var sprite = SKSpriteNode(imageNamed: "Background")
+        var sprite = SKSpriteNode(imageNamed: "BackgroundImage")
         if DeviceType.isiPad || DeviceType.isiPadPro {
             sprite.scaleTo(screenWidthPercentage: 1.0)
         } else {
             sprite.scaleTo(screenHeightPercentage: 1.0)
+            sprite.scaleTo(screenWidthPercentage: 1.0)
         }
         sprite.zPosition = 0
         return sprite
@@ -26,7 +27,7 @@ class Gameplay: SKScene {
     lazy var scoreLabel: SKLabelNode = {
         var label = SKLabelNode(fontNamed: "GlutenFT-Regular")
         label.fontSize = CGFloat.universalFont(size: 58)
-        label.zPosition = 10
+        label.zPosition = 30
         label.color = SKColor.white
         label.horizontalAlignmentMode = .center
         label.verticalAlignmentMode = .center

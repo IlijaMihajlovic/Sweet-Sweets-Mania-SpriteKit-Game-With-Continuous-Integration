@@ -123,7 +123,6 @@
 				24E95CC0227C603A00CA272C /* Resources */,
 				24E95CBF227C5FF100CA272C /* Supporting Files */,
 				244F99CD22689A36004874FB /* GameOver.swift */,
-				244F99CB22686FA6004874FB /* Gameplay.swift */,
 				24A6BA2E22876C3C007D74F4 /* GPButton.swift */,
 				244F99C322686D3E004874FB /* BDButton.swift */,
 			);
@@ -146,6 +145,7 @@
 				24CF84522281D61F00D35D19 /* Firebase Controllers */,
 				244F99BF22686A95004874FB /* GameViewController.swift */,
 				240F801E226A4910009F0B9F /* SettingsLauncher.swift */,
+				244F99CB22686FA6004874FB /* Gameplay.swift */,
 				244F99C122686BDD004874FB /* MainMenu.swift */,
 				246FFF82226F0EC30043B611 /* LoginScene.swift */,
 				24ED372B227B5A66009A466A /* SwipingController.swift */,

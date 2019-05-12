@@ -21,10 +21,24 @@ class WelcomeScene: SKScene {
     var email: String? = ""
     var profileImage: UIImage? = UIImage(named: "profileIcon")
     
+    
+    
+    var background: SKSpriteNode = {
+        var sprite = SKSpriteNode(imageNamed: "welcomeSceneImage")
+        if DeviceType.isiPad || DeviceType.isiPadPro {
+            sprite.scaleTo(screenWidthPercentage: 1.0)
+        } else {
+            sprite.scaleTo(screenHeightPercentage: 1.0)
+            sprite.scaleTo(screenWidthPercentage: 1.0)
+        }
+        sprite.zPosition = 0
+        return sprite
+    }()
 
     var privecyPolicyAndTermsOfServiceNode: SKSpriteNode = {
         var image = SKSpriteNode(imageNamed: "terms")
         image.scaleTo(screenWidthPercentage: 0.7)
+        image.zPosition = 5
         return image
         
     }()
@@ -264,15 +278,17 @@ class WelcomeScene: SKScene {
 
 
     func addNodes() {
-        [signInAnonymouslyButton, signInWithFacebookButton, privecyPolicyAndTermsOfServiceNode, logoLabel].forEach{addChild($0)}
+        [signInAnonymouslyButton, signInWithFacebookButton, privecyPolicyAndTermsOfServiceNode, background].forEach{addChild($0)}
     }
     
     func setupNodes() {
         signInAnonymouslyButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.26)
         signInWithFacebookButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.37)
         
-        logoLabel.position = .zero
+        //logoLabel.position = .zero
         privecyPolicyAndTermsOfServiceNode.position = CGPoint(x: ScreenSize.width * 0.00, y: ScreenSize.heigth * -0.45)
+        
+        background.position = .zero
         
     }
 }

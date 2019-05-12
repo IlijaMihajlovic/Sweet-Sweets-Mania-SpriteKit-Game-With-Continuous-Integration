@@ -11,11 +11,12 @@ import UIKit
 class MainMenu: SKScene {
 
     var background: SKSpriteNode = {
-        var sprite = SKSpriteNode(imageNamed: "Background")
+        var sprite = SKSpriteNode(imageNamed: "MainMenuBackground")
         if DeviceType.isiPad || DeviceType.isiPadPro {
             sprite.scaleTo(screenWidthPercentage: 1.0)
         } else {
             sprite.scaleTo(screenHeightPercentage: 1.0)
+            sprite.scaleTo(screenWidthPercentage: 1.0)
         }
         sprite.zPosition = 0
         return sprite
@@ -30,19 +31,6 @@ class MainMenu: SKScene {
         button.zPosition = 1
         return button
     }()
-    
-    
-    var title: SKLabelNode = {
-        var label = SKLabelNode(fontNamed: "Helvetica")
-        label.fontSize = CGFloat.universalFont(size: 24)
-        label.zPosition = 2
-        label.color = SKColor.white
-        label.horizontalAlignmentMode = .center
-        label.verticalAlignmentMode = .center
-        label.text = "The Biggest Donut"
-        return label
-    }()
-    
     
     
     lazy var shareButton: BDButton = {
@@ -95,7 +83,6 @@ class MainMenu: SKScene {
 
     func setupNodes() {
         background.position = CGPoint.zero
-        title.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.25)
         playButton.position = CGPoint.zero
         shareButton.position = CGPoint(x: ScreenSize.width * 0.20, y: ScreenSize.heigth * -0.15)
         handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.heigth * 0.35)
@@ -104,7 +91,6 @@ class MainMenu: SKScene {
     
     func addNodes() {
         addChild(background)
-        addChild(title)
         addChild(playButton)
         addChild(shareButton)
         addChild(handleMoreButton)
