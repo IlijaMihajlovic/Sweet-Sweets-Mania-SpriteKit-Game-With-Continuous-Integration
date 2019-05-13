@@ -22,13 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         let gameViewController = GameViewController()
-        ///let firebaseManager = FirebaseManager()
         
         window = UIWindow()
         window?.makeKeyAndVisible()
         window?.rootViewController = gameViewController
-        //window?.rootViewController = firebaseManager
-        
+   
         SSMManager.shared.launch()
         
         return true
