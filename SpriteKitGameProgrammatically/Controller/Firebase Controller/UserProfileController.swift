@@ -32,8 +32,8 @@ class UserProfileScene: SKScene {
         return image
     }()
     
-    lazy var fetchUserButton: BDButton = {
-        var button = BDButton(imageNamed: "FetchUser", buttonAction: {
+    lazy var fetchUserButton: SSMButton = {
+        var button = SSMButton(imageNamed: "FetchUser", buttonAction: {
             
             self.fetchUserButtonTapped()
             
@@ -43,8 +43,8 @@ class UserProfileScene: SKScene {
         return button
     }()
     
-    lazy var signOutAnonymouslyButton: BDButton = {
-        var button = BDButton(imageNamed: "SignOut", buttonAction: {
+    lazy var signOutAnonymouslyButton: SSMButton = {
+        var button = SSMButton(imageNamed: "SignOut", buttonAction: {
             
             self.handleSignOutButtonTapped()
             
@@ -54,8 +54,8 @@ class UserProfileScene: SKScene {
         return button
     }()
     
-    lazy var backButton: BDButton = {
-        var button = BDButton(imageNamed: "BackToMainMenu", buttonAction: {
+    lazy var backButton: SSMButton = {
+        var button = SSMButton(imageNamed: "BackToMainMenu", buttonAction: {
             
             self.userProfileImage.removeFromSuperview()
             SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.1))

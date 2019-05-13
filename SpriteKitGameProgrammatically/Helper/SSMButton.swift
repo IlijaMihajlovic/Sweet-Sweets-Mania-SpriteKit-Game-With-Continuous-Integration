@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class BDButton: SKNode {
+class SSMButton: SKNode {
     
     private var mask: SKSpriteNode
     private var cropNode: SKCropNode

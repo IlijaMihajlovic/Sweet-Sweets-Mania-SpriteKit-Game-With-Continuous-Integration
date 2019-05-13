@@ -22,8 +22,8 @@ class MainMenu: SKScene {
         return sprite
     }()
     
-    lazy var playButton: BDButton = {
-        var button = BDButton(imageNamed: "ButtonPlay", buttonAction: {
+    lazy var playButton: SSMButton = {
+        var button = SSMButton(imageNamed: "ButtonPlay", buttonAction: {
             self.startGameplay()
             
         })
@@ -33,8 +33,8 @@ class MainMenu: SKScene {
     }()
     
     
-    lazy var shareButton: BDButton = {
-        var button = BDButton(imageNamed: "ButtonShare", buttonAction: {
+    lazy var shareButton: SSMButton = {
+        var button = SSMButton(imageNamed: "ButtonShare", buttonAction: {
             
             SSMManager.shared.share(on: self, text: "I just love this new game. Go ahead and download 'The Biggest Donut' from the App Store", image: UIImage(named: "Donut92"), exculdeActivityTypes: [])
             
@@ -46,8 +46,8 @@ class MainMenu: SKScene {
     
     
     
-    lazy var handleMoreButton: BDButton = {
-        var button = BDButton(imageNamed: "ButtonSettings", buttonAction: {
+    lazy var handleMoreButton: SSMButton = {
+        var button = SSMButton(imageNamed: "ButtonSettings", buttonAction: {
         self.handleMore()
           
         })

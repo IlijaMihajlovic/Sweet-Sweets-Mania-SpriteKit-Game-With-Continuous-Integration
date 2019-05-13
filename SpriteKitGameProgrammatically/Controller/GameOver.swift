@@ -59,8 +59,8 @@ class GameOver: SKScene {
     }()
     
     
-    lazy var backButton: BDButton = {
-        var button = BDButton(imageNamed: "ButtonBack", title: "", buttonAction: {
+    lazy var backButton: SSMButton = {
+        var button = SSMButton(imageNamed: "ButtonBack", title: "", buttonAction: {
             SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
         })
         button.zPosition = 1
@@ -68,8 +68,8 @@ class GameOver: SKScene {
         return button
     }()
     
-    lazy var replayButton: BDButton = {
-        var button = BDButton(imageNamed: "ButtonReplay", buttonAction: {
+    lazy var replayButton: SSMButton = {
+        var button = SSMButton(imageNamed: "ButtonReplay", buttonAction: {
             
             SSMManager.shared.transition(self, toScene: .Gameplay, transition: SKTransition.moveIn(with: .left, duration: 0.5))
             

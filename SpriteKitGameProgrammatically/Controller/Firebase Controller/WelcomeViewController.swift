@@ -46,8 +46,8 @@ class WelcomeScene: SKScene {
     }()
     
  
-    lazy var signInAnonymouslyButton: BDButton = {
-        var button = BDButton(imageNamed: "anonymouslyButton", buttonAction: {
+    lazy var signInAnonymouslyButton: SSMButton = {
+        var button = SSMButton(imageNamed: "anonymouslyButton", buttonAction: {
             
             self.handleSignInAnonymouslyButtonTapped()
             
@@ -74,8 +74,8 @@ class WelcomeScene: SKScene {
         return label
     }()
     
-    lazy var signInWithFacebookButton: BDButton = {
-        var button = BDButton(imageNamed: "facebookButton", buttonAction: {
+    lazy var signInWithFacebookButton: SSMButton = {
+        var button = SSMButton(imageNamed: "facebookButton", buttonAction: {
             
             self.handleSignInWithFacebookButtonTapped()
             
