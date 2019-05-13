@@ -13,7 +13,6 @@ enum SceneType {
     case MainMenu
     case Gameplay
     case GameOver
-    case LoginScene
     case UserProfileScene
     case WelcomeScene
 }

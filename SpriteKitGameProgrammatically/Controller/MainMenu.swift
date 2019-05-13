@@ -33,19 +33,6 @@ class MainMenu: SKScene {
     }()
     
     
-    lazy var shareButton: SSMButton = {
-        var button = SSMButton(imageNamed: "ButtonShare", buttonAction: {
-            
-            SSMManager.shared.share(on: self, text: "I just love this new game. Go ahead and download 'The Biggest Donut' from the App Store", image: UIImage(named: "Donut92"), exculdeActivityTypes: [])
-            
-        })
-        button.scaleTo(screenWithPercentage: 0.27)
-        button.zPosition = 1
-        return button
-    }()
-    
-    
-    
     lazy var handleMoreButton: SSMButton = {
         var button = SSMButton(imageNamed: "ButtonSettings", buttonAction: {
         self.handleMore()
@@ -57,8 +44,6 @@ class MainMenu: SKScene {
         return button
     }()
     
-    
-
     
     override func didMove(to view: SKView) {
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
@@ -84,7 +69,6 @@ class MainMenu: SKScene {
     func setupNodes() {
         background.position = CGPoint.zero
         playButton.position = CGPoint.zero
-        shareButton.position = CGPoint(x: ScreenSize.width * 0.20, y: ScreenSize.heigth * -0.15)
         handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.heigth * 0.35)
     }
     
@@ -92,7 +76,6 @@ class MainMenu: SKScene {
     func addNodes() {
         addChild(background)
         addChild(playButton)
-        addChild(shareButton)
         addChild(handleMoreButton)
     }
     

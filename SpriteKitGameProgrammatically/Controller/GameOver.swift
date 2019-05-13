@@ -11,7 +11,6 @@ import StoreKit
 
 class GameOver: SKScene {
     
-    
     var background: SKSpriteNode = {
         var sprite = SKSpriteNode(imageNamed: "BackgroundImage")
         if DeviceType.isiPad || DeviceType.isiPadPro {
@@ -23,6 +22,7 @@ class GameOver: SKScene {
         sprite.zPosition = 0
         return sprite
     }()
+    
     
     var title: SKLabelNode = {
         var label = SKLabelNode(fontNamed: "Helvetica")
@@ -47,6 +47,7 @@ class GameOver: SKScene {
         return label
     }()
     
+    
     var bestScore: SKLabelNode = {
         var label = SKLabelNode(fontNamed: "Helvetica")
         label.fontSize = CGFloat.universalFont(size: 24)
@@ -61,6 +62,7 @@ class GameOver: SKScene {
     
     lazy var backButton: SSMButton = {
         var button = SSMButton(imageNamed: "ButtonBack", title: "", buttonAction: {
+           
             SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
         })
         button.zPosition = 1
@@ -72,7 +74,6 @@ class GameOver: SKScene {
         var button = SSMButton(imageNamed: "ButtonReplay", buttonAction: {
             
             SSMManager.shared.transition(self, toScene: .Gameplay, transition: SKTransition.moveIn(with: .left, duration: 0.5))
-            
         })
         button.scaleTo(screenWithPercentage: 0.27)
         button.zPosition = 1

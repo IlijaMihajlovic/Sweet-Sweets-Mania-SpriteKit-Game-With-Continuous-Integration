@@ -52,9 +52,6 @@ class SSMManager {
             
         case SceneType.UserProfileScene:
             return UserProfileScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
-            
-        case SceneType.LoginScene:
-            return LoginScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
      
         case SceneType.MainMenu:
             return MainMenu(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
@@ -87,56 +84,7 @@ class SSMManager {
         
     }
     
-    func share(on scene: SKScene, text: String, image: UIImage?, exculdeActivityTypes: [UIActivity.ActivityType] ) {
-        // text to share
-        let text = "Awesome App Checkout It Out."
-        guard let image = image else {return}
-        // set up activity view controller
-        let shareItems = [ text, image ] as [Any]
-        let activityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = scene.view // so that iPads won't crash
-        
-        // exclude some activity types from the list (optional)
-        activityViewController.excludedActivityTypes = exculdeActivityTypes
-        
-        // present the ViewController
-        scene.view?.window?.rootViewController?.present(activityViewController, animated: true, completion: nil)
-    }
-    
- 
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
