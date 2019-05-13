@@ -1,14 +1,16 @@
 //
 //  Gameplay.swift
-//  ACTGame
+//  Sweet Sweets Mania
 //
-//  Created by Alex Nagy on 21/12/2017.
-//  Copyright © 2017 Alex Nagy. All rights reserved.
+//  Created by Ilija Mihajlovic on 4/18/19.
+//  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
 //
 
 import SpriteKit
 
 class Gameplay: SKScene {
+    
+    var score = 0
     
     var background: SKSpriteNode = {
         var sprite = SKSpriteNode(imageNamed: "BackgroundImage")
@@ -22,10 +24,9 @@ class Gameplay: SKScene {
         return sprite
     }()
     
-    var score = 0
-    
+   
     lazy var scoreLabel: SKLabelNode = {
-        var label = SKLabelNode(fontNamed: "GlutenFT-Regular")
+        var label = SKLabelNode(fontNamed: "HelveticaNeue-Medium")
         label.fontSize = CGFloat.universalFont(size: 58)
         label.zPosition = 30
         label.color = SKColor.white
@@ -35,58 +36,52 @@ class Gameplay: SKScene {
         return label
     }()
     
+    
     override func didMove(to view: SKView) {
         setupNodes()
         addNodes()
-        addNewDonuts()
+        addNewSweets()
     }
     
-    func setupNodes() {
-        background.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.5)
-        scoreLabel.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.9)
-    }
-    
-    func addNodes() {
-        addChild(background)
-        addChild(scoreLabel)
-    }
-    
+  
     func startNewBoard() {
-        removeAllDonuts()
-        addNewDonuts()
+        removeAllSweets()
+        addNewSweets()
     }
     
-    func addNewDonuts() {
+    
+    func addNewSweets() {
         for i in 1...12 {
             
             let imageNamed = "sweet\(Int(CGFloat.random(1.0, max: 12.0)))"
             
-            let donut = GPButton(imageNamed: imageNamed) {
-                print("Wrong Donut tapped")
-                self.handleWrongDonutTapped()
+            let sweet = GPButton(imageNamed: imageNamed) {
+                print("Wrong Sweet Tapped")
+                self.handleWrongSweetTapped()
             }
-            donut.name = "sweet"
-            donut.scaleTo(screenWithPercentage: CGFloat.random(0.2, max: 0.3))
-            donut.zPosition = CGFloat(i)
-            donut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.9), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.9))
-            addChild(donut)
-            donut.button.popUp(after: CGFloat.random(0.1, max: 1.0), sequenceNumber: 0)
+            sweet.name = "sweet"
+            sweet.scaleTo(screenWithPercentage: CGFloat.random(0.2, max: 0.3))
+            sweet.zPosition = CGFloat(i)
+            sweet.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.9), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.9))
+            addChild(sweet)
+            sweet.button.popUp(after: CGFloat.random(0.1, max: 1.0), sequenceNumber: 0)
         }
         
         let imageNamed = "sweet\(Int(CGFloat.random(1.0, max: 12.0)))"
-        let winnerDonut = GPButton(imageNamed: imageNamed) {
-            print("Winner Donut tapped")
-            self.handleWinnerDonutTapped()
+        let winnerSweet = GPButton(imageNamed: imageNamed) {
+            print("Winer Sweet Tapped")
+            self.handleWinnerSweetTapped()
         }
-        winnerDonut.scaleTo(screenWithPercentage: 0.43)
-        winnerDonut.name = "sweet"
-        winnerDonut.zPosition = CGFloat(31)
-        winnerDonut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.9), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.9))
-        addChild(winnerDonut)
-        winnerDonut.button.popUp()
+        winnerSweet.scaleTo(screenWithPercentage: 0.43)
+        winnerSweet.name = "sweet"
+        winnerSweet.zPosition = CGFloat(31)
+        winnerSweet.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.9), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.9))
+        addChild(winnerSweet)
+        winnerSweet.button.popUp()
     }
     
-    func removeAllDonuts() {
+   
+    func removeAllSweets() {
         enumerateChildNodes(withName: "//*") { (node, stop) in
             if node.name == "sweet" {
                 node.removeFromParent()
@@ -94,42 +89,42 @@ class Gameplay: SKScene {
         }
     }
     
-    func handleWinnerDonutTapped() {
+   
+    func handleWinnerSweetTapped() {
         score += 1
         updateScoreLabel()
         startNewBoard()
     }
     
+   
     func updateScoreLabel() {
         scoreLabel.text = "\(score)"
     }
     
-    func handleWrongDonutTapped() {
+    
+    func handleWrongSweetTapped() {
         SSMPlayerStats.shared.setScore(score)
         SSMManager.shared.transition(self, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
     }
+    
+    
+    //MARK: - Constraints
+    func setupNodes() {
+        
+        //background Constraint
+        background.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.5)
+        
+        //scoreLabel Constraint
+        scoreLabel.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.9)
+    }
+    
+    
+    func addNodes() {
+        [background, scoreLabel].forEach{(addChild($0))}
+    
+    }
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

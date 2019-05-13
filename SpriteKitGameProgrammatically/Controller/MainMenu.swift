@@ -8,8 +8,9 @@
 
 import SpriteKit
 import UIKit
-class MainMenu: SKScene {
 
+class MainMenu: SKScene {
+    
     var background: SKSpriteNode = {
         var sprite = SKSpriteNode(imageNamed: "MainMenuBackground")
         if DeviceType.isiPad || DeviceType.isiPadPro {
@@ -21,6 +22,7 @@ class MainMenu: SKScene {
         sprite.zPosition = 0
         return sprite
     }()
+    
     
     lazy var playButton: SSMButton = {
         var button = SSMButton(imageNamed: "ButtonPlay", buttonAction: {
@@ -35,14 +37,28 @@ class MainMenu: SKScene {
     
     lazy var handleMoreButton: SSMButton = {
         var button = SSMButton(imageNamed: "ButtonSettings", buttonAction: {
-        self.handleMore()
-          
+            self.handleMore()
+            
         })
         button.scaleTo(screenWithPercentage: 0.27)
-        
         button.zPosition = 2
         return button
     }()
+    
+    
+    lazy var settingsLauncher: SettingsLauncher = {
+        let launcher = SettingsLauncher()
+        launcher.mainMenu = self //Make MainMenuScene Not Nil
+        return launcher
+    }()
+    
+    
+    
+    func handleMore() {
+        settingsLauncher.mainMenu = self
+        settingsLauncher.showSettings()
+        
+    }
     
     
     override func didMove(to view: SKView) {
@@ -50,44 +66,39 @@ class MainMenu: SKScene {
         playButton.position = CGPoint.zero
         setupNodes()
         addNodes()
- 
+        
     }
     
-    lazy var settingsLauncher: SettingsLauncher = {
-        let launcher = SettingsLauncher()
-        launcher.mainMenu = self //Make Main Menu scene not nil
-        return launcher
-    }()
-
-    
-    func handleMore() {
-        settingsLauncher.mainMenu = self
-        settingsLauncher.showSettings()
- 
-    }
-
-    func setupNodes() {
-        background.position = CGPoint.zero
-        playButton.position = CGPoint.zero
-        handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.heigth * 0.35)
-    }
-    
-    
-    func addNodes() {
-        addChild(background)
-        addChild(playButton)
-        addChild(handleMoreButton)
-    }
     
     @objc func startGameplayNotification(_ info:Notification) {
         startGameplay()
     }
     
+    
     func startGameplay() {
         SSMManager.shared.transition(self, toScene: .Gameplay, transition: SKTransition.moveIn(with: .right, duration: 0.5))
         
     }
+    
+    
+    //MARK: - Constraints
+    func setupNodes() {
+        
+        //background Constraint
+        background.position = CGPoint.zero
+        
+        //playButton Constraint
+        playButton.position = CGPoint.zero
+        
+        //handleMoreButton Constraint
+        handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.heigth * 0.35)
+    }
+    
+    
+    func addNodes() {
+        [background, playButton, handleMoreButton].forEach{(addChild($0))}
+        
+    }
 }
-
 
 
