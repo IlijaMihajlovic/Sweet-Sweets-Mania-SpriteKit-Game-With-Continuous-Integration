@@ -157,7 +157,7 @@ class UserProfileScene: SKScene {
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        ACTManager.shared.showAlert(on: self, title: "Are You Sure?", message: "You Will Sign Out From The Biggest Logo", actions: [cancelAction, signOutAction])
+        ACTManager.shared.showAlert(on: self, title: "Are You Sure?", message: "You Will Sign Out From Sweet Sweets Mania", actions: [cancelAction, signOutAction])
         
     }
     

@@ -37,7 +37,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         super.init()
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(SettingCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(SettingsCell.self, forCellWithReuseIdentifier: cellId)
         
     }
     
@@ -91,7 +91,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SettingCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SettingsCell
         
         let setting = settings[indexPath.item]
         cell.setting = setting

@@ -1,6 +1,6 @@
 //
 //  PageCell.swift
-//  SpriteKitGameProgrammatically
+//  Sweet Sweets Mania
 //
 //  Created by Ilija Mihajlovic on 5/2/19.
 //  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
