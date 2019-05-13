@@ -1,23 +1,19 @@
 //
-//  ACTManager.swift
-//  AdventCalendarTutorials
+//  Sweet Sweets Mania
+//  SSMManager.swift
 //
-//  Created by Alex Nagy on 04/12/2017.
-//  Copyright © 2017 Alex Nagy. All rights reserved.
+//  Created by Ilija Mihajlovic on 4/18/19.
+//  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
 //
 
 import Foundation
 import SpriteKit
 
-class ACTManager {
+class SSMManager {
     
-    enum SceneType {
-        case MainMenu, Gameplay, GameOver, LoginScene, UserProfileScene, WelcomeScene
-    }
-    
-    //initialize of class private
+    //Initialize of class private
     private init() {}
-    static let shared = ACTManager()
+    static let shared = SSMManager()
     
     public func launch() {
         firstLaunch()
@@ -27,7 +23,7 @@ class ACTManager {
         if !UserDefaults.standard.bool(forKey: "isFirstLaunch") {
             
             print("This is our first launch")
-            ACTPlayerStats.shared.setSounds(true)
+            SSMPlayerStats.shared.setSounds(true)
           
             
             UserDefaults.standard.set(true, forKey: "isFirstLaunch")
@@ -50,9 +46,7 @@ class ACTManager {
     
     func getScene(_ sceneType: SceneType) -> SKScene? {
         switch sceneType {
-        //case SceneType.AboutScene:
-            //return AboutScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
-        
+    
         case SceneType.WelcomeScene:
             return WelcomeScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
             
@@ -64,15 +58,17 @@ class ACTManager {
      
         case SceneType.MainMenu:
             return MainMenu(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+            
         case SceneType.Gameplay:
             return Gameplay(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+            
         case SceneType.GameOver:
             return GameOver(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
         }
     }
     
     func run(_ fileName: String, onNode: SKNode) {
-        if ACTPlayerStats.shared.getSound() {
+        if SSMPlayerStats.shared.getSound() {
             onNode.run(SKAction.playSoundFileNamed(fileName, waitForCompletion: false))
         }
     }
@@ -93,7 +89,7 @@ class ACTManager {
     
     func share(on scene: SKScene, text: String, image: UIImage?, exculdeActivityTypes: [UIActivity.ActivityType] ) {
         // text to share
-        //let text = "This is some text that I want to share."
+        let text = "Awesome App Checkout It Out."
         guard let image = image else {return}
         // set up activity view controller
         let shareItems = [ text, image ] as [Any]
@@ -103,7 +99,7 @@ class ACTManager {
         // exclude some activity types from the list (optional)
         activityViewController.excludedActivityTypes = exculdeActivityTypes
         
-        // present the view controller
+        // present the ViewController
         scene.view?.window?.rootViewController?.present(activityViewController, animated: true, completion: nil)
     }
     

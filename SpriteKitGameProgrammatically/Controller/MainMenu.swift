@@ -1,6 +1,6 @@
 //
 //  MainMenu.swift
-//  SpriteKitGameProgrammatically
+//  Sweet Sweets Mania
 //
 //  Created by Ilija Mihajlovic on 4/18/19.
 //  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
@@ -36,7 +36,7 @@ class MainMenu: SKScene {
     lazy var shareButton: BDButton = {
         var button = BDButton(imageNamed: "ButtonShare", buttonAction: {
             
-            ACTManager.shared.share(on: self, text: "I just love this new game. Go ahead and download 'The Biggest Donut' from the App Store", image: UIImage(named: "Donut92"), exculdeActivityTypes: [])
+            SSMManager.shared.share(on: self, text: "I just love this new game. Go ahead and download 'The Biggest Donut' from the App Store", image: UIImage(named: "Donut92"), exculdeActivityTypes: [])
             
         })
         button.scaleTo(screenWithPercentage: 0.27)
@@ -101,7 +101,7 @@ class MainMenu: SKScene {
     }
     
     func startGameplay() {
-        ACTManager.shared.transition(self, toScene: .Gameplay, transition: SKTransition.moveIn(with: .right, duration: 0.5))
+        SSMManager.shared.transition(self, toScene: .Gameplay, transition: SKTransition.moveIn(with: .right, duration: 0.5))
         
     }
 }

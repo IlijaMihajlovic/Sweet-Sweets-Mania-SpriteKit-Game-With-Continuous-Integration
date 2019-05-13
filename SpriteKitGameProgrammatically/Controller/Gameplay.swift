@@ -105,8 +105,8 @@ class Gameplay: SKScene {
     }
     
     func handleWrongDonutTapped() {
-        ACTPlayerStats.shared.setScore(score)
-        ACTManager.shared.transition(self, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
+        SSMPlayerStats.shared.setScore(score)
+        SSMManager.shared.transition(self, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
     }
 }
 

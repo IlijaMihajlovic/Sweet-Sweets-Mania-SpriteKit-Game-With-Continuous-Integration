@@ -58,7 +58,7 @@ class UserProfileScene: SKScene {
         var button = BDButton(imageNamed: "BackToMainMenu", buttonAction: {
             
             self.userProfileImage.removeFromSuperview()
-            ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.1))
+            SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.1))
             self.userProfileImage.removeFromSuperview()
             
         })
@@ -147,17 +147,17 @@ class UserProfileScene: SKScene {
                 try Auth.auth().signOut()
                 
                 self.userProfileImage.removeFromSuperview()
-                ACTManager.shared.transition(self, toScene: .WelcomeScene, transition: SKTransition.moveIn(with: .left, duration: 0.1))
+                SSMManager.shared.transition(self, toScene: .WelcomeScene, transition: SKTransition.moveIn(with: .left, duration: 0.1))
                 
             } catch let err {
                 print("Failed to sign out with error", err)
                 
-                ACTManager.shared.showAlert(on: self, title: "Sign Out Error", message: err.localizedDescription, actions: [errorAction], animated: true)
+                SSMManager.shared.showAlert(on: self, title: "Sign Out Error", message: err.localizedDescription, actions: [errorAction], animated: true)
             }
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        ACTManager.shared.showAlert(on: self, title: "Are You Sure?", message: "You Will Sign Out From Sweet Sweets Mania", actions: [cancelAction, signOutAction])
+        SSMManager.shared.showAlert(on: self, title: "Are You Sure?", message: "You Will Sign Out From Sweet Sweets Mania", actions: [cancelAction, signOutAction])
         
     }
     

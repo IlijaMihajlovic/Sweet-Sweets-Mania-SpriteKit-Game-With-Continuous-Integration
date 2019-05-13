@@ -116,7 +116,7 @@ class WelcomeScene: SKScene {
                
                 self.signInIntoFirebaseWithFacebook()
                
-                ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.0))
+                SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.0))
                 
                 SVProgressHUD.dismiss(withDelay: 0.8)
                 
@@ -142,7 +142,7 @@ class WelcomeScene: SKScene {
                 
                 let errorAction = UIAlertAction(title: "", style: .default, handler: nil)
                 
-                ACTManager.shared.showAlert(on: self, title: "Sign In Error", message: err.localizedDescription, actions: [errorAction])
+                SSMManager.shared.showAlert(on: self, title: "Sign In Error", message: err.localizedDescription, actions: [errorAction])
                 return
             }
             SVProgressHUD.show(withStatus: "Signing Up Anonymously...")
@@ -150,7 +150,7 @@ class WelcomeScene: SKScene {
             self.saveUserIntoFirebaseStorageAndIntoDatabase()
             print("Successfully Signed In Anonymously ")
             
-            ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+            SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
             
             SVProgressHUD.dismiss(withDelay: 0.7)
         }

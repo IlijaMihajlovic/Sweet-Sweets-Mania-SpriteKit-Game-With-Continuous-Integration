@@ -134,7 +134,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
                     self.collectionViewFlowLayoutInitToSwipeController()
                
                 case 1:
-                    ACTManager.shared.transition(mainMenu, toScene: .UserProfileScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
+                    SSMManager.shared.transition(mainMenu, toScene: .UserProfileScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
                     
                 case 2:
                    self.rateProjectOnGitHub()

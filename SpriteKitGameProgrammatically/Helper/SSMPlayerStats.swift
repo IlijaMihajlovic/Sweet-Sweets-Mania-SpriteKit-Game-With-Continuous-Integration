@@ -1,21 +1,26 @@
+//
+//  Sweet Sweets Mania
+//  SSMPlayerStats.swift
+//
+//  Created by Ilija Mihajlovic on 4/18/19.
+//  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
+//
 
 import Foundation
 import SpriteKit
 
 let kSoundState = "kSoundState"
-let kBackgroundMusicName = "summer"
+let kBackgroundMusicName = "BackgroundMusic"
 let kBackgroundMusicExtension = "mp3"
 
 let kScore = "kScore"
 let kBestScore = "kBestScore"
 
 
-
-
-class ACTPlayerStats {
+class SSMPlayerStats {
     
     private init() {}
-    static let shared = ACTPlayerStats()
+    static let shared = SSMPlayerStats()
     
     func setScore(_ value: Int) {
         

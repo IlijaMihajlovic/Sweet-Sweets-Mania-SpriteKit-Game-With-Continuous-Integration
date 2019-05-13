@@ -43,7 +43,7 @@ class GameOver: SKScene {
         label.color = SKColor.white
         label.horizontalAlignmentMode = .center
         label.verticalAlignmentMode = .center
-        label.text = "Score: \(ACTPlayerStats.shared.getScore())"
+        label.text = "Score: \(SSMPlayerStats.shared.getScore())"
         return label
     }()
     
@@ -54,14 +54,14 @@ class GameOver: SKScene {
         label.color = SKColor.white
         label.horizontalAlignmentMode = .center
         label.verticalAlignmentMode = .center
-        label.text = "Best Score: \(ACTPlayerStats.shared.getBestScore())"
+        label.text = "Best Score: \(SSMPlayerStats.shared.getBestScore())"
         return label
     }()
     
     
     lazy var backButton: BDButton = {
         var button = BDButton(imageNamed: "ButtonBack", title: "", buttonAction: {
-            ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+            SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
         })
         button.zPosition = 1
         button.scaleTo(screenWithPercentage: 0.15)
@@ -71,7 +71,7 @@ class GameOver: SKScene {
     lazy var replayButton: BDButton = {
         var button = BDButton(imageNamed: "ButtonReplay", buttonAction: {
             
-            ACTManager.shared.transition(self, toScene: .Gameplay, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+            SSMManager.shared.transition(self, toScene: .Gameplay, transition: SKTransition.moveIn(with: .left, duration: 0.5))
             
         })
         button.scaleTo(screenWithPercentage: 0.27)

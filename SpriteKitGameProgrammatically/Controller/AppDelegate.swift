@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = gameViewController
         //window?.rootViewController = firebaseManager
         
-        ACTManager.shared.launch()
+        SSMManager.shared.launch()
         
         return true
     }

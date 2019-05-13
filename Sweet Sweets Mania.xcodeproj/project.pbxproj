@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0CE9CE28C5511A94A074C2C0 /* Pods_SpriteKitGameProgrammatically.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F35CF71BFF61AADB9A22BC69 /* Pods_SpriteKitGameProgrammatically.framework */; };
-		240F8013226A1765009F0B9F /* ACTPlayerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99C922686EE3004874FB /* ACTPlayerStats.swift */; };
-		240F801B226A229E009F0B9F /* ACTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F801A226A229E009F0B9F /* ACTManager.swift */; };
+		240F8013226A1765009F0B9F /* SSMPlayerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99C922686EE3004874FB /* SSMPlayerStats.swift */; };
+		240F801B226A229E009F0B9F /* SSMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F801A226A229E009F0B9F /* SSMManager.swift */; };
 		240F801F226A4910009F0B9F /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F801E226A4910009F0B9F /* SettingsLauncher.swift */; };
-		2436715D22707603009FC1A1 /* summer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2436715C22707603009FC1A1 /* summer.mp3 */; };
+		2436715D22707603009FC1A1 /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2436715C22707603009FC1A1 /* BackgroundMusic.mp3 */; };
 		2442D334228484770080003C /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442D333228484770080003C /* CurrentUser.swift */; };
 		244F99AE226868A3004874FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99AD226868A3004874FB /* AppDelegate.swift */; };
 		244F99B5226868A4004874FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244F99B4226868A4004874FB /* Assets.xcassets */; };
@@ -29,6 +29,7 @@
 		24A6BA2F22876C3C007D74F4 /* GPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A6BA2E22876C3C007D74F4 /* GPButton.swift */; };
 		24C5BEF2227C458F0050CBAA /* SwipingController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */; };
 		24CC57692289BA730045C278 /* SettingsCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC57682289BA730045C278 /* SettingsCellDelegate.swift */; };
+		24CC576C2289C2A50045C278 /* SceneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC576B2289C2A50045C278 /* SceneType.swift */; };
 		24CF845422820A5500D35D19 /* SettignsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF845322820A5500D35D19 /* SettignsModel.swift */; };
 		24E4A5BE227F49F9009035F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */; };
 		24E4A5C0227F4BAC009035F7 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */; };
@@ -43,9 +44,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		240F801A226A229E009F0B9F /* ACTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACTManager.swift; sourceTree = "<group>"; };
+		240F801A226A229E009F0B9F /* SSMManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSMManager.swift; sourceTree = "<group>"; };
 		240F801E226A4910009F0B9F /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
-		2436715C22707603009FC1A1 /* summer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = summer.mp3; sourceTree = "<group>"; };
+		2436715C22707603009FC1A1 /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic.mp3; sourceTree = "<group>"; };
 		2442D333228484770080003C /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		244F99AA226868A3004874FB /* Sweet Sweets Mania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sweet Sweets Mania.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		244F99AD226868A3004874FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +57,7 @@
 		244F99C122686BDD004874FB /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		244F99C322686D3E004874FB /* BDButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDButton.swift; sourceTree = "<group>"; };
 		244F99C522686D79004874FB /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = SpriteKitGameProgrammatically/Extension.swift; sourceTree = SOURCE_ROOT; };
-		244F99C922686EE3004874FB /* ACTPlayerStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACTPlayerStats.swift; sourceTree = "<group>"; };
+		244F99C922686EE3004874FB /* SSMPlayerStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSMPlayerStats.swift; sourceTree = "<group>"; };
 		244F99CB22686FA6004874FB /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
 		244F99CD22689A36004874FB /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		246FFF82226F0EC30043B611 /* LoginScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScene.swift; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		24A6BA2E22876C3C007D74F4 /* GPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPButton.swift; sourceTree = "<group>"; };
 		24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+CollectionView.swift"; sourceTree = "<group>"; };
 		24CC57682289BA730045C278 /* SettingsCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellDelegate.swift; sourceTree = "<group>"; };
+		24CC576B2289C2A50045C278 /* SceneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneType.swift; sourceTree = "<group>"; };
 		24CF845322820A5500D35D19 /* SettignsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettignsModel.swift; sourceTree = "<group>"; };
 		24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		244F99AC226868A3004874FB /* SpriteKitGameProgrammatically */ = {
 			isa = PBXGroup;
 			children = (
+				24CC576A2289C2950045C278 /* Enum */,
 				24CC57672289BA290045C278 /* Protocol */,
 				2482B1C6226B2A36007EF025 /* Extension */,
 				24ED3731227B8805009A466A /* Model */,
@@ -159,8 +162,8 @@
 		2482B1C1226B2662007EF025 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				240F801A226A229E009F0B9F /* ACTManager.swift */,
-				244F99C922686EE3004874FB /* ACTPlayerStats.swift */,
+				240F801A226A229E009F0B9F /* SSMManager.swift */,
+				244F99C922686EE3004874FB /* SSMPlayerStats.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -186,6 +189,14 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		24CC576A2289C2950045C278 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				24CC576B2289C2A50045C278 /* SceneType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		24CF84522281D61F00D35D19 /* Firebase Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				244F99B4226868A4004874FB /* Assets.xcassets */,
-				2436715C22707603009FC1A1 /* summer.mp3 */,
+				2436715C22707603009FC1A1 /* BackgroundMusic.mp3 */,
 				24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
@@ -309,7 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2436715D22707603009FC1A1 /* summer.mp3 in Resources */,
+				2436715D22707603009FC1A1 /* BackgroundMusic.mp3 in Resources */,
 				244F99B8226868A4004874FB /* LaunchScreen.storyboard in Resources */,
 				24E4A5BE227F49F9009035F7 /* GoogleService-Info.plist in Resources */,
 				244F99B5226868A4004874FB /* Assets.xcassets in Resources */,
@@ -397,13 +408,14 @@
 				24CF845422820A5500D35D19 /* SettignsModel.swift in Sources */,
 				2482B1C8226B2A61007EF025 /* AutoLayoutAnchorExt.swift in Sources */,
 				246FFF83226F0EC30043B611 /* LoginScene.swift in Sources */,
-				240F8013226A1765009F0B9F /* ACTPlayerStats.swift in Sources */,
+				240F8013226A1765009F0B9F /* SSMPlayerStats.swift in Sources */,
 				240F801F226A4910009F0B9F /* SettingsLauncher.swift in Sources */,
 				244F99CE22689A36004874FB /* GameOver.swift in Sources */,
 				2482B1C3226B26BF007EF025 /* BaseCell.swift in Sources */,
-				240F801B226A229E009F0B9F /* ACTManager.swift in Sources */,
+				240F801B226A229E009F0B9F /* SSMManager.swift in Sources */,
 				2442D334228484770080003C /* CurrentUser.swift in Sources */,
 				24E4A5C0227F4BAC009035F7 /* FirebaseManager.swift in Sources */,
+				24CC576C2289C2A50045C278 /* SceneType.swift in Sources */,
 				244F99C022686A95004874FB /* GameViewController.swift in Sources */,
 				2482B1C5226B26D4007EF025 /* SettingsCell.swift in Sources */,
 				24ED372C227B5A66009A466A /* SwipingController.swift in Sources */,

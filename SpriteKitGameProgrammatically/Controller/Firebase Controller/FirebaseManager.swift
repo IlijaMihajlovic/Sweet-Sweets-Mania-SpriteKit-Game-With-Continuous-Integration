@@ -24,7 +24,7 @@ class FirebaseManager: SKScene {
             DispatchQueue.main.async {
                 DispatchQueue.main.async {
                     
-                    ACTManager.shared.transition(self, toScene: .WelcomeScene, transition: SKTransition.moveIn(with: .down, duration: 0.0))
+                    SSMManager.shared.transition(self, toScene: .WelcomeScene, transition: SKTransition.moveIn(with: .down, duration: 0.0))
                    
                     return
                 }
@@ -36,7 +36,7 @@ class FirebaseManager: SKScene {
             DispatchQueue.main.async {
                 DispatchQueue.main.async {
                     
-                    ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.0))
+                    SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.0))
                     
                     print("In Main Menu")
                     return

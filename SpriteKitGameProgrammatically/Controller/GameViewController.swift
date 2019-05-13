@@ -62,7 +62,7 @@ class GameViewController: UIViewController {
     }
     
     func playStopBackgroundMusic() {
-        if ACTPlayerStats.shared.getSound() {
+        if SSMPlayerStats.shared.getSound() {
             backgroundMusic?.play()
         
         } else {
@@ -71,13 +71,13 @@ class GameViewController: UIViewController {
     }
     
     @objc func stopBackgroundMusic(_ info:Notification) {
-        if ACTPlayerStats.shared.getSound() {
+        if SSMPlayerStats.shared.getSound() {
             backgroundMusic?.stop()
         }
     }
 
     @objc func startBackgroundMusic(_ info:Notification) {
-        if ACTPlayerStats.shared.getSound() {
+        if SSMPlayerStats.shared.getSound() {
             backgroundMusic?.play()
         }
     }
