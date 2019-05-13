@@ -1,20 +1,23 @@
 //
-//  BDButton.swift
-//  AdventCalendarTutorials
+//  Sweet Sweets Mania
+//  SSMManager.swift
 //
-//  Created by Alex Nagy on 07/12/2017.
-//  Copyright © 2017 Alex Nagy. All rights reserved.
+//  Created by Ilija Mihajlovic on 5/18/19.
+//  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
 //
 
 import SpriteKit
 
 class BDButton: SKNode {
-    var button: SKSpriteNode
+    
     private var mask: SKSpriteNode
     private var cropNode: SKCropNode
     private var action: () -> Void
+    
     var isEnabled = true
+    var button: SKSpriteNode
     var titleLabel: SKLabelNode?
+    
     
     init(imageNamed: String, title: String? = "", buttonAction: @escaping () -> Void) {
         button = SKSpriteNode(imageNamed: imageNamed)
@@ -38,9 +41,11 @@ class BDButton: SKNode {
         addNodes()
     }
     
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     func setupNodes() {
         button.zPosition = 0
@@ -133,27 +138,6 @@ class BDButton: SKNode {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
