@@ -19,7 +19,6 @@
 		244F99C022686A95004874FB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99BF22686A95004874FB /* GameViewController.swift */; };
 		244F99C222686BDD004874FB /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99C122686BDD004874FB /* MainMenu.swift */; };
 		244F99C422686D3E004874FB /* SSMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99C322686D3E004874FB /* SSMButton.swift */; };
-		244F99C622686D79004874FB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99C522686D79004874FB /* Extension.swift */; };
 		244F99CC22686FA6004874FB /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99CB22686FA6004874FB /* Gameplay.swift */; };
 		244F99CE22689A36004874FB /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99CD22689A36004874FB /* GameOver.swift */; };
 		2482B1C3226B26BF007EF025 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B1C2226B26BF007EF025 /* BaseCell.swift */; };
@@ -29,6 +28,7 @@
 		24C5BEF2227C458F0050CBAA /* SwipingController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */; };
 		24CC57692289BA730045C278 /* SettingsCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC57682289BA730045C278 /* SettingsCellDelegate.swift */; };
 		24CC576C2289C2A50045C278 /* SceneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC576B2289C2A50045C278 /* SceneType.swift */; };
+		24CC57702289EB920045C278 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC576F2289EB920045C278 /* Extension.swift */; };
 		24CF845422820A5500D35D19 /* SettignsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF845322820A5500D35D19 /* SettignsModel.swift */; };
 		24E4A5BE227F49F9009035F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */; };
 		24E4A5C0227F4BAC009035F7 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */; };
@@ -55,7 +55,6 @@
 		244F99BF22686A95004874FB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		244F99C122686BDD004874FB /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		244F99C322686D3E004874FB /* SSMButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSMButton.swift; sourceTree = "<group>"; };
-		244F99C522686D79004874FB /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = SpriteKitGameProgrammatically/Extension.swift; sourceTree = SOURCE_ROOT; };
 		244F99C922686EE3004874FB /* SSMPlayerStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSMPlayerStats.swift; sourceTree = "<group>"; };
 		244F99CB22686FA6004874FB /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
 		244F99CD22689A36004874FB /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+CollectionView.swift"; sourceTree = "<group>"; };
 		24CC57682289BA730045C278 /* SettingsCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellDelegate.swift; sourceTree = "<group>"; };
 		24CC576B2289C2A50045C278 /* SceneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneType.swift; sourceTree = "<group>"; };
+		24CC576F2289EB920045C278 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		24CF845322820A5500D35D19 /* SettignsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettignsModel.swift; sourceTree = "<group>"; };
 		24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				2482B1C7226B2A61007EF025 /* AutoLayoutAnchorExt.swift */,
-				244F99C522686D79004874FB /* Extension.swift */,
+				24CC576F2289EB920045C278 /* Extension.swift */,
 				24E95CBB227C5E4F00CA272C /* UIColor+UIbuttonExt.swift */,
 				24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */,
 				24E95CBD227C5F1700CA272C /* SwipingController+ScrollView.swift */,
@@ -417,7 +417,6 @@
 				24ED372C227B5A66009A466A /* SwipingController.swift in Sources */,
 				24E4A5C2227F4C84009035F7 /* WelcomeViewController.swift in Sources */,
 				244F99AE226868A3004874FB /* AppDelegate.swift in Sources */,
-				244F99C622686D79004874FB /* Extension.swift in Sources */,
 				24ED3730227B87FF009A466A /* PageModel.swift in Sources */,
 				24ED372E227B7016009A466A /* PageCell.swift in Sources */,
 				24C5BEF2227C458F0050CBAA /* SwipingController+CollectionView.swift in Sources */,
@@ -425,6 +424,7 @@
 				24A6BA2F22876C3C007D74F4 /* GPButton.swift in Sources */,
 				24CC57692289BA730045C278 /* SettingsCellDelegate.swift in Sources */,
 				244F99CC22686FA6004874FB /* Gameplay.swift in Sources */,
+				24CC57702289EB920045C278 /* Extension.swift in Sources */,
 				244F99C222686BDD004874FB /* MainMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
