@@ -81,24 +81,17 @@ class MainMenu: SKScene {
     }
     
     
-    //MARK: - Constraints
-    func setupNodes() {
-        
-        //background Constraint
-        background.position = CGPoint.zero
-        
-        //playButton Constraint
-        playButton.position = CGPoint.zero
-        
-        //handleMoreButton Constraint
-        handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.heigth * 0.35)
-    }
-    
-    
     func addNodes() {
         [background, playButton, handleMoreButton].forEach{(addChild($0))}
-        
     }
+    
+    //MARK: - Constraints
+    func setupNodes() {
+        background.position = CGPoint.zero
+        playButton.position = CGPoint.zero
+        handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.heigth * 0.35)
+    }
+     
 }
 
 

@@ -159,8 +159,8 @@
 			children = (
 				240F801A226A229E009F0B9F /* SSMManager.swift */,
 				244F99C922686EE3004874FB /* SSMPlayerStats.swift */,
-				24A6BA2E22876C3C007D74F4 /* GPButton.swift */,
 				244F99C322686D3E004874FB /* SSMButton.swift */,
+				24A6BA2E22876C3C007D74F4 /* GPButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";

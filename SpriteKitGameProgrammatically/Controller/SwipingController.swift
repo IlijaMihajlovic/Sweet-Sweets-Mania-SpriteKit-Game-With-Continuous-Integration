@@ -81,7 +81,6 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         configureCollectionView()
         addSubView()
         setupConstraints()
@@ -128,10 +127,8 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
      //MARK: - Constraints
     fileprivate func setupConstraints() {
         
-        //bottomControlsStackView Constraint
         bottomControlsStackView.anchor(top: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 3, bottom: 6, right: 3), size: .init(width: 0, height: 40))
         
-        //dismissAboutVCToMainMenu Constraint
        dismissAboutVCToMainMenu.anchor(top: view.topAnchor, bottom: nil, leading: view.leadingAnchor, trailing: nil, padding: .init(top: 2, left: 10, bottom: 0, right: 0), size: .init(width: 100, height: 100))
         
        

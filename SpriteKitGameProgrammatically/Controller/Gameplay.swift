@@ -26,9 +26,9 @@ class Gameplay: SKScene {
     
    
     lazy var scoreLabel: SKLabelNode = {
-        var label = SKLabelNode(fontNamed: "HelveticaNeue-Medium")
+        var label = SKLabelNode(fontNamed: "HelveticaNeue-Bold")
         label.fontSize = CGFloat.universalFont(size: 58)
-        label.zPosition = 30
+        label.zPosition = 40
         label.color = SKColor.white
         label.horizontalAlignmentMode = .center
         label.verticalAlignmentMode = .center
@@ -38,8 +38,8 @@ class Gameplay: SKScene {
     
     
     override func didMove(to view: SKView) {
-        setupNodes()
         addNodes()
+        setupNodes()
         addNewSweets()
     }
     
@@ -108,20 +108,14 @@ class Gameplay: SKScene {
     }
     
     
-    //MARK: - Constraints
-    func setupNodes() {
-        
-        //background Constraint
-        background.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.5)
-        
-        //scoreLabel Constraint
-        scoreLabel.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.9)
-    }
-    
-    
     func addNodes() {
         [background, scoreLabel].forEach{(addChild($0))}
+    }
     
+    //MARK: - Constraints
+    func setupNodes() {
+        background.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.5)
+        scoreLabel.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.9)
     }
     
 }

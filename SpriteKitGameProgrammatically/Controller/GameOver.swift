@@ -24,51 +24,16 @@ class GameOver: SKScene {
     }()
     
     
-    var title: SKLabelNode = {
-        var label = SKLabelNode(fontNamed: "Helvetica")
-        label.fontSize = CGFloat.universalFont(size: 28)
-        label.zPosition = 2
-        label.color = SKColor.white
-        label.horizontalAlignmentMode = .center
-        label.verticalAlignmentMode = .center
-        label.text = "Game Over"
-        return label
-    }()
-    
-    
-    var score: SKLabelNode = {
-        var label = SKLabelNode(fontNamed: "Helvetica")
-        label.fontSize = CGFloat.universalFont(size: 24)
-        label.zPosition = 2
-        label.color = SKColor.white
-        label.horizontalAlignmentMode = .center
-        label.verticalAlignmentMode = .center
-        label.text = "Score: \(SSMPlayerStats.shared.getScore())"
-        return label
-    }()
-    
-    
-    var bestScore: SKLabelNode = {
-        var label = SKLabelNode(fontNamed: "Helvetica")
-        label.fontSize = CGFloat.universalFont(size: 24)
-        label.zPosition = 2
-        label.color = SKColor.white
-        label.horizontalAlignmentMode = .center
-        label.verticalAlignmentMode = .center
-        label.text = "Best Score: \(SSMPlayerStats.shared.getBestScore())"
-        return label
-    }()
-    
-    
     lazy var backButton: SSMButton = {
         var button = SSMButton(imageNamed: "ButtonBack", title: "", buttonAction: {
-           
+            
             SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
         })
         button.zPosition = 1
         button.scaleTo(screenWithPercentage: 0.15)
         return button
     }()
+    
     
     lazy var replayButton: SSMButton = {
         var button = SSMButton(imageNamed: "ButtonReplay", buttonAction: {
@@ -80,28 +45,69 @@ class GameOver: SKScene {
         return button
     }()
     
+    
+    var title: SKLabelNode = {
+        var label = SKLabelNode(fontNamed: "HelveticaNeue-Bold")
+        label.fontSize = CGFloat.universalFont(size: 30)
+        label.zPosition = 2
+        label.color = SKColor.white
+        label.horizontalAlignmentMode = .center
+        label.verticalAlignmentMode = .center
+        label.text = "Game Over"
+        return label
+    }()
+    
+    
+    var score: SKLabelNode = {
+        var label = SKLabelNode(fontNamed: "HelveticaNeue-Bold")
+        label.fontSize = CGFloat.universalFont(size: 26)
+        label.zPosition = 2
+        label.color = SKColor.white
+        label.horizontalAlignmentMode = .center
+        label.verticalAlignmentMode = .center
+        label.text = "Score: \(SSMPlayerStats.shared.getScore())"
+        return label
+    }()
+    
+    
+    var bestScore: SKLabelNode = {
+        var label = SKLabelNode(fontNamed: "HelveticaNeue-Bold")
+        label.fontSize = CGFloat.universalFont(size: 26)
+        label.zPosition = 2
+        label.color = SKColor.white
+        label.horizontalAlignmentMode = .center
+        label.verticalAlignmentMode = .center
+        label.text = "Best Score: \(SSMPlayerStats.shared.getBestScore())"
+        return label
+    }()
+    
+    
+    
     override func didMove(to view: SKView) {
+        
+        //Ask the user to rate or review the app
         SKStoreReviewController.requestReview()
+        
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        setupNodes()
         addNodes()
+        setupNodes()
     }
     
-    func setupNodes() {
-        background.position = CGPoint.zero
-        title.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.25)
-        score.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.12)
-        bestScore.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.08)
-        backButton.position = CGPoint(x: ScreenSize.width * -0.4, y: ScreenSize.heigth * 0.4)
-        replayButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.10)
-    }
     
     func addNodes() {
-        addChild(background)
-        addChild(title)
-        addChild(score)
-        addChild(bestScore)
-        addChild(backButton)
-        addChild(replayButton)
+        [background, title, score, bestScore ,backButton, replayButton].forEach{(addChild($0))}
     }
+    
+    //MARK: - Constraints
+    func setupNodes() {
+        background.position = CGPoint.zero
+        title.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.28)
+        score.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.21)
+        bestScore.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.15)
+        backButton.position = CGPoint(x: ScreenSize.width * -0.4, y: ScreenSize.heigth * 0.4)
+        replayButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.0)
+    }
+    
 }
+
+
