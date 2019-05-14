@@ -121,7 +121,7 @@ class UserProfileScene: SKScene {
                 guard let dict = snapshot.value as? [String: Any] else { return }
                 
                 //Create User
-                let user = CurrentUser(dictionary: dict)
+                let user = CurrentUserModel(dictionary: dict)
                 
                 //Default Values When Sign In Anonymously
                 self.nameLabel.text = user.name == "" ? "Username: N/A" : user.name

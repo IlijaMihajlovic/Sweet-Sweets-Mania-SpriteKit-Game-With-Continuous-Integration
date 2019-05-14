@@ -34,7 +34,7 @@ class PageCell: UICollectionViewCell {
     }()
     
     //Present data from the model
-    var page: PageModel? {
+    var page: PageControllerModel? {
         didSet {
             guard let unwrappedPage = page else { return }
             

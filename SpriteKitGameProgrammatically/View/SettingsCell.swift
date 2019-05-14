@@ -14,7 +14,7 @@ class SettingsCell: BaseCell {
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "SettingsModel"
+        label.text = "SettingsControllerModel"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -34,7 +34,7 @@ class SettingsCell: BaseCell {
     }
     
     
-    var setting: SettingsModel? {
+    var setting: SettingsControllerModel? {
         didSet {
             nameLabel.text = setting?.name
             nameLabel.textColor = UIColor.darkGray

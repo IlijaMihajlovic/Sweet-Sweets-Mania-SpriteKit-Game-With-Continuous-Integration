@@ -25,11 +25,11 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     var mainMenu: MainMenuScene?
     
     // Data source cell
-    let settings: [SettingsModel] = {
-        return [SettingsModel(name: "About", imageName: "aboutIcon"),
-                SettingsModel(name: "User", imageName: "profileIcon"),
-                SettingsModel(name: "Rate", imageName: "rateButton"),
-                SettingsModel(name: "Cancel", imageName: "cancelButton")]
+    let settings: [SettingsControllerModel] = {
+        return [SettingsControllerModel(name: "About", imageName: "aboutIcon"),
+                SettingsControllerModel(name: "User", imageName: "profileIcon"),
+                SettingsControllerModel(name: "Rate", imageName: "rateButton"),
+                SettingsControllerModel(name: "Cancel", imageName: "cancelButton")]
     }()
     
     

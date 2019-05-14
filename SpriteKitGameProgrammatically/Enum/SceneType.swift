@@ -8,8 +8,8 @@
 
 import Foundation
 
+//Scenes in which we want to transition
 enum SceneType {
-    
     case MainMenu
     case Gameplay
     case GameOver

@@ -1,6 +1,6 @@
 //
-//  ColorExt.swift
-//  SpriteKitGameProgrammatically
+//  UIColor+UIbutton.swift
+//  Sweet Sweets Mania
 //
 //  Created by Ilija Mihajlovic on 5/3/19.
 //  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
@@ -14,12 +14,12 @@ extension UIColor {
     static let mainPink = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
     static let customLightPinkColor = UIColor(red: 242/255, green: 151/255, blue: 187/255, alpha: 1)
     static let customPurpleColor = UIColor(red: 170/255, green: 53/255, blue: 218/255, alpha: 1)
-  
 }
 
 extension SKColor {
     static let customSKLightPinkColor = SKColor(red: 242/255, green: 151/255, blue: 187/255, alpha: 1)
 }
+
 
 extension UIButton {
     

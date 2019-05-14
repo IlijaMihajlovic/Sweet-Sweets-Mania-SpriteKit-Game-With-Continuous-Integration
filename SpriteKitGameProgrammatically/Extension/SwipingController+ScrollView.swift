@@ -1,6 +1,6 @@
 //
 //  SwipingController+ScrollView.swift
-//  SpriteKitGameProgrammatically
+//  Sweet Sweets Mania
 //
 //  Created by Ilija Mihajlovic on 5/3/19.
 //  Copyright © 2019 Ilija Mihajlovic. All rights reserved.

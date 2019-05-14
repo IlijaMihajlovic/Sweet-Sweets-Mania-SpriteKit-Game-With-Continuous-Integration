@@ -1,6 +1,6 @@
 //
-//  SettingsModel.swift
-//  SpriteKitGameProgrammatically
+//  SettingsControllerModel.swift
+//  Sweet Sweets Mania
 //
 //  Created by Ilija Mihajlovic on 5/7/19.
 //  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-//Model Class
-class SettingsModel: NSObject {
+class SettingsControllerModel: NSObject {
     let name: String
     let imageName: String
     

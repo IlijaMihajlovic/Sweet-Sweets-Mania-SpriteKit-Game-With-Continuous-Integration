@@ -1,81 +1,12 @@
 //
-//  Extension.swift
-//  AdventCalendarTutorials
+//  SKSpriteNodeExtension.swift
+//  Sweet Sweets Mania
 //
-//  Created by Alex Nagy on 01/12/2017.
-//  Copyright © 2017 Alex Nagy. All rights reserved.
+//  Created by Ilija Mihajlovic on 5/14/19.
+//  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
 //
 
-import UIKit
 import SpriteKit
-
-
-enum UIUserInterfaceIdiom: Int {
-    case undefined
-    case phone
-    case pad
-}
-
-struct ScreenSize {
-    static let width = UIScreen.main.bounds.size.width
-    static let heigth = UIScreen.main.bounds.size.height
-    static let maxLength = max(ScreenSize.width, ScreenSize.heigth)
-    static let minLength = min(ScreenSize.width, ScreenSize.heigth)
-}
-
-struct DeviceType {
-    static let isiPhone4OrLess = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength < 568.0
-    static let isiPhone5 = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength == 568.0
-    static let isiPhone6 = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength == 667.0
-    static let isiPhone6Plus = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength == 736.0
-    static let isiPhoneX = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength == 812.0
-    static let isiPad = UIDevice.current.userInterfaceIdiom == .pad && ScreenSize.maxLength == 1024.0
-    static let isiPadPro = UIDevice.current.userInterfaceIdiom == .pad && ScreenSize.maxLength == 1366.0
-    
-}
-
-public extension CGFloat {
-    public static func universalFont(size: CGFloat) -> CGFloat {
-        if DeviceType.isiPhone4OrLess {
-            return size * 0.6
-        }
-        
-        if DeviceType.isiPhone5 {
-            return size * 0.8
-        }
-        
-        if DeviceType.isiPhone6 {
-            return size * 1.0
-        }
-        
-        if DeviceType.isiPhone6Plus {
-            return size * 1.0
-        }
-        
-        if DeviceType.isiPhoneX {
-            return size * 1.0
-        }
-        
-        if DeviceType.isiPad {
-            return size * 2.1
-        }
-        
-        if DeviceType.isiPadPro {
-            return size * 2.1
-        } else {
-            return size * 1.0
-        }
-    }
-    
-    public static func random() -> CGFloat {
-        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
-    }
-    
-    public static func random(_ min: CGFloat, max: CGFloat) -> CGFloat {
-        return CGFloat.random() * (max - min) + min
-    }
-    
-}
 
 extension SKSpriteNode {
     
@@ -192,42 +123,3 @@ extension SKSpriteNode {
         self.run(SKAction.sequence([randomWait, group]))
     }
 }
-
-extension SKLabelNode {
-    func popUp(after: CGFloat = 0.0, sequenceNumber: Int = 1) {
-        let action2Duration = 0.2
-        let action3Duration = 0.06
-        let action4Duration = 0.1
-        let action5Duration = 0.05
-        let totalTimeOfPopUpAnimation = action2Duration + action3Duration + action4Duration + action5Duration
-        let action0 = SKAction.scale(to: 0.0, duration: 0.0)
-        let action1 = SKAction.wait(forDuration: TimeInterval(CGFloat(sequenceNumber) * CGFloat(totalTimeOfPopUpAnimation) + after))
-        let action2 = SKAction.scale(to: 1.1, duration: action2Duration)
-        let action3 = SKAction.scale(to: 0.95, duration: action3Duration)
-        let action4 = SKAction.scale(to: 1.05, duration: action4Duration)
-        let action5 = SKAction.scale(to: 1.0, duration: action5Duration)
-        let sequence = SKAction.sequence([action0, action1, action2, action3, action4, action5])
-        self.run(sequence)
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
