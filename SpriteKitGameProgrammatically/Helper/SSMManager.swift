@@ -54,13 +54,13 @@ class SSMManager {
             return UserProfileScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
      
         case SceneType.MainMenu:
-            return MainMenu(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+            return MainMenuScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
             
         case SceneType.Gameplay:
-            return Gameplay(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+            return GameplayScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
             
         case SceneType.GameOver:
-            return GameOver(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+            return GameOverScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
         }
     }
     

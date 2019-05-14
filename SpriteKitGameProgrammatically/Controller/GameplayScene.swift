@@ -1,5 +1,5 @@
 //
-//  Gameplay.swift
+//  GameplayScene.swift
 //  Sweet Sweets Mania
 //
 //  Created by Ilija Mihajlovic on 4/18/19.
@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class Gameplay: SKScene {
+class GameplayScene: SKScene {
     
     var score = 0
     

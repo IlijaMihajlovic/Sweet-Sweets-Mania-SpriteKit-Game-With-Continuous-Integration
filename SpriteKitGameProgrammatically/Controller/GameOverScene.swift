@@ -1,6 +1,6 @@
 //
-//  GameOver.swift
-//  SpriteKitGameProgrammatically
+//  GameOverScene.swift
+//  Sweet Sweets Mania
 //
 //  Created by Ilija Mihajlovic on 4/18/19.
 //  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
@@ -9,7 +9,7 @@
 import SpriteKit
 import StoreKit
 
-class GameOver: SKScene {
+class GameOverScene: SKScene {
     
     var background: SKSpriteNode = {
         var sprite = SKSpriteNode(imageNamed: "BackgroundImage")

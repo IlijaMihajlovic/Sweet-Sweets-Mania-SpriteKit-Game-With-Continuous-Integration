@@ -1,5 +1,5 @@
 //
-//  MainMenu.swift
+//  MainMenuScene.swift
 //  Sweet Sweets Mania
 //
 //  Created by Ilija Mihajlovic on 4/18/19.
@@ -9,7 +9,7 @@
 import SpriteKit
 import UIKit
 
-class MainMenu: SKScene {
+class MainMenuScene: SKScene {
     
     var background: SKSpriteNode = {
         var sprite = SKSpriteNode(imageNamed: "MainMenuBackground")
