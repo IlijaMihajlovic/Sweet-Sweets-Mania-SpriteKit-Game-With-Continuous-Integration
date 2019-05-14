@@ -1,6 +1,6 @@
 //
-//  UserProfileController.swift
-//  SpriteKitGameProgrammatically
+//  UserProfileScene.swift
+//  Sweet Sweets Mania
 //
 //  Created by Ilija Mihajlovic on 5/5/19.
 //  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
@@ -16,6 +16,10 @@ import SVProgressHUD
 
 class UserProfileScene: SKScene {
     
+    //Default Values When SigningUp Anonymously
+    var firstName: String? = ""
+    var email: String? = ""
+    var profileImage: UIImage? = UIImage(named: "profileIcon")
     let userProfileImageViewHeight: CGFloat = 80
     
     lazy var userProfileImage: CachedImageView = {
@@ -25,7 +29,7 @@ class UserProfileScene: SKScene {
         image.backgroundColor = .customLightPinkColor
         image.layer.cornerRadius = userProfileImageViewHeight / 2
         image.layer.masksToBounds = false
-        image.layer.borderWidth = 3
+        image.layer.borderWidth = 2
         image.layer.borderColor = UIColor.lightGray.cgColor
         image.clipsToBounds = true
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -95,6 +99,15 @@ class UserProfileScene: SKScene {
     }()
     
     
+    override func didMove(to view: SKView) {
+        anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        self.scene?.backgroundColor = .white
+        addNodes()
+        setupNodes()
+        print("In User Profile Scene")
+    }
+    
+    
     //MARK: - Fetch User Button Tapped
      func fetchUserButtonTapped() {
         
@@ -126,14 +139,7 @@ class UserProfileScene: SKScene {
     }
     
     
-    override func didMove(to view: SKView) {
-        anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        self.scene?.backgroundColor = .white
-        addNodes()
-        setupNodes()
-        print("In User Profile Scene")
-    }
-    
+  
     
     //Check if the user is Siggned Up
     fileprivate func handleSignOutButtonTapped() {

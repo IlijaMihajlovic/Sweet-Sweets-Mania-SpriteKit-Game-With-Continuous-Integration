@@ -1,6 +1,6 @@
 //
-//  WelcomeViewController.swift
-//  SpriteKitGameProgrammatically
+//  WelcomeScene.swift
+//  Sweet Sweets Mania
 //
 //  Created by Ilija Mihajlovic on 5/5/19.
 //  Copyright © 2019 Ilija Mihajlovic. All rights reserved.
@@ -17,11 +17,7 @@ import SVProgressHUD
 
 class WelcomeScene: SKScene {
     
-    var firstName: String? = ""
-    var email: String? = ""
-    var profileImage: UIImage? = UIImage(named: "profileIcon")
-    
-    
+    let userProfileSceneInstance = UserProfileScene()
     var background: SKSpriteNode = {
         var sprite = SKSpriteNode(imageNamed: "welcomeSceneImage")
         if DeviceType.isiPad || DeviceType.isiPadPro {
@@ -188,10 +184,10 @@ class WelcomeScene: SKScene {
                 let json = JSON(responseDictionary)
                 
                 //Extract: Email,  First Name and Picture URL
-                self.firstName = json["first_name"].string
+                self.userProfileSceneInstance.firstName = json["first_name"].string
                 
-                self.email = json["email"].string
-                print("User: \(String(describing: self.firstName)), Email: \(String(describing: self.email))")
+                self.userProfileSceneInstance.email = json["email"].string
+                print("User: \(String(describing: self.userProfileSceneInstance.firstName)), Email: \(String(describing: self.userProfileSceneInstance.email))")
                 
                 guard let profilePictureUrl = json["picture"]["data"]["url"].string else { return }
                 guard let url = URL(string: profilePictureUrl) else { return }
@@ -205,7 +201,7 @@ class WelcomeScene: SKScene {
                     
                     //Assign fetched image to profile picture variable
                     guard let data = data else { return }
-                    self.profileImage = UIImage(data: data)
+                    self.userProfileSceneInstance.profileImage = UIImage(data: data)
                     self.saveUserIntoFirebaseStorageAndIntoDatabase()
                     
                 }).resume()
@@ -224,7 +220,7 @@ class WelcomeScene: SKScene {
     fileprivate func saveUserIntoFirebaseStorageAndIntoDatabase() {
         
         let imageUuid = UUID().uuidString
-        guard let uploadData = profileImage?.jpegData(compressionQuality: 0.3) else { return }
+        guard let uploadData = userProfileSceneInstance.profileImage?.jpegData(compressionQuality: 0.3) else { return }
         
        
         //MARK: - Firebase Storage
@@ -251,7 +247,7 @@ class WelcomeScene: SKScene {
             guard let uid = Auth.auth().currentUser?.uid else {return}
             
             //Dictionary of keys to change and their new values
-            let dictionaryValues = ["name": self.firstName, "email": self.email, "profileImageUrl": profileImageURL]
+            let dictionaryValues = ["name": self.userProfileSceneInstance.firstName, "email": self.userProfileSceneInstance.email, "profileImageUrl": profileImageURL]
             
             let values = [uid: dictionaryValues]
             
