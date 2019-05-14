@@ -144,7 +144,7 @@
 		2482B1C0226B2645007EF025 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				24CF84522281D61F00D35D19 /* Firebase Controller */,
+				24CF84522281D61F00D35D19 /* Firebase Controller Scenes */,
 				244F99BF22686A95004874FB /* GameViewController.swift */,
 				240F801E226A4910009F0B9F /* SettingsLauncher.swift */,
 				244F99CD22689A36004874FB /* GameOverScene.swift */,
@@ -198,13 +198,13 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
-		24CF84522281D61F00D35D19 /* Firebase Controller */ = {
+		24CF84522281D61F00D35D19 /* Firebase Controller Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				24E4A5C5227F568E009035F7 /* UserProfileController.swift */,
 				24E4A5C1227F4C84009035F7 /* WelcomeViewController.swift */,
 			);
-			path = "Firebase Controller";
+			path = "Firebase Controller Scenes";
 			sourceTree = "<group>";
 		};
 		24E95CBF227C5FF100CA272C /* Supporting Files */ = {

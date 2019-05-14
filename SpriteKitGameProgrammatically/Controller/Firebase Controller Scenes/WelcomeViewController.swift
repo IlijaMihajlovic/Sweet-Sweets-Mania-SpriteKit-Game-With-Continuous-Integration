@@ -7,22 +7,19 @@
 //
 
 import SpriteKit
+import SwiftyJSON
+import FirebaseStorage
+import FirebaseDatabase
 import FirebaseAuth
 import FacebookCore
 import FacebookLogin
 import SVProgressHUD
-import SwiftyJSON
-import FBSDKCoreKit
-
-import FirebaseStorage
-import FirebaseDatabase
 
 class WelcomeScene: SKScene {
     
     var firstName: String? = ""
     var email: String? = ""
     var profileImage: UIImage? = UIImage(named: "profileIcon")
-    
     
     
     var background: SKSpriteNode = {
@@ -37,6 +34,7 @@ class WelcomeScene: SKScene {
         return sprite
     }()
 
+    
     var privecyPolicyAndTermsOfServiceNode: SKSpriteNode = {
         var image = SKSpriteNode(imageNamed: "terms")
         image.scaleTo(screenWidthPercentage: 0.7)
@@ -50,7 +48,6 @@ class WelcomeScene: SKScene {
         var button = SSMButton(imageNamed: "anonymouslyButton", buttonAction: {
             
             self.handleSignInAnonymouslyButtonTapped()
-            
         })
         button.scaleTo(screenWithPercentage: 0.8)
         button.zPosition = 3
@@ -59,9 +56,9 @@ class WelcomeScene: SKScene {
 
     
     var logoLabel: SKLabelNode = {
-        var label = SKLabelNode(fontNamed: "HelveticaNeue-Light")
-        label.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.center
+        var label = SKLabelNode(fontNamed: "HelveticaNeue-Medium")
         
+        label.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.center
         label.fontSize = 19
         label.text = "Sweet Sweets Mania"
         label.color = SKColor.purple
@@ -70,7 +67,6 @@ class WelcomeScene: SKScene {
         label.fontColor = SKColor.customSKLightPinkColor
         label.setScale(1.6)
         label.zPosition = 3
-        
         return label
     }()
     
@@ -78,7 +74,6 @@ class WelcomeScene: SKScene {
         var button = SSMButton(imageNamed: "facebookButton", buttonAction: {
             
             self.handleSignInWithFacebookButtonTapped()
-            
         })
         button.scaleTo(screenWithPercentage: 0.8)
         button.zPosition = 3
@@ -86,12 +81,11 @@ class WelcomeScene: SKScene {
     }()
     
     
-    
     override func didMove(to view: SKView) {
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.scene?.backgroundColor = .white
-        setupNodes()
         addNodes()
+        setupNodes()
         print("Welcome Controller")
     }
     
@@ -180,9 +174,6 @@ class WelcomeScene: SKScene {
     
     //MARK: - Fetch Facebook User
     fileprivate func fetchFacebookUser() {
-       
-//        let graphRequestConnection = GraphRequestConnection()
-//        let graphRequest = GraphRequest(graphPath: "me", parameters: ["fields": "id, first_name, email, picture.type(large)"], tokenString: AccessToken.current, version: .GET, HTTPMethod: .defaultVersion)
         
         let graphRequestConnection = GraphRequestConnection()
         let graphRequest = GraphRequest(graphPath: "me", parameters: ["fields": "id, first_name, email, picture.type(large)"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion)
@@ -232,7 +223,6 @@ class WelcomeScene: SKScene {
     //MARK: - Safe User Into into Firebase Storage And into Realtime Database
     fileprivate func saveUserIntoFirebaseStorageAndIntoDatabase() {
         
-        
         let imageUuid = UUID().uuidString
         guard let uploadData = profileImage?.jpegData(compressionQuality: 0.3) else { return }
         
@@ -249,16 +239,18 @@ class WelcomeScene: SKScene {
        
             
         Storage.storage().reference().child("profileImages").child(imageUuid).downloadURL(completion: { (url, err) in
+            
             if let err = err {
                 print("Failed to get downloadURL", err)
                 return
             }
+            
             guard let profileImageURL = url?.absoluteString else {return}
             print("Successfully uploaded profile image", profileImageURL)
         
             guard let uid = Auth.auth().currentUser?.uid else {return}
             
-            // Dictionary of keys to change and their new values
+            //Dictionary of keys to change and their new values
             let dictionaryValues = ["name": self.firstName, "email": self.email, "profileImageUrl": profileImageURL]
             
             let values = [uid: dictionaryValues]
@@ -283,16 +275,16 @@ class WelcomeScene: SKScene {
 
 
     func addNodes() {
-        [signInAnonymouslyButton, signInWithFacebookButton, privecyPolicyAndTermsOfServiceNode, background].forEach{addChild($0)}
+        [signInAnonymouslyButton, signInWithFacebookButton, privecyPolicyAndTermsOfServiceNode, background , logoLabel].forEach{addChild($0)}
     }
     
+    //MARK: - Constraints
     func setupNodes() {
         signInAnonymouslyButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.26)
         signInWithFacebookButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.37)
         
-        //logoLabel.position = .zero
+        logoLabel.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.0 + 20)
         privecyPolicyAndTermsOfServiceNode.position = CGPoint(x: ScreenSize.width * 0.00, y: ScreenSize.heigth * -0.45)
-        
         background.position = .zero
         
     }

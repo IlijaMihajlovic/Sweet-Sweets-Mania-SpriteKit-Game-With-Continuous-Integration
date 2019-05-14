@@ -36,7 +36,6 @@ class UserProfileScene: SKScene {
         var button = SSMButton(imageNamed: "FetchUser", buttonAction: {
             
             self.fetchUserButtonTapped()
-            
         })
         button.scaleTo(screenWithPercentage: 0.7)
         button.zPosition = 1
@@ -47,25 +46,25 @@ class UserProfileScene: SKScene {
         var button = SSMButton(imageNamed: "SignOut", buttonAction: {
             
             self.handleSignOutButtonTapped()
-            
         })
         button.scaleTo(screenWithPercentage: 0.3)
         button.zPosition = 1
         return button
     }()
     
+    
     lazy var backButton: SSMButton = {
         var button = SSMButton(imageNamed: "BackToMainMenu", buttonAction: {
             
             self.userProfileImage.removeFromSuperview()
             SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.1))
-            self.userProfileImage.removeFromSuperview()
-            
+        
         })
         button.scaleTo(screenWithPercentage: 0.3)
         button.zPosition = 2
         return button
     }()
+    
     
     var nameLabel: SKLabelNode = {
         var label = SKLabelNode(fontNamed: "HelveticaNeue-Medium")
@@ -96,7 +95,9 @@ class UserProfileScene: SKScene {
     }()
     
     
+    //MARK: - Fetch User Button Tapped
      func fetchUserButtonTapped() {
+        
         if Auth.auth().currentUser != nil {
             SVProgressHUD.show(withStatus: "Fetching User...")
             guard let uid = Auth.auth().currentUser?.uid else { return }
@@ -113,7 +114,7 @@ class UserProfileScene: SKScene {
                 self.nameLabel.text = user.name == "" ? "Username: N/A" : user.name
                 self.emailLabel.text = user.email == "" ? "Email: N/A" : user.email
                 
-                //Load image from Firebase and assign it
+                //Load Image From Firebase And Assign It
                 self.userProfileImage.loadImage(urlString: user.profileImageUrl)
                 SVProgressHUD.dismiss()
                 
@@ -128,11 +129,9 @@ class UserProfileScene: SKScene {
     override func didMove(to view: SKView) {
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.scene?.backgroundColor = .white
-        
         addNodes()
         setupNodes()
-        
-        print("In UserProfileController")
+        print("In User Profile Scene")
     }
     
     
@@ -171,6 +170,7 @@ class UserProfileScene: SKScene {
         [signOutAnonymouslyButton, backButton, fetchUserButton, nameLabel, emailLabel].forEach{addChild($0)}
     }
     
+    //MARK: - Constraints
     func setupNodes() {
         
         signOutAnonymouslyButton.position = CGPoint(x: ScreenSize.width * 0.31, y: ScreenSize.heigth * 0.40)

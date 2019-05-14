@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "welcomeSceneImage.png",
+      "filename" : "MainMenuBackground.png",
       "scale" : "1x"
     },
     {
