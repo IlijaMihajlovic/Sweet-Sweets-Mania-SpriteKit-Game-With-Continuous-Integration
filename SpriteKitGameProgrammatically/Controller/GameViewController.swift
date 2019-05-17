@@ -42,12 +42,13 @@ class GameViewController: UIViewController {
         
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubView()
         setupConstraints()
         
-        let scene = UserProfileScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+        let scene = MainMenuScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
         scene.scaleMode = .aspectFill
         skView.presentScene(scene)
         skView.ignoresSiblingOrder = true

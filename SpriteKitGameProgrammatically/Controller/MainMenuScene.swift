@@ -29,7 +29,7 @@ class MainMenuScene: SKScene {
             self.startGameplay()
             
         })
-        button.scaleTo(screenWithPercentage: 0.33)
+        button.scaleTo(screenWithPercentage: 0.23)
         button.zPosition = 1
         return button
     }()
@@ -40,7 +40,7 @@ class MainMenuScene: SKScene {
             self.handleMore()
             
         })
-        button.scaleTo(screenWithPercentage: 0.27)
+        button.scaleTo(screenWithPercentage: 0.23)
         button.zPosition = 2
         return button
     }()
@@ -89,7 +89,7 @@ class MainMenuScene: SKScene {
     func setupNodes() {
         background.position = CGPoint.zero
         playButton.position = CGPoint.zero
-        handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.heigth * 0.35)
+        handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.34, y: ScreenSize.heigth * 0.35)
     }
      
 }

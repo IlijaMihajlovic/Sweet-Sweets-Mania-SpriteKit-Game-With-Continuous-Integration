@@ -24,11 +24,21 @@ class GameplayScene: SKScene {
         return sprite
     }()
     
+    lazy var backButton: SSMButton = {
+        var button = SSMButton(imageNamed: "ButtonBack", title: "", buttonAction: {
+            
+            SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+        })
+        button.zPosition = 42
+        button.scaleTo(screenWithPercentage: 0.15)
+        return button
+    }()
+    
    
     lazy var scoreLabel: SKLabelNode = {
         var label = SKLabelNode(fontNamed: "HelveticaNeue-Bold")
         label.fontSize = CGFloat.universalFont(size: 58)
-        label.zPosition = 40
+        label.zPosition = 42
         label.color = SKColor.white
         label.horizontalAlignmentMode = .center
         label.verticalAlignmentMode = .center
@@ -109,13 +119,15 @@ class GameplayScene: SKScene {
     
     
     func addNodes() {
-        [background, scoreLabel].forEach{(addChild($0))}
+        [background, scoreLabel, backButton].forEach{(addChild($0))}
     }
     
     //MARK: - Constraints
     func setupNodes() {
         background.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.5)
         scoreLabel.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.9)
+        backButton.position = CGPoint(x: ScreenSize.width * 0.1, y: ScreenSize.heigth * 0.9)
+   
     }
     
 }
