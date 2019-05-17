@@ -24,10 +24,22 @@ class GameplayScene: SKScene {
         return sprite
     }()
     
-    lazy var backButton: SSMButton = {
-        var button = SSMButton(imageNamed: "ButtonBack", title: "", buttonAction: {
+    fileprivate func backButtonShowAlert() {
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let goToMainMenu = UIAlertAction(title: "Go to Main Menu", style: .destructive) { (action) in
             
             SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+            
+        }
+        SSMManager.shared.showAlert(on: self, title: "You Are Now Leaving Gameplay!", message: "Are You Sure?", actions: [cancelAction, goToMainMenu])
+        
+    }
+    
+    lazy var backButton: SSMButton = {
+        var button = SSMButton(imageNamed: "ButtonBack", title: "", buttonAction: {
+            self.backButtonShowAlert()
+           
+            //SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
         })
         button.zPosition = 42
         button.scaleTo(screenWithPercentage: 0.15)

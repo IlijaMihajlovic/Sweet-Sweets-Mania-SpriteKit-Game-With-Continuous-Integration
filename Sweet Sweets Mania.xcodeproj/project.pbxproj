@@ -150,12 +150,9 @@
 		2482B1C0226B2645007EF025 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				24C95296228F22DA007CF6E6 /* Game Scenes */,
 				24CF84522281D61F00D35D19 /* Firebase Controller Scenes */,
-				244F99BF22686A95004874FB /* GameViewController.swift */,
 				240F801E226A4910009F0B9F /* SettingsLauncher.swift */,
-				244F99CD22689A36004874FB /* GameOverScene.swift */,
-				244F99CB22686FA6004874FB /* GameplayScene.swift */,
-				244F99C122686BDD004874FB /* MainMenuScene.swift */,
 				24ED372B227B5A66009A466A /* SwipingController.swift */,
 				244F99AD226868A3004874FB /* AppDelegate.swift */,
 			);
@@ -179,14 +176,25 @@
 			isa = PBXGroup;
 			children = (
 				2482B1C7226B2A61007EF025 /* AutoLayoutAnchorExtension.swift */,
+				24BDFC67228ACF72004859A2 /* SettingsLauncher+CollectionView.swift */,
 				24E95CBB227C5E4F00CA272C /* UIColor+UIbuttonExtension.swift */,
 				24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */,
 				24E95CBD227C5F1700CA272C /* SwipingController+ScrollView.swift */,
-				24BDFC67228ACF72004859A2 /* SettingsLauncher+CollectionView.swift */,
 				24FE46CE228B356B0064F9B7 /* SKSpriteNodeExtension.swift */,
 				24FE46D0228B35D60064F9B7 /* CGFloatExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		24C95296228F22DA007CF6E6 /* Game Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				244F99BF22686A95004874FB /* GameViewController.swift */,
+				244F99CD22689A36004874FB /* GameOverScene.swift */,
+				244F99C122686BDD004874FB /* MainMenuScene.swift */,
+				244F99CB22686FA6004874FB /* GameplayScene.swift */,
+			);
+			path = "Game Scenes";
 			sourceTree = "<group>";
 		};
 		24CC57672289BA290045C278 /* Protocol */ = {

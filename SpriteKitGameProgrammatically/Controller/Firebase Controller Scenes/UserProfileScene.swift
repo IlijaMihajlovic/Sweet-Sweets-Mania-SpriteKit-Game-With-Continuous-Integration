@@ -145,7 +145,6 @@ class UserProfileScene: SKScene {
     fileprivate func handleSignOutButtonTapped() {
         
         let errorAction = UIAlertAction(title: "Sign Out Error", style: .default, handler: nil)
-        
         let signOutAction = UIAlertAction(title: "Sign Out", style: .destructive) { (action) in
             
             do {
