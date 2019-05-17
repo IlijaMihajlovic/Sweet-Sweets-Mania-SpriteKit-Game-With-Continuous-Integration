@@ -64,7 +64,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     
     
      let pages = [
-        PageControllerModel(imageName: "MyImage", headerText: "Briefly About The Author Of The Project", bodyText:
+        PageControllerModel(imageName: "myImage", headerText: "Briefly About The Author Of The Project", bodyText:
         """
         Self-taught iOS developer and computer science graduate, with a passion for machine
         learning and computer vision.
@@ -72,10 +72,11 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         In my free time, I read about deep learning, neural nets and theire application towards
         solving difficult and data-intensive problems or just playing with the nearest dog.
         """),
-        PageControllerModel(imageName: "heart_second", headerText: "About The Game", bodyText: "Get notified of the savings immediately when we announce them on our website. Make sure to also give us any feedback you have."),
-        PageControllerModel(imageName: "leaf_third", headerText: "Want to Get In Touch", bodyText: ""),
         
-        PageControllerModel(imageName: "bear_first", headerText: "Join use today in our fun and games!", bodyText: "Are you ready for loads and loads of fun? Don't wait any longer! We hope to see you in our stores soon.")
+        PageControllerModel(imageName: "iconForSwipingController", headerText: "About The Game", bodyText: "Find the biggest sweets and move your way to the top.🍰🍪"),
+        
+        PageControllerModel(imageName: "wantToGetInTouchImage", headerText: "Want to Get In Touch?", bodyText: "If you want to get in touch and by the way, you know a  good joke you can contact me by email or message me over Linkedin.")
+        
     ]
     
     

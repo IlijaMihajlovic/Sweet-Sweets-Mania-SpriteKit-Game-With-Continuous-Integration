@@ -175,13 +175,10 @@
 		2482B1C6226B2A36007EF025 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				24C95298228F3AA2007CF6E6 /* Swiping Controller Extension */,
+				24C95297228F3A4B007CF6E6 /* UIColor+UIButton+SKSpriteNode+CGFlaot */,
 				2482B1C7226B2A61007EF025 /* AutoLayoutAnchorExtension.swift */,
 				24BDFC67228ACF72004859A2 /* SettingsLauncher+CollectionView.swift */,
-				24E95CBB227C5E4F00CA272C /* UIColor+UIbuttonExtension.swift */,
-				24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */,
-				24E95CBD227C5F1700CA272C /* SwipingController+ScrollView.swift */,
-				24FE46CE228B356B0064F9B7 /* SKSpriteNodeExtension.swift */,
-				24FE46D0228B35D60064F9B7 /* CGFloatExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -195,6 +192,25 @@
 				244F99CB22686FA6004874FB /* GameplayScene.swift */,
 			);
 			path = "Game Scenes";
+			sourceTree = "<group>";
+		};
+		24C95297228F3A4B007CF6E6 /* UIColor+UIButton+SKSpriteNode+CGFlaot */ = {
+			isa = PBXGroup;
+			children = (
+				24E95CBB227C5E4F00CA272C /* UIColor+UIbuttonExtension.swift */,
+				24FE46CE228B356B0064F9B7 /* SKSpriteNodeExtension.swift */,
+				24FE46D0228B35D60064F9B7 /* CGFloatExtension.swift */,
+			);
+			path = "UIColor+UIButton+SKSpriteNode+CGFlaot";
+			sourceTree = "<group>";
+		};
+		24C95298228F3AA2007CF6E6 /* Swiping Controller Extension */ = {
+			isa = PBXGroup;
+			children = (
+				24E95CBD227C5F1700CA272C /* SwipingController+ScrollView.swift */,
+				24C5BEF1227C458F0050CBAA /* SwipingController+CollectionView.swift */,
+			);
+			path = "Swiping Controller Extension";
 			sourceTree = "<group>";
 		};
 		24CC57672289BA290045C278 /* Protocol */ = {
