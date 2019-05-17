@@ -24,22 +24,13 @@ class GameplayScene: SKScene {
         return sprite
     }()
     
-    fileprivate func backButtonShowAlert() {
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let goToMainMenu = UIAlertAction(title: "Go to Main Menu", style: .destructive) { (action) in
-            
-            SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
-            
-        }
-        SSMManager.shared.showAlert(on: self, title: "You Are Now Leaving Gameplay!", message: "Are You Sure?", actions: [cancelAction, goToMainMenu])
-        
-    }
+    
     
     lazy var backButton: SSMButton = {
         var button = SSMButton(imageNamed: "ButtonBack", title: "", buttonAction: {
-            self.backButtonShowAlert()
+            
+            self.backButtonShowAlertAndTransition()
            
-            //SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
         })
         button.zPosition = 42
         button.scaleTo(screenWithPercentage: 0.15)
@@ -129,6 +120,24 @@ class GameplayScene: SKScene {
         SSMManager.shared.transition(self, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
     }
     
+   
+    fileprivate func transitionToMainMenu() {
+        SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+    }
+    
+  
+    fileprivate func backButtonShowAlertAndTransition() {
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let goToMainMenu = UIAlertAction(title: "Go to Main Menu", style: .destructive) { (action) in
+            
+            self.transitionToMainMenu()
+            
+        }
+        
+        SSMManager.shared.showAlert(on: self, title: "You Are Now Leaving Gameplay!", message: "Are You Sure?", actions: [cancelAction, goToMainMenu])
+    }
+    
+  
     
     func addNodes() {
         [background, scoreLabel, backButton].forEach{(addChild($0))}
