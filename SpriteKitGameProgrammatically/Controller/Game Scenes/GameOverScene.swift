@@ -30,7 +30,7 @@ class GameOverScene: SKScene {
             SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
         })
         button.zPosition = 1
-        button.scaleTo(screenWithPercentage: 0.20)
+        button.scaleTo(screenWithPercentage: 0.15)
         return button
     }()
     
@@ -40,7 +40,13 @@ class GameOverScene: SKScene {
             
             SSMManager.shared.transition(self, toScene: .Gameplay, transition: SKTransition.moveIn(with: .left, duration: 0.5))
         })
-        button.scaleTo(screenWithPercentage: 0.27)
+        
+        if DeviceType.isiPad{
+            //button.scaleTo(screenWithPercentage: 0.22)
+        } else {
+            button.scaleTo(screenWithPercentage: 0.22)
+        }
+      
         button.zPosition = 1
         return button
     }()

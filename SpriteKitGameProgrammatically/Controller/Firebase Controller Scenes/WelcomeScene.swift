@@ -276,7 +276,18 @@ class WelcomeScene: SKScene {
     
     //MARK: - Constraints
     func setupNodes() {
-        signInAnonymouslyButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.26)
+        
+        if DeviceType.isiPhoneX {
+            signInAnonymouslyButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.29)
+        
+        } else if DeviceType.isiPad {
+           
+        } else {
+             signInAnonymouslyButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.26)
+        }
+        
+       
+        
         signInWithFacebookButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.37)
         
         logoLabel.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.0 + 20)

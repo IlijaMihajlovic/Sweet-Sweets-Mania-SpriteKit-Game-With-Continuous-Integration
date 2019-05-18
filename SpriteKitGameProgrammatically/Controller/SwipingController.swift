@@ -15,8 +15,8 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     private let dismissAboutVCToMainMenu: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "BackToMainMenu"), for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.imageView?.contentMode = .scaleAspectFit
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(dismissAboutViewControllerTapped), for: .touchUpInside)
         return button
     }()
@@ -130,7 +130,15 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         
         bottomControlsStackView.anchor(top: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 3, bottom: 6, right: 3), size: .init(width: 0, height: 40))
         
-       dismissAboutVCToMainMenu.anchor(top: view.topAnchor, bottom: nil, leading: view.leadingAnchor, trailing: nil, padding: .init(top: 2, left: 10, bottom: 0, right: 0), size: .init(width: 100, height: 100))
+        if DeviceType.isiPhoneX {
+            dismissAboutVCToMainMenu.anchor(top: view.topAnchor, bottom: nil, leading: view.safeAreaLayoutGuide.leadingAnchor, trailing: nil, padding: .init(top: 15, left: 10, bottom: 0, right: 0), size: .init(width: 100, height: 100))
+        } else {
+            dismissAboutVCToMainMenu.anchor(top: view.topAnchor, bottom: nil, leading: view.safeAreaLayoutGuide.leadingAnchor, trailing: nil, padding: .init(top: 4, left: 10, bottom: 0, right: 0), size: .init(width: 100, height: 100))
+        }
+        
+       
+        
+      
         
        
     }

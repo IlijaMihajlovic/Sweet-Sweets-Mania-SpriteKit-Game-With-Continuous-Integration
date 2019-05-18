@@ -29,7 +29,7 @@ class MainMenuScene: SKScene {
             self.startGameplay()
             
         })
-        button.scaleTo(screenWithPercentage: 0.23)
+        button.scaleTo(screenWithPercentage: 0.22)
         button.zPosition = 1
         return button
     }()
@@ -40,7 +40,7 @@ class MainMenuScene: SKScene {
             self.handleMore()
             
         })
-        button.scaleTo(screenWithPercentage: 0.23)
+        button.scaleTo(screenWithPercentage: 0.22)
         button.zPosition = 2
         return button
     }()
@@ -90,6 +90,12 @@ class MainMenuScene: SKScene {
         background.position = CGPoint.zero
         playButton.position = CGPoint.zero
         handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.34, y: ScreenSize.heigth * 0.35)
+        
+        if DeviceType.isiPhoneX {
+        handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.36, y: ScreenSize.heigth * 0.36)
+        
+        }
+        
     }
      
 }
