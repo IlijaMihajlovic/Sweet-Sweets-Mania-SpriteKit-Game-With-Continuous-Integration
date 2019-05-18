@@ -13,12 +13,8 @@ class GameOverScene: SKScene {
     
     var background: SKSpriteNode = {
         var sprite = SKSpriteNode(imageNamed: "BackgroundImage")
-        if DeviceType.isiPad || DeviceType.isiPadPro {
-            sprite.scaleTo(screenWidthPercentage: 1.0)
-        } else {
-            sprite.scaleTo(screenHeightPercentage: 1.0)
-            sprite.scaleTo(screenWidthPercentage: 1.0)
-        }
+        
+        sprite.scaleTo(screenWidthPercentage: 1.0)
         sprite.zPosition = 0
         return sprite
     }()

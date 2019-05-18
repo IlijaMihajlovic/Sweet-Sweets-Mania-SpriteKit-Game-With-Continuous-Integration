@@ -14,12 +14,8 @@ class GameplayScene: SKScene {
     
     var background: SKSpriteNode = {
         var sprite = SKSpriteNode(imageNamed: "BackgroundImage")
-        if DeviceType.isiPad || DeviceType.isiPadPro {
-            sprite.scaleTo(screenWidthPercentage: 1.0)
-        } else {
-            sprite.scaleTo(screenHeightPercentage: 1.0)
-            sprite.scaleTo(screenWidthPercentage: 1.0)
-        }
+        
+        sprite.scaleTo(screenWidthPercentage: 1.0)
         sprite.zPosition = 0
         return sprite
     }()
@@ -64,7 +60,7 @@ class GameplayScene: SKScene {
     
     
     func addNewSweets() {
-        for i in 1...12 {
+        for i in 1...18 {
             
             let imageNamed = "sweet\(Int(CGFloat.random(1.0, max: 12.0)))"
             
@@ -85,7 +81,7 @@ class GameplayScene: SKScene {
             print("Winer Sweet Tapped")
             self.handleWinnerSweetTapped()
         }
-        winnerSweet.scaleTo(screenWithPercentage: 0.43)
+        winnerSweet.scaleTo(screenWithPercentage: 0.4)
         winnerSweet.name = "sweet"
         winnerSweet.zPosition = CGFloat(31)
         winnerSweet.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.9), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.9))
@@ -117,12 +113,12 @@ class GameplayScene: SKScene {
     
     func handleWrongSweetTapped() {
         SSMPlayerStats.shared.setScore(score)
-        SSMManager.shared.transition(self, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
+        SSMManager.shared.transition(self, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.3))
     }
     
    
     fileprivate func transitionToMainMenu() {
-        SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+        SSMManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.3))
     }
     
   
