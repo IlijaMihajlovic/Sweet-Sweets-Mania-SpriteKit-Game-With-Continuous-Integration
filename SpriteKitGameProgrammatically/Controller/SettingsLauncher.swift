@@ -38,7 +38,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(SettingsCell.self, forCellWithReuseIdentifier: cellId)
-        
+        collectionView.isScrollEnabled = false
     }
     
     

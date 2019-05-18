@@ -82,6 +82,12 @@ class SettingsCell: BaseCell {
         nameLabel.anchor(top: self.topAnchor, bottom: nil, leading: iconImageView.trailingAnchor, trailing: nil, padding: .init(top: 5, left: 5, bottom: 0, right: 0), size: .init(width: 70, height: 40))
         
         //iconImageView Constraint
-        iconImageView.anchor(top: self.topAnchor, bottom: nil, leading: self.leadingAnchor, trailing: nameLabel.leadingAnchor, padding: .init(top: 5, left: 5, bottom: 0, right: 7), size: .init(width: 35, height: 35))
+        if DeviceType.isiPhoneX {
+            iconImageView.anchor(top: self.topAnchor, bottom: nil, leading: self.leadingAnchor, trailing: nameLabel.leadingAnchor, padding: .init(top: 5, left: 10, bottom: 3, right: 7), size: .init(width: 35, height: 35))
+        
+        } else {
+            iconImageView.anchor(top: self.topAnchor, bottom: nil, leading: self.leadingAnchor, trailing: nameLabel.leadingAnchor, padding: .init(top: 5, left: 5, bottom: 0, right: 7), size: .init(width: 35, height: 35))
+        }
+        
     }
 }
