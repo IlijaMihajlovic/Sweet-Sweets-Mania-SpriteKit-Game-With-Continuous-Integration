@@ -89,15 +89,16 @@ class MainMenuScene: SKScene {
     func setupNodes() {
         background.position = CGPoint.zero
         playButton.position = CGPoint.zero
-        handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.34, y: ScreenSize.heigth * 0.35)
         
         if DeviceType.isiPhoneX {
-        handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.36, y: ScreenSize.heigth * 0.36)
-        
+            handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.36, y: ScreenSize.heigth * 0.36)
+            
+        } else {
+            handleMoreButton.position = CGPoint(x: ScreenSize.width * 0.34, y: ScreenSize.heigth * 0.35)
         }
         
     }
-     
+    
 }
 
 
