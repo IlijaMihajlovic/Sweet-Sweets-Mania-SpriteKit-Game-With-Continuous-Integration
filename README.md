@@ -2,9 +2,7 @@
 
 A single player game in SpriteKit completely programmatically without the use of .sks files and Xcode Scene Editor. 
 I used Firebase as a backend and implemented its Sign up/Login with Facebook and Anonymously into the app, and saved all users information into the Firebase Database and Firebase Storage, likewise, I implemented a persistent store so all user data is saved after the user quits the app.
-During the development of the app, I followed the MVC design pattern.
-
-
+During the development of the app, I followed the MVC design pattern, likewise, I used Sketch for creating most of the UI.
 ___
 
 ## Side Note
@@ -24,6 +22,11 @@ ___
 ## Getting the files
 
 * Use GitHub to clone the repository locally, or download the .zip file of the repository and extract the files.
+___
+
+## Example how the UI looks
+
+* This is the Welcome Screen that the user is presented with the Facebook Sign Up Button and Sign Up Anonymously Button
 ___
 
 ## License
