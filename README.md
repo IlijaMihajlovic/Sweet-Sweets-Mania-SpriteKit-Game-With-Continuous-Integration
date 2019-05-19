@@ -1,4 +1,4 @@
-# Sweet Sweets Mania
+# Sweet-Sweets-Mania
 Project is still in progress...💻
 
 
