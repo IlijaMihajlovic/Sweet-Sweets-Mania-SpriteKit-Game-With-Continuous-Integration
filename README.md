@@ -1,4 +1,4 @@
-# Sweet-Sweets-Mania
+# Sweet-Sweets-Mania-SpriteKit-Game
 
 ![platform-ios](https://img.shields.io/badge/platform-ios-Blue.svg)
 ![swift-version](https://img.shields.io/badge/swift-4.2-Orange.svg)
