@@ -30,7 +30,12 @@ ___
 At the very bottom of the screen, we can see the Terms of Service and Privacy Policy.
 
 ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania/blob/master/Images/welcomeSceneWoman.png)
+
+* Here we can see like on the first image the welcome screen, the main menu, and on the far right side, the settings slide menu after, the user presses the settings button.
+
+![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania/blob/master/Images/firstThreeScreens.png)
 ___
+
 
 ## License
 ```
