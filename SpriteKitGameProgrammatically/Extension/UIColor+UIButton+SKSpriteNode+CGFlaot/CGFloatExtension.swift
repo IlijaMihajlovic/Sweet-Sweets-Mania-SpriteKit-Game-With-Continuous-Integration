@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Creating a dynamic font size to adapt to all screen sizes
 extension CGFloat {
     static func universalFont(size: CGFloat) -> CGFloat {
         if DeviceType.isiPhone4OrLess {

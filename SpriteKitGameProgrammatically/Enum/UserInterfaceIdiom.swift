@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Checking if we're on an iPhone or iPad device
 enum UserInterfaceIdiom: Int {
     case undefined
     case phone

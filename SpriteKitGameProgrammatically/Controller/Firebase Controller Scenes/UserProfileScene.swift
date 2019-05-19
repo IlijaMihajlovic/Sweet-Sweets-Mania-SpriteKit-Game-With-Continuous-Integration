@@ -75,7 +75,7 @@ class UserProfileScene: SKScene {
         label.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.center
         
         label.fontSize = 19
-        label.text = "User's Name"
+        label.text = "Username"
         label.numberOfLines = 0
         label.preferredMaxLayoutWidth = 310
         label.fontColor = SKColor.lightGray

@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Determine device type
 struct DeviceType {
     static let isiPhone4OrLess = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength < 568.0
     static let isiPhone5 = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.maxLength == 568.0
