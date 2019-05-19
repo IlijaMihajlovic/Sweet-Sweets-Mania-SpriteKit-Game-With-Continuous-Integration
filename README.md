@@ -30,7 +30,7 @@ ___
 
 ## Example how the UI looks
 
-* This is the Welcome Screen that the user is presented during the first launch of the app. On the screen, we can see the background with the name of the app with Facebook Sign-Up Button and the Sign-Up Anonymously Button.
+* This is the "welcome screen" that the user is presented during the first launch of the app. On the screen, we can see the background with the name of the app with Facebook Sign-Up Button and the Sign-Up Anonymously Button.
 At the very bottom of the screen, we can see the Terms of Service and Privacy Policy.
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania/blob/master/Images/welcomeSceneWoman.png)
@@ -39,9 +39,9 @@ At the very bottom of the screen, we can see the Terms of Service and Privacy Po
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania/blob/master/Images/firstThreeScreens.png)
 
-* On this image, we have three SpriteKit scenes.
-On the left side is the gameplay scene. In the middle is the game over scene with the SKStoreReviewController pop up asking the user to rate the app on the App Store.
-On the right side of the screen, we have the game over scene with the replay button, the best score, the current score and the back button on the top left corner of the scene.
+* On this image, we have three screens.
+On the left side is the "gameplay screen". In the middle is the "game over" screen with the SKStoreReviewController pop up asking the user to rate the app on the App Store.
+On the right side of the screen, we have the "game over" screen with the replay button, the best score, the current score and the back button on the top left corner of the screen.
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania/blob/master/Images/GameScenes.png)
 
