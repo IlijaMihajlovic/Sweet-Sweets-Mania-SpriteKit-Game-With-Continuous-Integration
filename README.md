@@ -45,7 +45,7 @@ On the right side of the screen, we have the game over scene with the replay but
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania/blob/master/Images/GameScenes.png)
 
-* Now we are in what I call the swiping controller. Here I used a UIcollectionViewController and used UICollectionViewFlowLayout methods to implement the kind like swiping mechanism from page to page
+* Now we are in what I call the "swiping controller". Here I used a UIcollectionViewController and UICollectionViewFlowLayout methods to implement the kind like swiping mechanism from page to page
 UIPageControl was used for the dots represteting on what page the user is currently on, and how many pages there are.
 Also we have two buttons on near the button of the screen for navigating through the pages together with the UIPageControl in a UIStackView .
 On each page, there is a UITextView and a UIImageView that represent a different image and a different text.
