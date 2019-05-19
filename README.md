@@ -28,6 +28,8 @@ ___
 
 * This is the Welcome Screen that the user is presented during the first launch of the app. On the screen, we can see the background with the name of the app with Facebook Sign-Up Button and the Sign-Up Anonymously Button.
 At the very bottom of the screen, we can see the Terms of Service and Privacy Policy.
+
+![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania/blob/master/Images/welcomeSceneWoman.png)
 ___
 
 ## License
