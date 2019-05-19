@@ -17,3 +17,5 @@ class SettingsControllerModel: NSObject {
         self.imageName = imageName
     }
 }
+
+
