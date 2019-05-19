@@ -26,7 +26,8 @@ ___
 
 ## Example how the UI looks
 
-* This is the Welcome Screen that the user is presented with the Facebook Sign Up Button and Sign Up Anonymously Button
+* This is the Welcome Screen that the user is presented during the first launch of the app. On the screen, we can see the background with the name of the app with Facebook Sign-Up Button and the Sign-Up Anonymously Button.
+At the very bottom of the screen, we can see the Terms of Service and Privacy Policy.
 ___
 
 ## License
