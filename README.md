@@ -52,9 +52,13 @@ On each page, there is a UITextView and a UIImageView that represent a different
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania/blob/master/Images/SwipingController.png)
 
-* On this image we have the user profile controller with the image on left showing the users sign-up anonymously. And on the right side is signing up with Facebook. Also, there are buttons for signing out, one to the main menu and one for fetching users data this one changes the UILabel and UIImageView with the user's profile image from Facebook and users email address.
+* On this image we have the "user profile controller" with the image on left showing when the user sign-up anonymously. And on the right side is signing up with Facebook. Also, there are buttons for signing out, one to the main menu and one for fetching users data this one changes the UILabel and UIImageView with the user's profile image from Facebook and users email address.
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/UserProfileScene.png)
+  
+* Last but not least a short sneak peek how the project looks. 😄💻
+
+   ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/project.png)
 ___
 
 
