@@ -45,8 +45,8 @@ On the right side of the screen, we have the "game over" screen with the replay 
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/GameScenes.png)
 
-* Now we're in what I call the "swiping controller". Here I used a UIcollectionViewController and UICollectionViewFlowLayout methods to implement the page to page swiping mechanism UIPageViewController with the flexibility UICollectionView has.
-UIPageControl was used for the dots represteting on what page the user is currently on, and how many pages there are.
+* Now we're in what I call the "swiping controller". Here I used a UICollectionViewController and UICollectionViewFlowLayout methods to implement the page to page swiping mechanism UIPageViewController with the flexibility UICollectionView has.
+UIPageControl was used for the dots representing on what page the user is currently on, and how many pages there are.
 Also we have two buttons on near the button of the screen for navigating through the pages together with the UIPageControl in a UIStackView.
 On each page, there is a UITextView and a UIImageView that represent a different image and a different text.
 
@@ -76,7 +76,7 @@ copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
