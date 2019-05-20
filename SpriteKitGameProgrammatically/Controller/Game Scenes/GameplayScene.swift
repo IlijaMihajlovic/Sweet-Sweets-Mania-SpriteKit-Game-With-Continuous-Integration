@@ -21,7 +21,6 @@ class GameplayScene: SKScene {
     }()
     
     
-    
     lazy var backButton: SSMButton = {
         var button = SSMButton(imageNamed: "ButtonBack", title: "", buttonAction: {
             

@@ -36,13 +36,7 @@ class GameOverScene: SKScene {
             
             SSMManager.shared.transition(self, toScene: .Gameplay, transition: SKTransition.moveIn(with: .left, duration: 0.5))
         })
-        
-        if DeviceType.isiPad{
-            //button.scaleTo(screenWithPercentage: 0.22)
-        } else {
-            button.scaleTo(screenWithPercentage: 0.22)
-        }
-      
+        button.scaleTo(screenWithPercentage: 0.22)
         button.zPosition = 1
         return button
     }()

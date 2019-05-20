@@ -130,8 +130,8 @@
 				2482B1C0226B2645007EF025 /* Controller */,
 				2482B1BF226B2635007EF025 /* View */,
 				2482B1C1226B2662007EF025 /* Helper */,
-				24E95CC1227C607C00CA272C /* Interface Builder */,
 				24E95CC0227C603A00CA272C /* Resources */,
+				24E95CC1227C607C00CA272C /* Interface Builder */,
 				24E95CBF227C5FF100CA272C /* Supporting Files */,
 			);
 			path = SpriteKitGameProgrammatically;

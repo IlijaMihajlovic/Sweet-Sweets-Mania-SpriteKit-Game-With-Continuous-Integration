@@ -18,18 +18,13 @@ import SVProgressHUD
 class WelcomeScene: SKScene {
     
     let userProfileSceneInstance = UserProfileScene()
+   
     var background: SKSpriteNode = {
         var sprite = SKSpriteNode(imageNamed: "welcomeSceneImage")
-        if DeviceType.isiPad || DeviceType.isiPadPro {
-            sprite.scaleTo(screenWidthPercentage: 1.0)
-        } else {
-            sprite.scaleTo(screenHeightPercentage: 1.0)
-            sprite.scaleTo(screenWidthPercentage: 1.0)
-        }
+        sprite.scaleTo(screenWidthPercentage: 1.0)
         sprite.zPosition = 0
         return sprite
     }()
-
     
     var privecyPolicyAndTermsOfServiceNode: SKSpriteNode = {
         var image = SKSpriteNode(imageNamed: "terms")
@@ -39,7 +34,6 @@ class WelcomeScene: SKScene {
         
     }()
     
- 
     lazy var signInAnonymouslyButton: SSMButton = {
         var button = SSMButton(imageNamed: "anonymouslyButton", buttonAction: {
             
@@ -65,6 +59,7 @@ class WelcomeScene: SKScene {
         label.zPosition = 3
         return label
     }()
+    
     
     lazy var signInWithFacebookButton: SSMButton = {
         var button = SSMButton(imageNamed: "facebookButton", buttonAction: {
