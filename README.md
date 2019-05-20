@@ -4,7 +4,7 @@
 ![swift-version](https://img.shields.io/badge/swift-4.2-Orange.svg)
 ![lisence](https://img.shields.io/badge/license-MIT-Lightgrey.svg)
 
-A single player game in SpriteKit completely programmatically without the use of .sks files and Xcode Scene Editor. 
+A single player game in SpriteKit created completely programmatically without the use of .sks files and Xcode Scene Editor. 
 I used Firebase as a backend and implemented its Sign up/Login with Facebook and Anonymously into the app, and saved all user information into the Firebase Database and Firebase Storage, likewise, I implemented a persistent store so all user data is saved after the user quits the app.
 During the development of the app, I followed the MVC design pattern, likewise, I used Sketch for creating most of the UI.
 ___
@@ -52,7 +52,7 @@ On each page, there is a UITextView and a UIImageView that represent a different
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania/blob/master/Images/SwipingController.png)
 
-* On this image we have the "user profile controller" with the image on left showing when the user sign-up anonymously. And on the right side is signing up with Facebook. Also, there are buttons for signing out, one to the main menu and one for fetching users data this one changes the UILabel and UIImageView with the user's profile image from Facebook and users email address.
+* On this image we have the "user profile controller" with the image on left showing when the user sign-up anonymously. And on the right side is signing up with Facebook. Also, there are buttons for signing out, one to the main menu and one for fetching users data. This one changes the UILabel and UIImageView with the user's profile image from Facebook and users email address.
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/UserProfileScene.png)
   
