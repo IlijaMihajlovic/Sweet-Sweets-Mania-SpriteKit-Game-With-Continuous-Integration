@@ -43,7 +43,7 @@ At the very bottom of the screen, we can see the Terms of Service and Privacy Po
 On the left side is the "gameplay screen". In the middle is the "game over" screen with the SKStoreReviewController pop up asking the user to rate the app on the App Store.
 On the right side of the screen, we have the "game over" screen with the replay button, the best score, the current score and the back button on the top left corner of the screen.
 
-   ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania/blob/master/Images/GameScenes.png)
+   ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/GameScenes.png)
 
 * Now we're in what I call the "swiping controller". Here I used a UIcollectionViewController and UICollectionViewFlowLayout methods to implement the page to page swiping mechanism UIPageViewController with the flexibility UICollectionView has.
 UIPageControl was used for the dots represteting on what page the user is currently on, and how many pages there are.
