@@ -30,6 +30,8 @@
 		24CC57692289BA730045C278 /* SettingsCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC57682289BA730045C278 /* SettingsCellDelegate.swift */; };
 		24CC576C2289C2A50045C278 /* SceneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC576B2289C2A50045C278 /* SceneType.swift */; };
 		24CF845422820A5500D35D19 /* SettignsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF845322820A5500D35D19 /* SettignsModel.swift */; };
+		24DEE2B322968E6A00CF69D7 /* StoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DEE2B222968E6A00CF69D7 /* StoreReviewManager.swift */; };
+		24DEE2B52296923700CF69D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DEE2B42296923700CF69D7 /* Constants.swift */; };
 		24E4A5BE227F49F9009035F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */; };
 		24E4A5C0227F4BAC009035F7 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */; };
 		24E4A5C2227F4C84009035F7 /* WelcomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4A5C1227F4C84009035F7 /* WelcomeScene.swift */; };
@@ -71,6 +73,8 @@
 		24CC57682289BA730045C278 /* SettingsCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellDelegate.swift; sourceTree = "<group>"; };
 		24CC576B2289C2A50045C278 /* SceneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneType.swift; sourceTree = "<group>"; };
 		24CF845322820A5500D35D19 /* SettignsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettignsModel.swift; sourceTree = "<group>"; };
+		24DEE2B222968E6A00CF69D7 /* StoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewManager.swift; sourceTree = "<group>"; };
+		24DEE2B42296923700CF69D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		24E4A5BD227F49F9009035F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		24E4A5C1227F4C84009035F7 /* WelcomeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScene.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				24FE46D4228B36BF0064F9B7 /* Screen Size & Device Type */,
+				24DEE2B42296923700CF69D7 /* Constants.swift */,
+				24DEE2B222968E6A00CF69D7 /* StoreReviewManager.swift */,
 				24E4A5BF227F4BAC009035F7 /* FirebaseManager.swift */,
 				240F801A226A229E009F0B9F /* SSMManager.swift */,
 				244F99C922686EE3004874FB /* SSMPlayerStats.swift */,
@@ -443,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E95CBE227C5F1700CA272C /* SwipingController+ScrollView.swift in Sources */,
+				24DEE2B52296923700CF69D7 /* Constants.swift in Sources */,
 				24E4A5C6227F568E009035F7 /* UserProfileScene.swift in Sources */,
 				24E95CBC227C5E4F00CA272C /* UIColor+UIbuttonExtension.swift in Sources */,
 				24CF845422820A5500D35D19 /* SettignsModel.swift in Sources */,
@@ -456,6 +463,7 @@
 				24FE46CF228B356B0064F9B7 /* SKSpriteNodeExtension.swift in Sources */,
 				2442D334228484770080003C /* CurrentUserModel.swift in Sources */,
 				24E4A5C0227F4BAC009035F7 /* FirebaseManager.swift in Sources */,
+				24DEE2B322968E6A00CF69D7 /* StoreReviewManager.swift in Sources */,
 				24FE46D3228B36410064F9B7 /* UserInterfaceIdiom.swift in Sources */,
 				24CC576C2289C2A50045C278 /* SceneType.swift in Sources */,
 				244F99C022686A95004874FB /* GameViewController.swift in Sources */,

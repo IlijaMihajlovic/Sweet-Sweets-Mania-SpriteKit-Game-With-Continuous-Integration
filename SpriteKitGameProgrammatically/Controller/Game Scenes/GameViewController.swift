@@ -48,7 +48,7 @@ class GameViewController: UIViewController {
         addSubView()
         setupConstraints()
         
-        let scene = WelcomeScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+        let scene = FirebaseManager(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
         scene.scaleMode = .aspectFill
         skView.presentScene(scene)
         skView.ignoresSiblingOrder = true

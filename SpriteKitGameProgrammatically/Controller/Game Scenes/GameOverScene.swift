@@ -34,6 +34,10 @@ class GameOverScene: SKScene {
     lazy var replayButton: SSMButton = {
         var button = SSMButton(imageNamed: "ButtonReplay", buttonAction: {
             
+            //Ask the user to rate or review the app
+            //I'm showing the SKStoreReviewController here on the first launch only for presentation purposes
+            StoreReviewManger.checkAndAskForReview()
+            
             SSMManager.shared.transition(self, toScene: .Gameplay, transition: SKTransition.moveIn(with: .left, duration: 0.5))
         })
         button.scaleTo(screenWithPercentage: 0.22)
@@ -80,10 +84,6 @@ class GameOverScene: SKScene {
     
     
     override func didMove(to view: SKView) {
-        
-        //Ask the user to rate or review the app
-        SKStoreReviewController.requestReview()
-        
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
         addNodes()
         setupNodes()

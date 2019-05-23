@@ -9,14 +9,6 @@
 import Foundation
 import SpriteKit
 
-let kSoundState = "kSoundState"
-let kBackgroundMusicName = "BackgroundMusic"
-let kBackgroundMusicExtension = "mp3"
-
-let kScore = "kScore"
-let kBestScore = "kBestScore"
-
-
 class SSMPlayerStats {
     
     private init() {}

@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
    
         SSMManager.shared.launch()
+        StoreReviewManger.incrementAppOpenedCount()
         
         return true
     }
