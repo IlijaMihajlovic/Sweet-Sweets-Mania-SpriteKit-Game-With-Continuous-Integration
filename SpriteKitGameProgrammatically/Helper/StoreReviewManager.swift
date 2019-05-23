@@ -14,7 +14,6 @@ struct UserDefaultsKey {
 }
 
 struct StoreReviewManger {
-    let Defaults = UserDefaults.standard
     
     //Called from Appdelegate didfinishLaunchingWithOptions method
     static func incrementAppOpenedCount() {

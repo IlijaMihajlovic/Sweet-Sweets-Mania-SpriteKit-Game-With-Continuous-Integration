@@ -8,6 +8,7 @@
 
 import Foundation
 
+//MARK: - Constants
 let kSoundState = "kSoundState"
 let kBackgroundMusicName = "BackgroundMusic"
 let kBackgroundMusicExtension = "mp3"
