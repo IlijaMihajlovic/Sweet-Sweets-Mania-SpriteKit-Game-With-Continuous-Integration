@@ -140,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				244F99AC226868A3004874FB /* SpriteKitGameProgrammatically */,
-				2427B8D32297F3DA004DACE2 /* Sweet Sweets ManiaTests */,
 				244F99AB226868A3004874FB /* Products */,
 				BC2C8F615C6A6BE92C0693D1 /* Pods */,
 				C9216CE52709AABE21DF5EF8 /* Frameworks */,
@@ -168,6 +167,7 @@
 				2482B1C1226B2662007EF025 /* Helper */,
 				24E95CC0227C603A00CA272C /* Resources */,
 				24E95CC1227C607C00CA272C /* Interface Builder */,
+				2427B8D32297F3DA004DACE2 /* Sweet Sweets ManiaTests */,
 				24E95CBF227C5FF100CA272C /* Supporting Files */,
 			);
 			path = SpriteKitGameProgrammatically;
