@@ -72,10 +72,9 @@ One thing we need for this a Payload URL - the URL of our your Jenkins server. U
 
 After "ngrok" is downloaded all I need to do is to run 
 
-``` terminal 
+``` zsh 
    ./ngrok http 8080
-   
-   ```
+  ```
 
 And we can see ngrok running in terminal
 
