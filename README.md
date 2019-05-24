@@ -7,7 +7,7 @@
 A single player game in SpriteKit created completely programmatically without the use of .sks files and Xcode Scene Editor. 
 I used Firebase as a backend and implemented its Sign up/Login with Facebook and Anonymously into the app, and saved users data like: UID, email address, username and profile image into Firebase Database and Firebase Storage, likewise, I implemented a persistent store so all user data is saved after the user quits the app.
 During the development of the app, I followed the MVC design pattern, likewise, I used Sketch for creating most of the UI.
-
+___
 ## Side Note
 * Currently, I do not have an iPhone, so I'm unable to test the app on a physical device. I apologize in advance for maybe possible bugs.
 
@@ -39,8 +39,8 @@ At the very bottom of the screen, we can see the Terms of Service and Privacy Po
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania/blob/master/Images/firstThreeScreens.png)
 
 * On this image, we have three screens.
-On the left side is the "gameplay screen". In the middle is the "game over" screen with the SKStoreReviewController pop up asking the user to rate the app on the App Store.
-On the right side of the screen, we have the "game over" screen with the replay button, the best score, the current score and the back button on the top left corner of the screen.
+On the left side is the "gameplay screen". In the middle is the "game over" screen with the replay button, the best score, the current score and the back button on the top left corner of the screen.
+On the far right side of the image, we have the "gameplay" screen with the SKStoreReviewController pop-up asking the user to rate the app on the App Store. We are asking the user to rate the app after he/she presses the replay button for a new game. In the future version of the app, I will implement the request after the user finishes a level successfully.
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/GameScenes.png)
 
