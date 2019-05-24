@@ -69,7 +69,7 @@ Here we can see my previous commits during my testing.
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/Jenkins%20%26%20Fastlane%20(CI)/ChangesInRepository.png)
 
-One thing we need for this a Payload URL - the URL of our your Jenkins server. Unless we specify otherwise we're using a localhost. But GitHub needs a real URL to send notifications to. To overcame this burden is I'm using "ngrok" an app that uses a secure tunnel to expose localhost to the internet.
+   One thing we need for this a Payload URL - the URL of our your Jenkins server. Unless we specify otherwise we're using a localhost. But GitHub needs a real URL to send notifications to. To overcame this burden is I'm using "ngrok" an app that uses a secure tunnel to expose localhost to the internet.
 
 After "ngrok" is downloaded all I need to do is to run in terminal
 
@@ -82,7 +82,7 @@ And we can see ngrok running in terminal
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/Jenkins%20%26%20Fastlane%20(CI)/ngrok.png)
 
-* After that, I need to head back to to my GitHub repository and past the URL in the Payload URL field and add /github-webhook/ to the end of the URL. 
+   After that, I need to head back to to my GitHub repository and past the URL in the Payload URL field and add /github-webhook/ to the end of the URL. 
 This will be the endpoint on my Jenkins server that responds to pushes from GitHub. And we're all set! :)
 
 ## Email Notifications From Jenkins
@@ -91,13 +91,13 @@ This will be the endpoint on my Jenkins server that responds to pushes from GitH
 over an SMTP (Simple Mail Transfer Protocol) server for each build. I don't wanna get into detail here because it would take a whole tutorial for that, and this MARKDOWN file simply isn't made for that. 😄
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/Jenkins%20%26%20Fastlane%20(CI)/EmailNotificationsFromJenkins.png)
-___   
+   
 
 ## Our Projects Workspace On The Jenkins Server
 
 * And this is how our workspace looks on our Jenkins automation server.
 
-![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/Jenkins%20%26%20Fastlane%20(CI)/JenkinsWorkspace.png)
+   ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/Jenkins%20%26%20Fastlane%20(CI)/JenkinsWorkspace.png)
 ___
 
 
