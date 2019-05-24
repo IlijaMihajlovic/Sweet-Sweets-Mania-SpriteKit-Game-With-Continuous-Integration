@@ -11,6 +11,7 @@
 		240F8013226A1765009F0B9F /* SSMPlayerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99C922686EE3004874FB /* SSMPlayerStats.swift */; };
 		240F801B226A229E009F0B9F /* SSMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F801A226A229E009F0B9F /* SSMManager.swift */; };
 		240F801F226A4910009F0B9F /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F801E226A4910009F0B9F /* SettingsLauncher.swift */; };
+		2427B8D52297F3DA004DACE2 /* Sweet_Sweets_ManiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2427B8D42297F3DA004DACE2 /* Sweet_Sweets_ManiaTests.swift */; };
 		2436715D22707603009FC1A1 /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2436715C22707603009FC1A1 /* BackgroundMusic.mp3 */; };
 		2442D334228484770080003C /* CurrentUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442D333228484770080003C /* CurrentUserModel.swift */; };
 		244F99AE226868A3004874FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F99AD226868A3004874FB /* AppDelegate.swift */; };
@@ -48,9 +49,22 @@
 		24FE46D8228B37960064F9B7 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FE46D7228B37960064F9B7 /* DeviceType.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2427B8D72297F3DA004DACE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244F99A2226868A3004874FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 244F99A9226868A3004874FB;
+			remoteInfo = "Sweet Sweets Mania";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		240F801A226A229E009F0B9F /* SSMManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSMManager.swift; sourceTree = "<group>"; };
 		240F801E226A4910009F0B9F /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
+		2427B8D22297F3DA004DACE2 /* Sweet Sweets ManiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sweet Sweets ManiaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2427B8D42297F3DA004DACE2 /* Sweet_Sweets_ManiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sweet_Sweets_ManiaTests.swift; sourceTree = "<group>"; };
+		2427B8D62297F3DA004DACE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2436715C22707603009FC1A1 /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic.mp3; sourceTree = "<group>"; };
 		2442D333228484770080003C /* CurrentUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserModel.swift; sourceTree = "<group>"; };
 		244F99AA226868A3004874FB /* Sweet Sweets Mania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sweet Sweets Mania.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +109,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2427B8CF2297F3DA004DACE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		244F99A7226868A3004874FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,10 +127,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2427B8D32297F3DA004DACE2 /* Sweet Sweets ManiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				2427B8D42297F3DA004DACE2 /* Sweet_Sweets_ManiaTests.swift */,
+				2427B8D62297F3DA004DACE2 /* Info.plist */,
+			);
+			path = "Sweet Sweets ManiaTests";
+			sourceTree = "<group>";
+		};
 		244F99A1226868A3004874FB = {
 			isa = PBXGroup;
 			children = (
 				244F99AC226868A3004874FB /* SpriteKitGameProgrammatically */,
+				2427B8D32297F3DA004DACE2 /* Sweet Sweets ManiaTests */,
 				244F99AB226868A3004874FB /* Products */,
 				BC2C8F615C6A6BE92C0693D1 /* Pods */,
 				C9216CE52709AABE21DF5EF8 /* Frameworks */,
@@ -120,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				244F99AA226868A3004874FB /* Sweet Sweets Mania.app */,
+				2427B8D22297F3DA004DACE2 /* Sweet Sweets ManiaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -310,6 +342,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2427B8D12297F3DA004DACE2 /* Sweet Sweets ManiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2427B8DB2297F3DA004DACE2 /* Build configuration list for PBXNativeTarget "Sweet Sweets ManiaTests" */;
+			buildPhases = (
+				2427B8CE2297F3DA004DACE2 /* Sources */,
+				2427B8CF2297F3DA004DACE2 /* Frameworks */,
+				2427B8D02297F3DA004DACE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2427B8D82297F3DA004DACE2 /* PBXTargetDependency */,
+			);
+			name = "Sweet Sweets ManiaTests";
+			productName = "Sweet Sweets ManiaTests";
+			productReference = 2427B8D22297F3DA004DACE2 /* Sweet Sweets ManiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		244F99A9226868A3004874FB /* Sweet Sweets Mania */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 244F99BC226868A4004874FB /* Build configuration list for PBXNativeTarget "Sweet Sweets Mania" */;
@@ -339,6 +389,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Ilija Mihajlovic";
 				TargetAttributes = {
+					2427B8D12297F3DA004DACE2 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 244F99A9226868A3004874FB;
+					};
 					244F99A9226868A3004874FB = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -358,11 +412,19 @@
 			projectRoot = "";
 			targets = (
 				244F99A9226868A3004874FB /* Sweet Sweets Mania */,
+				2427B8D12297F3DA004DACE2 /* Sweet Sweets ManiaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2427B8D02297F3DA004DACE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		244F99A8226868A3004874FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -444,6 +506,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2427B8CE2297F3DA004DACE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2427B8D52297F3DA004DACE2 /* Sweet_Sweets_ManiaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		244F99A6226868A3004874FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -487,6 +557,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2427B8D82297F3DA004DACE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 244F99A9226868A3004874FB /* Sweet Sweets Mania */;
+			targetProxy = 2427B8D72297F3DA004DACE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		244F99B6226868A4004874FB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -499,6 +577,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2427B8D92297F3DA004DACE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Sweet Sweets ManiaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MafiaCaffe.Sweet-Sweets-ManiaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sweet Sweets Mania.app/Sweet Sweets Mania";
+			};
+			name = Debug;
+		};
+		2427B8DA2297F3DA004DACE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Sweet Sweets ManiaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MafiaCaffe.Sweet-Sweets-ManiaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sweet Sweets Mania.app/Sweet Sweets Mania";
+			};
+			name = Release;
+		};
 		244F99BA226868A4004874FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -654,6 +770,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2427B8DB2297F3DA004DACE2 /* Build configuration list for PBXNativeTarget "Sweet Sweets ManiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2427B8D92297F3DA004DACE2 /* Debug */,
+				2427B8DA2297F3DA004DACE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		244F99A5226868A3004874FB /* Build configuration list for PBXProject "Sweet Sweets Mania" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
