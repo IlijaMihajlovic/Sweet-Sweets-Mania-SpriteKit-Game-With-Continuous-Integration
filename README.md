@@ -55,9 +55,34 @@ On each page, there is a UITextView and a UIImageView that represent a different
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/UserProfileScene.png)
   
+## The Project
 * Last but not least a short sneak peek how the project looks. 😄💻
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/project.png)
+   
+   
+### Notifying Jenkins With GitHub Webhook
+
+I notify the Jenkins server with GitHub Webhook to pull the project and build it as soon I push a commit to GitHub.
+
+///
+
+One thing we need for this a Payload URL - the URL of our your Jenkins server. Unless we specify otherwise we're using a localhost. But GitHub needs a real URL to send notifications to. To overcame this burden is I'm using "ngrok" an app that uses a secure tunnel to expose localhost to the internet.
+
+After "ngrok" is downloaded all I need to do is to run 
+./ngrok http 8080
+
+And we can see ngrok running in terminal
+
+/////
+
+After that, I need to head back to to my GitHub repository and past the URL in the Payload URL field and add /github-webhook/ to the end of the URL. 
+This will be the endpoint on my Jenkins server that responds to pushes from GitHub. And we're all set! :)
+
+## Email Notifications From Jenkins
+
+I also added email notifications from Jenkins
+over an SMTP (Simple Mail Transfer Protocol) server for each build. I don't wanna get into detail here because it would take a whole tutorial for that, and this MARKDOWN file simply isn't made for that. :)
 ___
 
 
