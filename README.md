@@ -71,14 +71,14 @@ Here we can see my previous commits during my testing.
 
    One thing we need for this a Payload URL - the URL of our your Jenkins server. Unless we specify otherwise we're using a localhost. But GitHub needs a real URL to send notifications to. To overcame this burden is I'm using "ngrok" an app that uses a secure tunnel to expose localhost to the internet.
 
-After "ngrok" is downloaded all I need to do is to run in terminal
+   After "ngrok" is downloaded all I need to do is to run in terminal.
 
-``` console
+   ``` console
    ./ngrok http 8080
    
-  ```
+   ```
 
-And we can see ngrok running in terminal
+   And we can see ngrok running in terminal.
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/Jenkins%20%26%20Fastlane%20(CI)/ngrok.png)
 
