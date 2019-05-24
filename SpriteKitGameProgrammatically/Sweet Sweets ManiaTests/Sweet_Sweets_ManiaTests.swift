@@ -10,10 +10,10 @@ import XCTest
 
 @testable import Sweet_Sweets_Mania
 
-//Still Working on Unit Testing
+//Still Working on Unit Testing∫
 class Sweet_Sweets_ManiaTests: XCTestCase {
     var welcomeSceneIns: WelcomeScene!
-
+    
     override func setUp() {
         super.setUp()
         welcomeSceneIns = WelcomeScene()
@@ -21,23 +21,23 @@ class Sweet_Sweets_ManiaTests: XCTestCase {
         welcomeSceneIns.setupNodes()
         
     }
-
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class..
         welcomeSceneIns = nil
         super.tearDown()
         
     }
-
+    
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results
         
-    XCTAssert(welcomeSceneIns.signInAnonymouslyButton != nil)
-       
+        XCTAssert(welcomeSceneIns.signInAnonymouslyButton != nil)
+        
         
     }
-
+    
     
     
     func testPerformanceExample() {
@@ -46,5 +46,5 @@ class Sweet_Sweets_ManiaTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
 }
