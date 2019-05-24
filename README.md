@@ -89,7 +89,7 @@ This will be the endpoint on my Jenkins server that responds to pushes from GitH
 I also added email notifications from Jenkins
 over an SMTP (Simple Mail Transfer Protocol) server for each build. I don't wanna get into detail here because it would take a whole tutorial for that, and this MARKDOWN file simply isn't made for that. :)
 
-[alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/Jenkins%20%26%20Fastlane%20(CI)/JenkinsWorkspace.png)
+[alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/Jenkins%20%26%20Fastlane%20(CI)/EmailNotificationsFromJenkins.png)
 
 ## Our Projects Workspace On The Jenkins Server
 
