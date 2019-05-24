@@ -14,12 +14,12 @@ import XCTest
 //Sweet_Sweets_Mania
 
 class Sweet_Sweets_ManiaTests: XCTestCase {
-    var userProf: UserProfileScene!
+    var userProf: WelcomeScene!
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         super.setUp()
-        userProf = UserProfileScene()
+        userProf = WelcomeScene()
         userProf.addNodes()
         userProf.setupNodes()
         
@@ -37,8 +37,8 @@ class Sweet_Sweets_ManiaTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results
-        XCTAssertNil(userProf.setupNodes)
-    
+        
+    XCTAssert(userProf.signInAnonymouslyButton != nil)
        
         
     }
