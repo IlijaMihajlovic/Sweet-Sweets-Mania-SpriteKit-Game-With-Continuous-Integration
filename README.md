@@ -55,12 +55,14 @@ On each page, there is a UITextView and a UIImageView that represent a different
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/UserProfileScene.png)
   
+  
 ## The Project
 
-* Last but not least a short sneak peek how the project looks. 😄💻
+* A short sneak peek how the project looks. 😄💻
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/project.png)
    
+# Continuous Integration with Jenkins and Fastlane
    
 ## Notifying Jenkins With GitHub Webhook
 
