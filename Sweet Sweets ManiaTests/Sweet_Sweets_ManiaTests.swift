@@ -10,14 +10,11 @@ import XCTest
 
 @testable import Sweet_Sweets_Mania
 
-
-//Sweet_Sweets_Mania
-
+//Still Testing
 class Sweet_Sweets_ManiaTests: XCTestCase {
     var userProf: WelcomeScene!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         super.setUp()
         userProf = WelcomeScene()
         userProf.addNodes()
@@ -27,8 +24,6 @@ class Sweet_Sweets_ManiaTests: XCTestCase {
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class..
-      
-        
         userProf = nil
         super.tearDown()
         
