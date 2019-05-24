@@ -83,7 +83,7 @@ Here we can see my previous commits during my testing.
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/Jenkins%20%26%20Fastlane%20(CI)/ngrok.png)
 
    After that, all I need to do is to head back to my GitHub repository and past the URL in the Payload URL field and add
-  ` console/github-webhook/` to the end of the URL. 
+  `github-webhook/` to the end of the URL. 
 This will be the endpoint on my Jenkins server that responds to pushes from GitHub. And we're all set! :)
 
 ## Email Notifications From Jenkins
