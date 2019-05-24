@@ -10,21 +10,21 @@ import XCTest
 
 @testable import Sweet_Sweets_Mania
 
-//Still Testing
+//Still Working on Unit Testing
 class Sweet_Sweets_ManiaTests: XCTestCase {
-    var userProf: WelcomeScene!
+    var welcomeSceneIns: WelcomeScene!
 
     override func setUp() {
         super.setUp()
-        userProf = WelcomeScene()
-        userProf.addNodes()
-        userProf.setupNodes()
+        welcomeSceneIns = WelcomeScene()
+        welcomeSceneIns.addNodes()
+        welcomeSceneIns.setupNodes()
         
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class..
-        userProf = nil
+        welcomeSceneIns = nil
         super.tearDown()
         
     }
@@ -33,7 +33,7 @@ class Sweet_Sweets_ManiaTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results
         
-    XCTAssert(userProf.signInAnonymouslyButton != nil)
+    XCTAssert(welcomeSceneIns.signInAnonymouslyButton != nil)
        
         
     }
