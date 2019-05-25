@@ -67,8 +67,7 @@ On each page, there is a UITextView and a UIImageView that represent a different
    
 ## Notifying Jenkins With GitHub Webhook
 
-* The Jenkins server gets notified with the GitHub Webhook to pull the project and build it as soon I push a commit to GitHub.
-Here we can see my previous commits during my testing.
+* The Jenkins server gets notified with the GitHub Webhook to pull the project and build it as soon as I push a commit to the GitHub repository. Here we can see my previous commits during my testing.
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/Jenkins%20%26%20Fastlane%20(CI)/ChangesInRepository.png)
 
@@ -97,9 +96,9 @@ over an SMTP (Simple Mail Transfer Protocol) server for each build. I don't wann
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/Jenkins%20%26%20Fastlane%20(CI)/EmailNotificationsFromJenkins.png)
    
 
-## Our Projects Workspace On The Jenkins Server
+## Sweet Sweets Mania Workspace On The Jenkins Server
 
-* And this is how our workspace looks on our Jenkins automation server.
+* And this is the workspace looks on the Jenkins automation server.
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/Jenkins%20%26%20Fastlane%20(CI)/JenkinsWorkspace.png)
 ___
