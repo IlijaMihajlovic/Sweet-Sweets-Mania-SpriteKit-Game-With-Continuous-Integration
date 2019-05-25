@@ -4,7 +4,9 @@
 ![swift-version](https://img.shields.io/badge/swift-4.2-Orange.svg)
 ![lisence](https://img.shields.io/badge/license-MIT-Lightgrey.svg)
 
-A single player game in SpriteKit created completely programmatically without the use of .sks files and Xcode Scene Editor. 
+A single player game in SpriteKit created completely programmatically without the use of .sks files and Xcode Scene Editor.  
+Implemented continuous integration using Jenkins, Fastlane GitHub, and Unit Tests into one continuous integration system. So everything is automated from the first commit to the email notification at the end from Jenkins when the build finished.
+
 I used Firebase as a backend and implemented its Sign up/Login with Facebook and Anonymously into the app, and saved users data like: UID, email address, username and profile image into Firebase Database and Firebase Storage, likewise, I implemented a persistent store so all user data is saved after the user quits the app.
 During the development of the app, I followed the MVC design pattern, likewise, I used Sketch for creating most of the UI.
 ___
