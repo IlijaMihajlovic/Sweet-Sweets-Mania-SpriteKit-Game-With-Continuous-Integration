@@ -82,7 +82,7 @@ On each page, there is a UITextView and a UIImageView that represent a different
    
    ```
 
-   And we can see ngrok running in the terminal. Also in the background are our your unit tests making sure every commit and push to the repository is tested.
+   And we can see "ngrok" running in the terminal. Also in the background are our your unit tests making sure every commit and push to the repository is tested.
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/Jenkins%20%26%20Fastlane%20(CI)/ngrok.png)
 
