@@ -75,7 +75,7 @@ On each page, there is a UITextView and a UIImageView that represent a different
 
    One thing we need for this a Payload URL - the URL of our your Jenkins server. Unless we specify otherwise we're using a localhost. But GitHub needs a real URL to send notifications to. To overcame this burden is I'm using "ngrok" an app that uses a secure tunnel to expose localhost to the internet.
 
-   After "ngrok" is downloaded all I need to do is to run in terminal.
+   After "ngrok" is downloaded all I need to do is to run it in terminal.
 
    ``` console
    ./ngrok http 8080
