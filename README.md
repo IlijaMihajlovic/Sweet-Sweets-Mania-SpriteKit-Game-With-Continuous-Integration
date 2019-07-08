@@ -41,7 +41,7 @@ At the very bottom of the screen, we can see the Terms of Service and Privacy Po
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania/blob/master/Images/firstThreeScreens.png)
 
 * On this image, we have three screens.
-On the left side is the "gameplay screen with the two sign up buttons". In the middle is the "game over" screen with the replay button, the best score, the current score and the back button on the top left corner of the screen.
+On the left side is the "gameplay screen with the two sign up buttons (sign up with facebook and sign up anonymously)". In the middle is the "game over" screen with the replay button, the best score, the current score and the back button on the top left corner of the screen.
 On the far right side of the image, we have the "gameplay" screen with the SKStoreReviewController pop-up asking the user to rate the app on the App Store. We are asking the user to rate the app after he/she presses the replay button for a new game. In the future version of the app, I will implement the request after the user finishes a level successfully.
 
    ![alt text](https://github.com/IlijaMihajlovic/Sweet-Sweets-Mania-SpriteKit-Game/blob/master/Images/GameScenes.png)
